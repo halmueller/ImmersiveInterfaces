@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <title>TITLE</title>
+        <link rel="stylesheet" type="text/css" href="style-1.1.15.css" />
+        <meta charset='utf-8'> 
+        <meta id="xcode-display" name="xcode-display" content="render" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+    </head>
+
+    <body id="conceptual_flow_with_tasks" class="jazz">
+  		<div class="content-wrapper">
+			<article class="chapter>">
+	  			<section class="section">
+					<p class="para">Notice that we determined the position of the balloon by asking for at child node named <code class="code-voice">mouth</code>. That’s possible because we explicitly added a node named <code class="code-voice">mouth</code> as a child of each cannon to define where the balloon should appear. This approach freed us from having to calculate the position, and if we wanted to reposition where the balloons first appear, we could do that directly in Xcode, without changing the code.</p>
+                    <p class="para">To actually fire the balloon, we apply an impulse to its physics body to move it across the scene. An impulse is an instantaneous change to the body’s velocity. By applying an impulse to a body, SpriteKit pushes it in the direction specified (by an impulse vector). We’ve based the direction on the rotation of the firing cannon.</p>
+                    <p class="para">Finally, we wrap creation, displaying, and firing of a balloon in a single function that we can call later.</p>
+				</section>
+			</article>
+		</div>
+    </body>
+</html>

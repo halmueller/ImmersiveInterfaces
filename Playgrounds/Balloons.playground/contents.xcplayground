@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='3.0' sdk='macosx'>
+    <sections>
+        <code source-file-name='section-1.swift'/>
+        <documentation relative-path='fragment0.html'/>
+        <code source-file-name='section-3.swift'/>
+        <documentation relative-path='fragment11.html'/>
+        <code source-file-name='section-5.swift'/>
+        <documentation relative-path='fragment21.html'/>
+        <code source-file-name='section-7.swift'/>
+        <documentation relative-path='fragment22.html'/>
+        <code source-file-name='section-9.swift'/>
+        <documentation relative-path='fragment23.html'/>
+        <code source-file-name='section-11.swift'/>
+        <documentation relative-path='fragment24.html'/>
+        <code source-file-name='section-13.swift'/>
+        <documentation relative-path='fragment25.html'/>
+        <code source-file-name='section-15.swift'/>
+        <documentation relative-path='fragment26.html'/>
+        <code source-file-name='section-17.swift'/>
+        <documentation relative-path='fragment27.html'/>
+        <code source-file-name='section-19.swift'/>
+        <documentation relative-path='fragment31.html'/>
+        <code source-file-name='section-21.swift'/>
+        <documentation relative-path='fragment32.html'/>
+        <code source-file-name='section-23.swift'/>
+        <documentation relative-path='fragment33.html'/>
+    </sections>
+    <timeline fileName='timeline.xctimeline'/>
+</playground>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <title>TITLE</title>
+        <link rel="stylesheet" type="text/css" href="style-1.1.15.css" />
+        <meta charset='utf-8'> 
+        <meta id="xcode-display" name="xcode-display" content="render" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+    </head>
+
+    <body id="conceptual_flow_with_tasks" class="jazz">
+  		<div class="content-wrapper">
+			<article class="chapter>">
+	  			<section class="section">
+                    <div class="note">
+                      <aside class="aside">
+                        <p class="aside-title">Experiment
+                        </p>
+                        <p class="para">Because gravity is defined by the scene’s physics world (its <code class="code-voice">physicsWorld</code> property), in the the world of SpriteKit laws of physics can be altered! 
+                        </p>
+                        <p class="para">Turn the gravity upside down by changing the <code class="code-voice">scene.physicsWorld.gravity</code> vector. Hint: Invert the sign of the vector's <code class="code-voice">dy</code> component.
+                        </p>
+                      </aside>
+                    </div>
+					<p class="para">To actually see the content of a scene in a playground, we use the XCPlayground function <code class="code-voice">XCPShowView</code>. This function renders the view live in the timeline editor so that the game is visible. From this point on, every change you make will be rendered live and be visible in the timeline editor.</p>
+
+                    <h3 class="section-name" tabindex="0">Firing the Cannons</h3>
+                    <p class="para">
+                        When the cannons fire, let’s add a balloon and move it across the scene. The balloons are sprite nodes, and we'll give each balloon a texture with a random element from our collection of balloon images. 
+                    </p>
+                    <p class="para">
+                        Here, we use the <code class="code-voice">map</code> function of Swift arrays to create an array of <code class="code-voice">SKTexture</code> objects from an array of image names. With our array of textures, we can simply generate a random index within its range and then create a sprite node with the texture at that index.
+                    </p>
+				</section>
+			</article>
+		</div>
+    </body>
+</html>
