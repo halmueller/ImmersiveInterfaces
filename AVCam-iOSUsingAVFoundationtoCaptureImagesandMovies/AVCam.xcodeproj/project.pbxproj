@@ -14,6 +14,8 @@
 		220626891A1E345E00A45150 /* AAPLPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 220626851A1E345E00A45150 /* AAPLPreviewView.m */; };
 		2206268A1A1E345E00A45150 /* AAPLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220626871A1E345E00A45150 /* AAPLCameraViewController.m */; };
 		22CA31B81B022D1300D2DE70 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA31B61B022D1300D2DE70 /* Launch Screen.storyboard */; };
+		2B3ACBD81BCA040F00985F17 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3ACBD71BCA040F00985F17 /* SpriteKit.framework */; };
+		2B3ACBDA1BCA053000985F17 /* OverlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B3ACBD91BCA053000985F17 /* OverlayScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		220626871A1E345E00A45150 /* AAPLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCameraViewController.m; sourceTree = "<group>"; };
 		22CA31B71B022D1300D2DE70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "AVCam/Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		22CA31B91B0250C300D2DE70 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B3ACBD71BCA040F00985F17 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		2B3ACBD91BCA053000985F17 /* OverlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OverlayScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3ACBD81BCA040F00985F17 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,7 @@
 		220626501A1E330400A45150 = {
 			isa = PBXGroup;
 			children = (
+				2B3ACBD71BCA040F00985F17 /* SpriteKit.framework */,
 				22CA31B91B0250C300D2DE70 /* README.md */,
 				2206265B1A1E330400A45150 /* AVCam */,
 				2206265A1A1E330400A45150 /* Products */,
@@ -69,6 +75,7 @@
 				220626851A1E345E00A45150 /* AAPLPreviewView.m */,
 				220626861A1E345E00A45150 /* AAPLCameraViewController.h */,
 				220626871A1E345E00A45150 /* AAPLCameraViewController.m */,
+				2B3ACBD91BCA053000985F17 /* OverlayScene.sks */,
 				22CA31B61B022D1300D2DE70 /* Launch Screen.storyboard */,
 				220626661A1E330400A45150 /* Main.storyboard */,
 				220626691A1E330400A45150 /* Images.xcassets */,
@@ -145,6 +152,7 @@
 				22CA31B81B022D1300D2DE70 /* Launch Screen.storyboard in Resources */,
 				220626681A1E330400A45150 /* Main.storyboard in Resources */,
 				2206266A1A1E330400A45150 /* Images.xcassets in Resources */,
+				2B3ACBDA1BCA053000985F17 /* OverlayScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

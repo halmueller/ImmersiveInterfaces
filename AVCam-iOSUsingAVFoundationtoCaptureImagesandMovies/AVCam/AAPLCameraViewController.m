@@ -8,6 +8,7 @@ View controller for camera interface.
 
 @import AVFoundation;
 @import Photos;
+@import SpriteKit;
 
 #import "AAPLCameraViewController.h"
 #import "AAPLPreviewView.h"
@@ -30,6 +31,7 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 @property (nonatomic, weak) IBOutlet UIButton *recordButton;
 @property (nonatomic, weak) IBOutlet UIButton *cameraButton;
 @property (nonatomic, weak) IBOutlet UIButton *stillButton;
+@property (weak, nonatomic) IBOutlet SKView *overlayView;
 
 // Session management.
 @property (nonatomic) dispatch_queue_t sessionQueue;
@@ -61,6 +63,15 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 
 	// Setup the preview view.
 	self.previewView.session = self.session;
+	
+	// Set up the overlay view
+	self.overlayView.allowsTransparency = YES;
+	self.overlayView.showsFPS = YES;
+	self.overlayView.showsQuadCount = YES;
+	SKScene *overlayScene = [SKScene nodeWithFileNamed:@"OverlayScene"];
+	overlayScene.scaleMode = SKSceneScaleModeFill;
+	overlayScene.backgroundColor = [SKColor clearColor];
+	[self.overlayView presentScene:overlayScene];
 
 	// Communicate with the session and other session objects on this queue.
 	self.sessionQueue = dispatch_queue_create( "session queue", DISPATCH_QUEUE_SERIAL );
