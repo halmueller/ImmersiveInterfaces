@@ -1,6 +1,0 @@
-https://github.com/halmueller/ImmersiveInterfaces.git
-
-sceneView.showsPhysics = true
-
-scene.physicsWorld.gravity = CGVectorMake(0.0, 0.0)
-print (scene.physicsWorld.gravity)
