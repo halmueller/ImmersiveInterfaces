@@ -5,4 +5,5 @@ scene.scaleMode = .AspectFill
 sceneView.showsFPS = true
 sceneView.presentScene(scene)
 
-XCPlaygroundPage.currentPage.liveView = sceneView
+//XCPlaygroundPage.currentPage.liveView = sceneView
+XCPShowView("balloons", view: sceneView)
