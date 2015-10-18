@@ -1,6 +1,14 @@
 # Emacs
 *~
 
+# old skool
+.svn
+
+# osx noise
+.DS_Store
+*.swp
+profile
+
 # Xcode
 #
 build/
