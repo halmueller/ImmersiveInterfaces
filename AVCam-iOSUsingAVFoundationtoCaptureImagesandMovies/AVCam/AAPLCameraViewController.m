@@ -71,6 +71,10 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 	SKScene *overlayScene = [SKScene nodeWithFileNamed:@"OverlayScene"];
 	overlayScene.scaleMode = SKSceneScaleModeFill;
 	overlayScene.backgroundColor = [SKColor clearColor];
+	
+	 SKLabelNode * _Nullable rightHandLabel = ( SKLabelNode * _Nullable )[overlayScene childNodeWithName:@"rightHandLabel"];
+	rightHandLabel.text = @"right hand labels rock";
+	
 	[self.overlayView presentScene:overlayScene];
 
 	// Communicate with the session and other session objects on this queue.

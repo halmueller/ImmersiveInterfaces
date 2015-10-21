@@ -51,7 +51,6 @@
 		220626501A1E330400A45150 = {
 			isa = PBXGroup;
 			children = (
-				2B3ACBD71BCA040F00985F17 /* SpriteKit.framework */,
 				22CA31B91B0250C300D2DE70 /* README.md */,
 				2206265B1A1E330400A45150 /* AVCam */,
 				2206265A1A1E330400A45150 /* Products */,
@@ -87,6 +86,7 @@
 		2206265C1A1E330400A45150 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B3ACBD71BCA040F00985F17 /* SpriteKit.framework */,
 				2206265D1A1E330400A45150 /* Info.plist */,
 				2206265E1A1E330400A45150 /* main.m */,
 			);
