@@ -6,6 +6,7 @@
         <page name='Custom Scene'/>
         <page name='Sprites Gallery'/>
         <page name='Constraints'/>
+        <page name='Physics'/>
         <page name='Spaceship'/>
     </pages>
 </playground>
