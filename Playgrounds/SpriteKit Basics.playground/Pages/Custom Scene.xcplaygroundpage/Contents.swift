@@ -6,14 +6,13 @@ import XCPlayground
 
 class HelloWorldScene: SKScene {
     override func didMoveToView(view: SKView) {
-		backgroundColor = SKColor.greenColor()
-
 		let helloNodeName = "helloNode"
         let helloNode = SKLabelNode()
         helloNode.text = "Hello, World!"
         helloNode.name = helloNodeName
         helloNode.fontSize = 32
         helloNode.position = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame)/2.0)
+		helloNode.verticalAlignmentMode = .Center
         addChild(helloNode)
         
         let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
