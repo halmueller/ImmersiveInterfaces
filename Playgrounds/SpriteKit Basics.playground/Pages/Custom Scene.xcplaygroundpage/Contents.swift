@@ -6,12 +6,14 @@ import XCPlayground
 
 class HelloWorldScene: SKScene {
     override func didMoveToView(view: SKView) {
-        let helloNodeName = "helloNode"
+		backgroundColor = SKColor.greenColor()
+
+		let helloNodeName = "helloNode"
         let helloNode = SKLabelNode()
         helloNode.text = "Hello, World!"
         helloNode.name = helloNodeName
         helloNode.fontSize = 32
-        helloNode.position = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame))
+        helloNode.position = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame)/2.0)
         addChild(helloNode)
         
         let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
@@ -36,8 +38,8 @@ class HelloWorldScene: SKScene {
     }
     override func update(currentTime: CFTimeInterval) {
     }
-    
 }
+
 //: #### Basic SpriteKit setup for playgrounds:
 let sceneView = SKView(frame: CGRect(x: 0, y: 0, width: 850, height: 638))
 let scene = HelloWorldScene(size: CGSize(width: 400.0, height: 200.0))
@@ -46,9 +48,5 @@ sceneView.showsFPS = true
 sceneView.presentScene(scene)
 
 XCPlaygroundPage.currentPage.liveView = sceneView
-
-//: #### And now a Hello World node:
-
-scene.backgroundColor = SKColor.redColor()
 
 //: [Next](@next)

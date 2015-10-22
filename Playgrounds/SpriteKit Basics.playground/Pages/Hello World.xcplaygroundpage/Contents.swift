@@ -18,7 +18,7 @@ scene.backgroundColor = SKColor.redColor()
 
 let helloNode = SKLabelNode(fontNamed: "Marker Felt")
 helloNode.text = "Hello, World!"
-helloNode.fontSize = 32
+helloNode.fontSize = 48
 helloNode.position = CGPointMake(CGRectGetMidX(scene.frame), CGRectGetMidY(scene.frame))
 scene.addChild(helloNode)
 

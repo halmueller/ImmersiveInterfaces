@@ -4,6 +4,8 @@
         <page name='TOC'/>
         <page name='Hello World'/>
         <page name='Custom Scene'/>
+        <page name='Sprites Gallery'/>
+        <page name='Constraints'/>
         <page name='Spaceship'/>
     </pages>
 </playground>
