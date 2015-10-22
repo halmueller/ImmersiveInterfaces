@@ -4,8 +4,11 @@
         <page name='TOC'/>
         <page name='Hello World'/>
         <page name='Custom Scene'/>
+        <page name='Z Order'/>
         <page name='Sprites Gallery'/>
+        <page name='Node Hierarchies'/>
         <page name='Constraints'/>
         <page name='Spaceship'/>
+        <page name='Physics'/>
     </pages>
 </playground>
