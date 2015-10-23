@@ -19,17 +19,22 @@ let home = CGPoint(x: 100, y: 10)
 redSquare.position = home
 
 let magentaRectangle = SKSpriteNode(color: SKColor.magentaColor(), size: CGSize(width: 25.0, height: 5.0))
-magentaRectangle.position = CGPoint(x: 150, y: 200)
+magentaRectangle.position = CGPoint(x: 135, y: 200)
 let followConstraint = SKConstraint.distance(SKRange.init(lowerLimit: 30.0, upperLimit: 100.0), toNode:redSquare)
 magentaRectangle.constraints = [followConstraint]
 
+let greenRectangle = SKSpriteNode(color: SKColor.greenColor(), size: CGSize(width: 5.0, height: 25.0))
+greenRectangle.position = CGPoint(x: 300, y: 100)
+let aimConstraint = SKConstraint.orientToNode(redSquare, offset: SKRange.init(value: 0.0, variance: 0.0))
+greenRectangle.constraints = [aimConstraint]
+
 let yellowRectangle = SKSpriteNode(color: SKColor.yellowColor(), size: CGSize(width: 25.0, height: 5.0))
 yellowRectangle.position = CGPoint(x: 300, y: 35)
-let aimConstraint = SKConstraint.orientToNode(redSquare, offset: SKRange.init(value: 0.0, variance: 0.2))
 yellowRectangle.constraints = [aimConstraint]
 
 scene.addChild(redSquare)
 scene.addChild(magentaRectangle)
+scene.addChild(greenRectangle)
 scene.addChild(yellowRectangle)
 
 let moveUp = SKAction.moveByX(50.0, y: 400.0, duration: 10)
