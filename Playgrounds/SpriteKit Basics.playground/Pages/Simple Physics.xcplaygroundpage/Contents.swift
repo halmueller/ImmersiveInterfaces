@@ -17,8 +17,8 @@ scene.physicsWorld.gravity.dy = -1.0
 
 XCPlaygroundPage.currentPage.liveView = sceneView
 
+//: Balloon and ground textures taken from Apple's original Swift sample playground
 let ground = SKSpriteNode(texture: SKTexture(imageNamed: "ground"))
-print(ground)
 let GroundCategory: UInt32 = 1 << 2
 ground.physicsBody = SKPhysicsBody(texture: ground.texture!, size: ground.size)
 ground.physicsBody?.affectedByGravity = false
@@ -57,7 +57,6 @@ configureBalloonPhysics = { balloon in
 let makeBalloon = SKAction.runBlock {
 	let balloon = createRandomBalloon()
 	balloon.position = CGPoint(x:150.0 + Double(arc4random_uniform(100)), y:400.0)
-	print (balloon.texture)
 	scene.addChild(balloon)
 }
 scene.runAction(SKAction.repeatActionForever(SKAction.sequence([makeBalloon,SKAction.waitForDuration(1.0)])))

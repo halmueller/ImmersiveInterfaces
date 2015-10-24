@@ -9,7 +9,6 @@
         <page name='Node Hierarchies'/>
         <page name='Constraints'/>
         <page name='Simple Physics'/>
-        <page name='Balloons'/>
         <page name='Spaceship'/>
     </pages>
 </playground>
