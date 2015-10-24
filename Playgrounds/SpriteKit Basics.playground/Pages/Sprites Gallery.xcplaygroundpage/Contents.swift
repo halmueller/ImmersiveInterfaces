@@ -15,7 +15,6 @@ XCPlaygroundPage.currentPage.liveView = sceneView
 
 let spaceshipNode = SKSpriteNode(imageNamed: "rocket.png")
 spaceshipNode.setScale(0.1)
-spaceshipNode.anchorPoint = CGPointMake(0.0, 0.0)
 print(spaceshipNode.size)
 
 let labelNode = SKLabelNode(fontNamed: "Marker Felt")
@@ -37,7 +36,7 @@ let wobble = SKAction.sequence([rotate, rotateBack])
 wobblingSpaceship.runAction(SKAction.repeatActionForever(wobble))
 
 let wobblingToo = wobblingSpaceship.copy() as! SKSpriteNode
-wobblingToo.anchorPoint = CGPointMake(0.5, 0.5)
+wobblingToo.anchorPoint = CGPointMake(0.5, 0.0)
 
 let thetas = 0.0.stride(through: M_PI * 3.0, by: 1.0)
 var sines = thetas.map() {
@@ -68,7 +67,7 @@ let redNode = SKSpriteNode(color: SKColor.redColor(), size: CGSize(width: 15.0, 
 let magentaNode = SKSpriteNode(color: SKColor.magentaColor(), size: CGSize(width: 25.0, height: 5.0))
 
 
-let sampleNodes = [spaceshipNode, labelNode, circleNode, ellipseNode, wobblingSpaceship, wobblingToo, pigNode, pulseNode, wtfNode, graphNode, redNode, magentaNode]
+let sampleNodes = [labelNode, circleNode, ellipseNode, spaceshipNode, wobblingSpaceship, wobblingToo, pigNode, pulseNode, wtfNode, graphNode, redNode, magentaNode]
 var row = 0
 var column = 0
 let numberOfColumns = 3

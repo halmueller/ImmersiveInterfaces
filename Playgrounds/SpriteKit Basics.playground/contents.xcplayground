@@ -8,8 +8,8 @@
         <page name='Sprites Gallery'/>
         <page name='Node Hierarchies'/>
         <page name='Constraints'/>
-        <page name='Physics'/>
+        <page name='Simple Physics'/>
+        <page name='Balloons'/>
         <page name='Spaceship'/>
-        <page name='Physics'/>
     </pages>
 </playground>
