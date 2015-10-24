@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let illusionScene = SpiralIllusionScene(size: spriteKitView.bounds.size)
+        illusionScene.backgroundColor = SKColor.blueColor()
+        spriteKitView.showsFPS = true
+        spriteKitView.presentScene(illusionScene)
     }
 
     override func didReceiveMemoryWarning() {

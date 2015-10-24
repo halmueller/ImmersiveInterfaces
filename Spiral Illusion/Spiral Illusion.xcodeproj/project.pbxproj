@@ -14,6 +14,8 @@
 		203B2CD71BDB37DF009F1A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203B2CD51BDB37DF009F1A4F /* LaunchScreen.storyboard */; };
 		203B2CE21BDB37DF009F1A4F /* Spiral_IllusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B2CE11BDB37DF009F1A4F /* Spiral_IllusionTests.swift */; };
 		203B2CED1BDB37DF009F1A4F /* Spiral_IllusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B2CEC1BDB37DF009F1A4F /* Spiral_IllusionUITests.swift */; };
+		206648AF1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206648AE1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift */; };
+		206648B11BDB4C620002EE57 /* SpiralIllusionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206648B01BDB4C620002EE57 /* SpiralIllusionScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		203B2CE81BDB37DF009F1A4F /* Spiral IllusionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spiral IllusionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		203B2CEC1BDB37DF009F1A4F /* Spiral_IllusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiral_IllusionUITests.swift; sourceTree = "<group>"; };
 		203B2CEE1BDB37DF009F1A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206648AE1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralIllusionDefinition.swift; sourceTree = "<group>"; };
+		206648B01BDB4C620002EE57 /* SpiralIllusionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralIllusionScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				203B2CCC1BDB37DF009F1A4F /* AppDelegate.swift */,
 				203B2CCE1BDB37DF009F1A4F /* ViewController.swift */,
+				206648AE1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift */,
+				206648B01BDB4C620002EE57 /* SpiralIllusionScene.swift */,
 				203B2CD01BDB37DF009F1A4F /* Main.storyboard */,
 				203B2CD31BDB37DF009F1A4F /* Assets.xcassets */,
 				203B2CD51BDB37DF009F1A4F /* LaunchScreen.storyboard */,
@@ -256,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206648B11BDB4C620002EE57 /* SpiralIllusionScene.swift in Sources */,
+				206648AF1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift in Sources */,
 				203B2CCF1BDB37DF009F1A4F /* ViewController.swift in Sources */,
 				203B2CCD1BDB37DF009F1A4F /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +492,7 @@
 				203B2CF31BDB37DF009F1A4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203B2CF41BDB37DF009F1A4F /* Build configuration list for PBXNativeTarget "Spiral IllusionTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				203B2CF61BDB37DF009F1A4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203B2CF71BDB37DF009F1A4F /* Build configuration list for PBXNativeTarget "Spiral IllusionUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				203B2CF91BDB37DF009F1A4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
