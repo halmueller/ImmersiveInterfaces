@@ -50,6 +50,38 @@ func enqueueTransitionDemo(transition: SKTransition) {
 	counter++
 }
 
+let moveUpTransitions = [
+	SKTransition.moveInWithDirection(.Up, duration: 5),
+	SKTransition.moveInWithDirection(.Up, duration: 5),
+	SKTransition.moveInWithDirection(.Up, duration: 5),
+	SKTransition.moveInWithDirection(.Up, duration: 5),
+	SKTransition.moveInWithDirection(.Up, duration: 5)
+]
+
+let moveRightTransitions = [
+	SKTransition.moveInWithDirection(.Right, duration: 5),
+	SKTransition.moveInWithDirection(.Right, duration: 5),
+	SKTransition.moveInWithDirection(.Right, duration: 5),
+	SKTransition.moveInWithDirection(.Right, duration: 5),
+	SKTransition.moveInWithDirection(.Right, duration: 5)
+]
+
+let moveDownTransitions = [
+	SKTransition.moveInWithDirection(.Down, duration: 5),
+	SKTransition.moveInWithDirection(.Down, duration: 5),
+	SKTransition.moveInWithDirection(.Down, duration: 5),
+	SKTransition.moveInWithDirection(.Down, duration: 5),
+	SKTransition.moveInWithDirection(.Down, duration: 5)
+]
+
+let revealRightTransitions = [
+	SKTransition.revealWithDirection(.Right, duration: 5),
+	SKTransition.revealWithDirection(.Right, duration: 5),
+	SKTransition.revealWithDirection(.Right, duration: 5),
+	SKTransition.revealWithDirection(.Right, duration: 5),
+	SKTransition.revealWithDirection(.Right, duration: 5)
+]
+
 let transitions = [
 	SKTransition.moveInWithDirection(.Down, duration: 5),
 	SKTransition.moveInWithDirection(.Up, duration: 5),
@@ -67,5 +99,8 @@ let transitions = [
 	SKTransition.flipVerticalWithDuration(5)
 ]
 
-transitions.map({enqueueTransitionDemo($0)})
-
+revealRightTransitions.map({enqueueTransitionDemo($0)})
+//: In the moveInWithDirection() transition, the direction: parameter specifies where the move comes from, not which direction it moves toward. SKTransition.moveInWithDirection(.Up, duration: 5) makes the new scene move down.
+moveRightTransitions.map({enqueueTransitionDemo($0)})
+moveDownTransitions.map({enqueueTransitionDemo($0)})
+moveUpTransitions.map({enqueueTransitionDemo($0)})
