@@ -9,7 +9,7 @@
 import SpriteKit
 
 struct SpiralIllusionDefinition {
-    let numberOfRings = 6
+    let numberOfRings = 4
 	let squareSize = 16.0
 	let squareSeparation = 6.0
 	let innerRingRotationRate = 0.2
