@@ -14,8 +14,14 @@
 		203B2CD71BDB37DF009F1A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203B2CD51BDB37DF009F1A4F /* LaunchScreen.storyboard */; };
 		203B2CE21BDB37DF009F1A4F /* Spiral_IllusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B2CE11BDB37DF009F1A4F /* Spiral_IllusionTests.swift */; };
 		203B2CED1BDB37DF009F1A4F /* Spiral_IllusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B2CEC1BDB37DF009F1A4F /* Spiral_IllusionUITests.swift */; };
-		206648AF1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206648AE1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift */; };
-		206648B11BDB4C620002EE57 /* SpiralIllusionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206648B01BDB4C620002EE57 /* SpiralIllusionScene.swift */; };
+		2B30CD361BDF475B00783566 /* SpiralIllusionDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD341BDF475B00783566 /* SpiralIllusionDefinition.swift */; };
+		2B30CD371BDF475B00783566 /* SpiralIllusionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD351BDF475B00783566 /* SpiralIllusionScene.swift */; };
+		2B30CD401BDF479400783566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD3F1BDF479400783566 /* AppDelegate.swift */; };
+		2B30CD421BDF479400783566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD411BDF479400783566 /* ViewController.swift */; };
+		2B30CD451BDF479400783566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B30CD431BDF479400783566 /* Main.storyboard */; };
+		2B30CD471BDF479400783566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B30CD461BDF479400783566 /* Assets.xcassets */; };
+		2B30CD4C1BDF47F200783566 /* SpiralIllusionDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD341BDF475B00783566 /* SpiralIllusionDefinition.swift */; };
+		2B30CD4D1BDF47F200783566 /* SpiralIllusionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD351BDF475B00783566 /* SpiralIllusionScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +55,14 @@
 		203B2CE81BDB37DF009F1A4F /* Spiral IllusionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spiral IllusionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		203B2CEC1BDB37DF009F1A4F /* Spiral_IllusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiral_IllusionUITests.swift; sourceTree = "<group>"; };
 		203B2CEE1BDB37DF009F1A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		206648AE1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralIllusionDefinition.swift; sourceTree = "<group>"; };
-		206648B01BDB4C620002EE57 /* SpiralIllusionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiralIllusionScene.swift; sourceTree = "<group>"; };
+		2B30CD341BDF475B00783566 /* SpiralIllusionDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpiralIllusionDefinition.swift; path = Shared/SpiralIllusionDefinition.swift; sourceTree = "<group>"; };
+		2B30CD351BDF475B00783566 /* SpiralIllusionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpiralIllusionScene.swift; path = Shared/SpiralIllusionScene.swift; sourceTree = "<group>"; };
+		2B30CD3D1BDF479400783566 /* Spirals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spirals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B30CD3F1BDF479400783566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B30CD411BDF479400783566 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B30CD441BDF479400783566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B30CD461BDF479400783566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B30CD481BDF479400783566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,15 +87,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B30CD3A1BDF479400783566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		203B2CC01BDB37DF009F1A4F = {
 			isa = PBXGroup;
 			children = (
+				2B30CD381BDF477200783566 /* Shared */,
 				203B2CCB1BDB37DF009F1A4F /* Spiral Illusion */,
 				203B2CE01BDB37DF009F1A4F /* Spiral IllusionTests */,
 				203B2CEB1BDB37DF009F1A4F /* Spiral IllusionUITests */,
+				2B30CD3E1BDF479400783566 /* Spirals */,
 				203B2CCA1BDB37DF009F1A4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +115,7 @@
 				203B2CC91BDB37DF009F1A4F /* Spiral Illusion.app */,
 				203B2CDD1BDB37DF009F1A4F /* Spiral IllusionTests.xctest */,
 				203B2CE81BDB37DF009F1A4F /* Spiral IllusionUITests.xctest */,
+				2B30CD3D1BDF479400783566 /* Spirals.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,8 +125,6 @@
 			children = (
 				203B2CCC1BDB37DF009F1A4F /* AppDelegate.swift */,
 				203B2CCE1BDB37DF009F1A4F /* ViewController.swift */,
-				206648AE1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift */,
-				206648B01BDB4C620002EE57 /* SpiralIllusionScene.swift */,
 				203B2CD01BDB37DF009F1A4F /* Main.storyboard */,
 				203B2CD31BDB37DF009F1A4F /* Assets.xcassets */,
 				203B2CD51BDB37DF009F1A4F /* LaunchScreen.storyboard */,
@@ -129,6 +149,27 @@
 				203B2CEE1BDB37DF009F1A4F /* Info.plist */,
 			);
 			path = "Spiral IllusionUITests";
+			sourceTree = "<group>";
+		};
+		2B30CD381BDF477200783566 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2B30CD341BDF475B00783566 /* SpiralIllusionDefinition.swift */,
+				2B30CD351BDF475B00783566 /* SpiralIllusionScene.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		2B30CD3E1BDF479400783566 /* Spirals */ = {
+			isa = PBXGroup;
+			children = (
+				2B30CD3F1BDF479400783566 /* AppDelegate.swift */,
+				2B30CD411BDF479400783566 /* ViewController.swift */,
+				2B30CD431BDF479400783566 /* Main.storyboard */,
+				2B30CD461BDF479400783566 /* Assets.xcassets */,
+				2B30CD481BDF479400783566 /* Info.plist */,
+			);
+			path = Spirals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +228,23 @@
 			productReference = 203B2CE81BDB37DF009F1A4F /* Spiral IllusionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2B30CD3C1BDF479400783566 /* Spirals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B30CD491BDF479400783566 /* Build configuration list for PBXNativeTarget "Spirals" */;
+			buildPhases = (
+				2B30CD391BDF479400783566 /* Sources */,
+				2B30CD3A1BDF479400783566 /* Frameworks */,
+				2B30CD3B1BDF479400783566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spirals;
+			productName = Spirals;
+			productReference = 2B30CD3D1BDF479400783566 /* Spirals.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +266,9 @@
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 203B2CC81BDB37DF009F1A4F;
 					};
+					2B30CD3C1BDF479400783566 = {
+						CreatedOnToolsVersion = 7.1;
+					};
 				};
 			};
 			buildConfigurationList = 203B2CC41BDB37DF009F1A4F /* Build configuration list for PBXProject "Spiral Illusion" */;
@@ -226,6 +287,7 @@
 				203B2CC81BDB37DF009F1A4F /* Spiral Illusion */,
 				203B2CDC1BDB37DF009F1A4F /* Spiral IllusionTests */,
 				203B2CE71BDB37DF009F1A4F /* Spiral IllusionUITests */,
+				2B30CD3C1BDF479400783566 /* Spirals */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +317,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B30CD3B1BDF479400783566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B30CD471BDF479400783566 /* Assets.xcassets in Resources */,
+				2B30CD451BDF479400783566 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,8 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				206648B11BDB4C620002EE57 /* SpiralIllusionScene.swift in Sources */,
-				206648AF1BDB4BFC0002EE57 /* SpiralIllusionDefinition.swift in Sources */,
+				2B30CD371BDF475B00783566 /* SpiralIllusionScene.swift in Sources */,
+				2B30CD361BDF475B00783566 /* SpiralIllusionDefinition.swift in Sources */,
 				203B2CCF1BDB37DF009F1A4F /* ViewController.swift in Sources */,
 				203B2CCD1BDB37DF009F1A4F /* AppDelegate.swift in Sources */,
 			);
@@ -282,6 +353,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				203B2CED1BDB37DF009F1A4F /* Spiral_IllusionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B30CD391BDF479400783566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B30CD4D1BDF47F200783566 /* SpiralIllusionScene.swift in Sources */,
+				2B30CD4C1BDF47F200783566 /* SpiralIllusionDefinition.swift in Sources */,
+				2B30CD421BDF479400783566 /* ViewController.swift in Sources */,
+				2B30CD401BDF479400783566 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +397,14 @@
 				203B2CD61BDB37DF009F1A4F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2B30CD431BDF479400783566 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B30CD441BDF479400783566 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -473,6 +563,36 @@
 			};
 			name = Release;
 		};
+		2B30CD4A1BDF479400783566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Spirals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.halmueller.Spirals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		2B30CD4B1BDF479400783566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Spirals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.halmueller.Spirals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,6 +631,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2B30CD491BDF479400783566 /* Build configuration list for PBXNativeTarget "Spirals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B30CD4A1BDF479400783566 /* Debug */,
+				2B30CD4B1BDF479400783566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
