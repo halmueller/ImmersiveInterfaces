@@ -21,7 +21,6 @@ func imageNodeFromURLString (urlString: String) -> SKSpriteNode? {
 }
 func imageNodeFromMonthName (month: String) -> SKSpriteNode {
 	let fullname = "Mt Rainier/\(month)_800x600.jpg"
-	print (fullname)
 	let result = SKSpriteNode(imageNamed: fullname)
 	result.position = CGPointMake(400, 300)
 	return result
@@ -43,42 +42,30 @@ let scenes = rainierSprites.map { (sprite) -> SKScene in
 sceneView.presentScene(scenes[0])
 
 var counter = 1
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.crossFadeWithDuration(5))
+func enqueueTransitionDemo(transition: SKTransition) {
+	let scenesIndex = counter % scenes.count
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(8 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
+		sceneView.presentScene(scenes[scenesIndex], transition: transition)
+	}
+	counter++
 }
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.doorsCloseHorizontalWithDuration(5))
-}
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.doorsCloseVerticalWithDuration(5))
-}
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.doorsOpenHorizontalWithDuration(5))
-}
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.doorsOpenVerticalWithDuration(5))
-}
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.doorwayWithDuration(5))
-}
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.fadeWithColor(SKColor.yellowColor(), duration:5))
-}
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.fadeWithDuration(5))
-}
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-	sceneView.presentScene(scenes[counter++], transition: SKTransition.flipHorizontalWithDuration(5))
-}
-//dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-//	sceneView.presentScene(scenes[counter++], transition: SKTransition.flipVerticalWithDuration(5))
-//}
-//dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-//	sceneView.presentScene(scenes[counter++], transition: SKTransition.WithDuration(5))
-//}
-//dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-//	sceneView.presentScene(scenes[counter++], transition: SKTransition.WithDuration(5))
-//}
-//dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
-//	sceneView.presentScene(scenes[counter++], transition: SKTransition.WithDuration(5))
-//}
+
+let transitions = [
+	SKTransition.moveInWithDirection(.Down, duration: 5),
+	SKTransition.moveInWithDirection(.Up, duration: 5),
+	SKTransition.pushWithDirection(.Left, duration: 5),
+	SKTransition.revealWithDirection(.Up, duration: 5),
+	SKTransition.doorsCloseHorizontalWithDuration(5),
+	SKTransition.doorsCloseVerticalWithDuration(5),
+	SKTransition.doorsOpenHorizontalWithDuration(5),
+	SKTransition.doorsOpenVerticalWithDuration(5),
+	SKTransition.doorwayWithDuration(5),
+	SKTransition.fadeWithColor(SKColor.yellowColor(), duration:3),
+	SKTransition.fadeWithDuration(3),
+	SKTransition.crossFadeWithDuration(5),
+	SKTransition.flipHorizontalWithDuration(5),
+	SKTransition.flipVerticalWithDuration(5)
+]
+
+transitions.map({enqueueTransitionDemo($0)})
+
