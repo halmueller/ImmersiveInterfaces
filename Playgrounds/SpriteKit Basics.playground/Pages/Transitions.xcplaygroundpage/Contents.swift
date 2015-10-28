@@ -53,14 +53,10 @@ func enqueueTransitionDemo(transition: SKTransition) {
 let moveUpTransitions = [
 	SKTransition.moveInWithDirection(.Up, duration: 5),
 	SKTransition.moveInWithDirection(.Up, duration: 5),
-	SKTransition.moveInWithDirection(.Up, duration: 5),
-	SKTransition.moveInWithDirection(.Up, duration: 5),
 	SKTransition.moveInWithDirection(.Up, duration: 5)
 ]
 
 let moveRightTransitions = [
-	SKTransition.moveInWithDirection(.Right, duration: 5),
-	SKTransition.moveInWithDirection(.Right, duration: 5),
 	SKTransition.moveInWithDirection(.Right, duration: 5),
 	SKTransition.moveInWithDirection(.Right, duration: 5),
 	SKTransition.moveInWithDirection(.Right, duration: 5)
@@ -69,14 +65,10 @@ let moveRightTransitions = [
 let moveDownTransitions = [
 	SKTransition.moveInWithDirection(.Down, duration: 5),
 	SKTransition.moveInWithDirection(.Down, duration: 5),
-	SKTransition.moveInWithDirection(.Down, duration: 5),
-	SKTransition.moveInWithDirection(.Down, duration: 5),
 	SKTransition.moveInWithDirection(.Down, duration: 5)
 ]
 
 let revealRightTransitions = [
-	SKTransition.revealWithDirection(.Right, duration: 5),
-	SKTransition.revealWithDirection(.Right, duration: 5),
 	SKTransition.revealWithDirection(.Right, duration: 5),
 	SKTransition.revealWithDirection(.Right, duration: 5),
 	SKTransition.revealWithDirection(.Right, duration: 5)
@@ -104,3 +96,4 @@ revealRightTransitions.map({enqueueTransitionDemo($0)})
 moveRightTransitions.map({enqueueTransitionDemo($0)})
 moveDownTransitions.map({enqueueTransitionDemo($0)})
 moveUpTransitions.map({enqueueTransitionDemo($0)})
+transitions.map({enqueueTransitionDemo($0)})
