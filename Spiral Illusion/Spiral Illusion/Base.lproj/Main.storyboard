@@ -22,9 +22,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WTK-TP-c0u" secondAttribute="height" multiplier="1:1" id="Oc1-VA-Vsa"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7JO-DD-yoU" appends="YES" id="CJa-u1-ZCL"/>
+                                </connections>
                             </view>
                         </subviews>
                         <animations/>
@@ -40,11 +44,36 @@
                     </view>
                     <connections>
                         <outlet property="spriteKitView" destination="WTK-TP-c0u" id="O0f-f2-gkw"/>
+                        <segue destination="Ji3-7O-AhT" kind="presentation" identifier="editTheThing" id="v8L-a7-sWp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="7JO-DD-yoU">
+                    <connections>
+                        <action selector="triggerConfigEditor:" destination="BYZ-38-t0r" id="gzL-Y9-3ua"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="312" y="429"/>
+        </scene>
+        <!--Configuration View Controller-->
+        <scene sceneID="ayO-No-Vow">
+            <objects>
+                <viewController id="Ji3-7O-AhT" userLabel="Configuration View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fy9-Cd-bog"/>
+                        <viewControllerLayoutGuide type="bottom" id="LwG-TH-eF2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xft-hI-1jY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKo-Uh-PuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1395" y="546"/>
         </scene>
     </scenes>
 </document>

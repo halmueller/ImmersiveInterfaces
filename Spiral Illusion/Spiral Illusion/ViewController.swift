@@ -12,7 +12,6 @@ import SpriteKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var spriteKitView: SKView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let illusionScene = SpiralIllusionScene(size: spriteKitView.bounds.size)
@@ -22,6 +21,9 @@ class ViewController: UIViewController {
 		view.backgroundColor = illusionScene.backgroundColor
 	}
 
+    @IBAction func triggerConfigEditor(sender: AnyObject) {
+        self.performSegueWithIdentifier("editTheThing", sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

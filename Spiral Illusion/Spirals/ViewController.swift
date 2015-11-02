@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var spriteKitView: SKView!
 	
+    @IBAction func openConfigurationEditor(sender: AnyObject) {
+    }
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		let illusionScene = SpiralIllusionScene(size: spriteKitView.bounds.size)
