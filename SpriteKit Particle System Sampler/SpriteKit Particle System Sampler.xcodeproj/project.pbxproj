@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B70FAAB1BE0840C002C4A88 /* SparkParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B70FAA91BE0840C002C4A88 /* SparkParticle.sks */; };
+		2B70FAAC1BE0840C002C4A88 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B70FAAA1BE0840C002C4A88 /* spark.png */; };
+		2B75D96E1BE72E8100C4E730 /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D96D1BE72E8100C4E730 /* SnowParticle.sks */; };
+		2B75D9701BE72FC400C4E730 /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D96F1BE72FC400C4E730 /* SmokeParticle.sks */; };
+		2B75D9721BE732F000C4E730 /* RainParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D9711BE732F000C4E730 /* RainParticle.sks */; };
+		2B75D9741BE7330600C4E730 /* MagicParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D9731BE7330600C4E730 /* MagicParticle.sks */; };
+		2B75D9761BE7334A00C4E730 /* FirefliesParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D9751BE7334A00C4E730 /* FirefliesParticle.sks */; };
+		2B75D9781BE7335900C4E730 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D9771BE7335900C4E730 /* FireParticle.sks */; };
+		2B75D97B1BE7336500C4E730 /* BokehParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D9791BE7336500C4E730 /* BokehParticle.sks */; };
+		2B75D97C1BE7336500C4E730 /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B75D97A1BE7336500C4E730 /* bokeh.png */; };
 		2BEB6B4C1BE07A770005B638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB6B4B1BE07A770005B638 /* AppDelegate.swift */; };
 		2BEB6B4E1BE07A770005B638 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB6B4D1BE07A770005B638 /* GameScene.sks */; };
 		2BEB6B501BE07A770005B638 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB6B4F1BE07A770005B638 /* GameScene.swift */; };
@@ -17,6 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B70FAA91BE0840C002C4A88 /* SparkParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkParticle.sks; sourceTree = "<group>"; };
+		2B70FAAA1BE0840C002C4A88 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		2B75D96D1BE72E8100C4E730 /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
+		2B75D96F1BE72FC400C4E730 /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
+		2B75D9711BE732F000C4E730 /* RainParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainParticle.sks; sourceTree = "<group>"; };
+		2B75D9731BE7330600C4E730 /* MagicParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicParticle.sks; sourceTree = "<group>"; };
+		2B75D9751BE7334A00C4E730 /* FirefliesParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirefliesParticle.sks; sourceTree = "<group>"; };
+		2B75D9771BE7335900C4E730 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+		2B75D9791BE7336500C4E730 /* BokehParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BokehParticle.sks; sourceTree = "<group>"; };
+		2B75D97A1BE7336500C4E730 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		2BEB6B481BE07A770005B638 /* SpriteKit Particle System Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpriteKit Particle System Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB6B4B1BE07A770005B638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BEB6B4D1BE07A770005B638 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -39,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B75D96C1BE72E6400C4E730 /* Emitters */ = {
+			isa = PBXGroup;
+			children = (
+				2B70FAA91BE0840C002C4A88 /* SparkParticle.sks */,
+				2B70FAAA1BE0840C002C4A88 /* spark.png */,
+				2B75D96D1BE72E8100C4E730 /* SnowParticle.sks */,
+				2B75D96F1BE72FC400C4E730 /* SmokeParticle.sks */,
+				2B75D9711BE732F000C4E730 /* RainParticle.sks */,
+				2B75D9731BE7330600C4E730 /* MagicParticle.sks */,
+				2B75D9751BE7334A00C4E730 /* FirefliesParticle.sks */,
+				2B75D9771BE7335900C4E730 /* FireParticle.sks */,
+				2B75D9791BE7336500C4E730 /* BokehParticle.sks */,
+				2B75D97A1BE7336500C4E730 /* bokeh.png */,
+			);
+			name = Emitters;
+			sourceTree = "<group>";
+		};
 		2BEB6B3F1BE07A770005B638 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +97,7 @@
 			children = (
 				2BEB6B4B1BE07A770005B638 /* AppDelegate.swift */,
 				2BEB6B4D1BE07A770005B638 /* GameScene.sks */,
+				2B75D96C1BE72E6400C4E730 /* Emitters */,
 				2BEB6B4F1BE07A770005B638 /* GameScene.swift */,
 				2BEB6B511BE07A770005B638 /* GameViewController.swift */,
 				2BEB6B531BE07A770005B638 /* Main.storyboard */,
@@ -128,10 +166,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B75D96E1BE72E8100C4E730 /* SnowParticle.sks in Resources */,
 				2BEB6B4E1BE07A770005B638 /* GameScene.sks in Resources */,
+				2B70FAAC1BE0840C002C4A88 /* spark.png in Resources */,
+				2B75D97B1BE7336500C4E730 /* BokehParticle.sks in Resources */,
+				2B75D9701BE72FC400C4E730 /* SmokeParticle.sks in Resources */,
 				2BEB6B5A1BE07A780005B638 /* LaunchScreen.storyboard in Resources */,
+				2B75D9781BE7335900C4E730 /* FireParticle.sks in Resources */,
+				2B75D9721BE732F000C4E730 /* RainParticle.sks in Resources */,
 				2BEB6B571BE07A780005B638 /* Assets.xcassets in Resources */,
+				2B75D9741BE7330600C4E730 /* MagicParticle.sks in Resources */,
+				2B75D9761BE7334A00C4E730 /* FirefliesParticle.sks in Resources */,
+				2B75D97C1BE7336500C4E730 /* bokeh.png in Resources */,
 				2BEB6B551BE07A770005B638 /* Main.storyboard in Resources */,
+				2B70FAAB1BE0840C002C4A88 /* SparkParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +342,7 @@
 				2BEB6B601BE07A780005B638 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

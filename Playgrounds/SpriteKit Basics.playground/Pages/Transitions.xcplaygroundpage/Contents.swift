@@ -44,7 +44,7 @@ sceneView.presentScene(scenes[0])
 var counter = 1
 func enqueueTransitionDemo(transition: SKTransition) {
 	let scenesIndex = counter % scenes.count
-	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(8 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(10 * UInt64(counter) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
 		sceneView.presentScene(scenes[scenesIndex], transition: transition)
 	}
 	counter++
@@ -75,18 +75,18 @@ let revealRightTransitions = [
 ]
 
 let transitions = [
-	SKTransition.moveInWithDirection(.Down, duration: 5),
-	SKTransition.moveInWithDirection(.Up, duration: 5),
-	SKTransition.pushWithDirection(.Left, duration: 5),
-	SKTransition.revealWithDirection(.Up, duration: 5),
-	SKTransition.doorsCloseHorizontalWithDuration(5),
-	SKTransition.doorsCloseVerticalWithDuration(5),
-	SKTransition.doorsOpenHorizontalWithDuration(5),
-	SKTransition.doorsOpenVerticalWithDuration(5),
+//	SKTransition.moveInWithDirection(.Down, duration: 5),
+//	SKTransition.moveInWithDirection(.Up, duration: 5),
+//	SKTransition.pushWithDirection(.Left, duration: 5),
+//	SKTransition.revealWithDirection(.Up, duration: 5),
+//	SKTransition.doorsCloseHorizontalWithDuration(5),
+//	SKTransition.doorsCloseVerticalWithDuration(5),
+//	SKTransition.doorsOpenHorizontalWithDuration(5),
+//	SKTransition.doorsOpenVerticalWithDuration(5),
 	SKTransition.doorwayWithDuration(5),
 	SKTransition.fadeWithColor(SKColor.yellowColor(), duration:3),
 	SKTransition.fadeWithDuration(3),
-	SKTransition.crossFadeWithDuration(5),
+	SKTransition.crossFadeWithDuration(3),
 	SKTransition.flipHorizontalWithDuration(5),
 	SKTransition.flipVerticalWithDuration(5)
 ]

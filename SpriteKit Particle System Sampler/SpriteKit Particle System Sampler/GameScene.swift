@@ -9,36 +9,54 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 45;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+	let emitterTuples = [("SparkParticle.sks", "Spark"),
+		("RainParticle.sks", "Rain"),
+		("SnowParticle.sks", "Snow"),
+		("SmokeParticle.sks", "Smoke"),
+		("MagicParticle.sks", "Magic"),
+		("FirefliesParticle.sks", "Fireflies"),
+		("FireParticle.sks", "Fire"),
+		("BokehParticle.sks", "Bokeh")
+	]
+	var sampleEmitter: SKEmitterNode?
+	var sampleLabel: SKLabelNode?
+	var sampleIndex: Int = 0
+	
+	override func didMoveToView(view: SKView) {
+		let labelNode = SKLabelNode()
+		labelNode.position = CGPoint(x:CGRectGetMidX(self.frame), y:20)
+		labelNode.fontName = "HelveticaNeue-Light"
+		self.addChild(labelNode)
+		sampleLabel = labelNode
+		self.backgroundColor = SKColor.darkGrayColor()
+		self.showNextSampleEmitter()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
-    }
-   
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+		showNextSampleEmitter()
+	}
+
+	func showNextSampleEmitter() {
+		print("index", sampleIndex)
+		let nodeLabelTuple = emitterTuples[sampleIndex]
+		if ++sampleIndex == emitterTuples.count {
+			sampleIndex = 0
+		}
+		if sampleEmitter != nil {
+			sampleEmitter!.removeFromParent()
+		}
+		if sampleLabel != nil {
+			sampleLabel!.text = nodeLabelTuple.1
+		}
+		print (nodeLabelTuple)
+		let nodeName = nodeLabelTuple.0
+		// Tried reusing the node, but when it's re-added to scene it doesn't animate.
+		let node = SKEmitterNode(fileNamed: nodeName)!
+		node.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+		self.addChild(node)
+		sampleEmitter = node
+	}
+	
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
