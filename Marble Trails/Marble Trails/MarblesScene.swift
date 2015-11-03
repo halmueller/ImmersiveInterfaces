@@ -33,12 +33,12 @@ class MarblesScene: SKScene {
         for touch in touches {
             let location = touch.locationInNode(self)
 
-            let sprite = SKShapeNode(circleOfRadius: 10.0)
-            sprite.physicsBody = SKPhysicsBody(circleOfRadius: 10.0)
-            sprite.physicsBody?.affectedByGravity = true
-            sprite.physicsBody?.dynamic = true
-            sprite.fillColor = SKColor.yellowColor()
-            sprite.position = location
+            let marbleSprite = SKShapeNode(circleOfRadius: 10.0)
+            marbleSprite.physicsBody = SKPhysicsBody(circleOfRadius: 10.0)
+            marbleSprite.physicsBody?.affectedByGravity = true
+            marbleSprite.physicsBody?.dynamic = true
+            marbleSprite.fillColor = SKColor.yellowColor()
+            marbleSprite.position = location
             if (showTrails) {
                 let emitter = SKEmitterNode()
                 emitter.particleTexture = SKTexture(imageNamed: "spark")
@@ -47,9 +47,9 @@ class MarblesScene: SKScene {
                 emitter.particleAlphaSpeed = -1.0
                 emitter.particleLifetime = 2
                 emitter.particleScale = 0.2
-                sprite.addChild(emitter)
+                marbleSprite.addChild(emitter)
             }
-            self.addChild(sprite)
+            self.addChild(marbleSprite)
         }
     }
 
