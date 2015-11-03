@@ -10,7 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene {
 	let emitterTuples = [("SparkParticle.sks", "Spark"),
-		("RainParticle.sks", "Rain"),
+		("RainParticle.sks", "Rain, modified color for visibility"),
 		("SnowParticle.sks", "Snow"),
 		("SmokeParticle.sks", "Smoke"),
 		("MagicParticle.sks", "Magic"),
