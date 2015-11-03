@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B5184481BE815DD00F1A14D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5184471BE815DD00F1A14D /* AppDelegate.swift */; };
+		2B51844A1BE815DD00F1A14D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5184491BE815DD00F1A14D /* ViewController.swift */; };
+		2B51844D1BE815DD00F1A14D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B51844B1BE815DD00F1A14D /* Main.storyboard */; };
+		2B51844F1BE815DD00F1A14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B51844E1BE815DD00F1A14D /* Assets.xcassets */; };
+		2B5184521BE815DD00F1A14D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5184501BE815DD00F1A14D /* LaunchScreen.storyboard */; };
+		2B51845D1BE815DD00F1A14D /* Marble_TrailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B51845C1BE815DD00F1A14D /* Marble_TrailsTests.swift */; };
+		2B5184681BE815DD00F1A14D /* Marble_TrailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5184671BE815DD00F1A14D /* Marble_TrailsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B5184591BE815DD00F1A14D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B51843C1BE815DD00F1A14D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B5184431BE815DD00F1A14D;
+			remoteInfo = "Marble Trails";
+		};
+		2B5184641BE815DD00F1A14D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B51843C1BE815DD00F1A14D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B5184431BE815DD00F1A14D;
+			remoteInfo = "Marble Trails";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B5184441BE815DD00F1A14D /* Marble Trails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marble Trails.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5184471BE815DD00F1A14D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B5184491BE815DD00F1A14D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B51844C1BE815DD00F1A14D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B51844E1BE815DD00F1A14D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B5184511BE815DD00F1A14D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B5184531BE815DD00F1A14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5184581BE815DD00F1A14D /* Marble TrailsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marble TrailsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B51845C1BE815DD00F1A14D /* Marble_TrailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marble_TrailsTests.swift; sourceTree = "<group>"; };
+		2B51845E1BE815DD00F1A14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5184631BE815DD00F1A14D /* Marble TrailsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marble TrailsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5184671BE815DD00F1A14D /* Marble_TrailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marble_TrailsUITests.swift; sourceTree = "<group>"; };
+		2B5184691BE815DD00F1A14D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B5184411BE815DD00F1A14D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B5184551BE815DD00F1A14D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B5184601BE815DD00F1A14D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B51843B1BE815DD00F1A14D = {
+			isa = PBXGroup;
+			children = (
+				2B5184461BE815DD00F1A14D /* Marble Trails */,
+				2B51845B1BE815DD00F1A14D /* Marble TrailsTests */,
+				2B5184661BE815DD00F1A14D /* Marble TrailsUITests */,
+				2B5184451BE815DD00F1A14D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B5184451BE815DD00F1A14D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B5184441BE815DD00F1A14D /* Marble Trails.app */,
+				2B5184581BE815DD00F1A14D /* Marble TrailsTests.xctest */,
+				2B5184631BE815DD00F1A14D /* Marble TrailsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B5184461BE815DD00F1A14D /* Marble Trails */ = {
+			isa = PBXGroup;
+			children = (
+				2B5184471BE815DD00F1A14D /* AppDelegate.swift */,
+				2B5184491BE815DD00F1A14D /* ViewController.swift */,
+				2B51844B1BE815DD00F1A14D /* Main.storyboard */,
+				2B51844E1BE815DD00F1A14D /* Assets.xcassets */,
+				2B5184501BE815DD00F1A14D /* LaunchScreen.storyboard */,
+				2B5184531BE815DD00F1A14D /* Info.plist */,
+			);
+			path = "Marble Trails";
+			sourceTree = "<group>";
+		};
+		2B51845B1BE815DD00F1A14D /* Marble TrailsTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B51845C1BE815DD00F1A14D /* Marble_TrailsTests.swift */,
+				2B51845E1BE815DD00F1A14D /* Info.plist */,
+			);
+			path = "Marble TrailsTests";
+			sourceTree = "<group>";
+		};
+		2B5184661BE815DD00F1A14D /* Marble TrailsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B5184671BE815DD00F1A14D /* Marble_TrailsUITests.swift */,
+				2B5184691BE815DD00F1A14D /* Info.plist */,
+			);
+			path = "Marble TrailsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B5184431BE815DD00F1A14D /* Marble Trails */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B51846C1BE815DD00F1A14D /* Build configuration list for PBXNativeTarget "Marble Trails" */;
+			buildPhases = (
+				2B5184401BE815DD00F1A14D /* Sources */,
+				2B5184411BE815DD00F1A14D /* Frameworks */,
+				2B5184421BE815DD00F1A14D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Marble Trails";
+			productName = "Marble Trails";
+			productReference = 2B5184441BE815DD00F1A14D /* Marble Trails.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B5184571BE815DD00F1A14D /* Marble TrailsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B51846F1BE815DD00F1A14D /* Build configuration list for PBXNativeTarget "Marble TrailsTests" */;
+			buildPhases = (
+				2B5184541BE815DD00F1A14D /* Sources */,
+				2B5184551BE815DD00F1A14D /* Frameworks */,
+				2B5184561BE815DD00F1A14D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B51845A1BE815DD00F1A14D /* PBXTargetDependency */,
+			);
+			name = "Marble TrailsTests";
+			productName = "Marble TrailsTests";
+			productReference = 2B5184581BE815DD00F1A14D /* Marble TrailsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B5184621BE815DD00F1A14D /* Marble TrailsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B5184721BE815DD00F1A14D /* Build configuration list for PBXNativeTarget "Marble TrailsUITests" */;
+			buildPhases = (
+				2B51845F1BE815DD00F1A14D /* Sources */,
+				2B5184601BE815DD00F1A14D /* Frameworks */,
+				2B5184611BE815DD00F1A14D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B5184651BE815DD00F1A14D /* PBXTargetDependency */,
+			);
+			name = "Marble TrailsUITests";
+			productName = "Marble TrailsUITests";
+			productReference = 2B5184631BE815DD00F1A14D /* Marble TrailsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B51843C1BE815DD00F1A14D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hal Mueller";
+				TargetAttributes = {
+					2B5184431BE815DD00F1A14D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2B5184571BE815DD00F1A14D = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2B5184431BE815DD00F1A14D;
+					};
+					2B5184621BE815DD00F1A14D = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2B5184431BE815DD00F1A14D;
+					};
+				};
+			};
+			buildConfigurationList = 2B51843F1BE815DD00F1A14D /* Build configuration list for PBXProject "Marble Trails" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B51843B1BE815DD00F1A14D;
+			productRefGroup = 2B5184451BE815DD00F1A14D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B5184431BE815DD00F1A14D /* Marble Trails */,
+				2B5184571BE815DD00F1A14D /* Marble TrailsTests */,
+				2B5184621BE815DD00F1A14D /* Marble TrailsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B5184421BE815DD00F1A14D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5184521BE815DD00F1A14D /* LaunchScreen.storyboard in Resources */,
+				2B51844F1BE815DD00F1A14D /* Assets.xcassets in Resources */,
+				2B51844D1BE815DD00F1A14D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B5184561BE815DD00F1A14D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B5184611BE815DD00F1A14D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B5184401BE815DD00F1A14D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B51844A1BE815DD00F1A14D /* ViewController.swift in Sources */,
+				2B5184481BE815DD00F1A14D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B5184541BE815DD00F1A14D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B51845D1BE815DD00F1A14D /* Marble_TrailsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B51845F1BE815DD00F1A14D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5184681BE815DD00F1A14D /* Marble_TrailsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B51845A1BE815DD00F1A14D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B5184431BE815DD00F1A14D /* Marble Trails */;
+			targetProxy = 2B5184591BE815DD00F1A14D /* PBXContainerItemProxy */;
+		};
+		2B5184651BE815DD00F1A14D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B5184431BE815DD00F1A14D /* Marble Trails */;
+			targetProxy = 2B5184641BE815DD00F1A14D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B51844B1BE815DD00F1A14D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B51844C1BE815DD00F1A14D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B5184501BE815DD00F1A14D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B5184511BE815DD00F1A14D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B51846A1BE815DD00F1A14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B51846B1BE815DD00F1A14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B51846D1BE815DD00F1A14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Marble Trails/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Marble-Trails";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B51846E1BE815DD00F1A14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Marble Trails/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Marble-Trails";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2B5184701BE815DD00F1A14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Marble TrailsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Marble-TrailsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marble Trails.app/Marble Trails";
+			};
+			name = Debug;
+		};
+		2B5184711BE815DD00F1A14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Marble TrailsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Marble-TrailsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marble Trails.app/Marble Trails";
+			};
+			name = Release;
+		};
+		2B5184731BE815DD00F1A14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Marble TrailsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Marble-TrailsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Marble Trails";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2B5184741BE815DD00F1A14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Marble TrailsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Marble-TrailsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Marble Trails";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B51843F1BE815DD00F1A14D /* Build configuration list for PBXProject "Marble Trails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B51846A1BE815DD00F1A14D /* Debug */,
+				2B51846B1BE815DD00F1A14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B51846C1BE815DD00F1A14D /* Build configuration list for PBXNativeTarget "Marble Trails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B51846D1BE815DD00F1A14D /* Debug */,
+				2B51846E1BE815DD00F1A14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B51846F1BE815DD00F1A14D /* Build configuration list for PBXNativeTarget "Marble TrailsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B5184701BE815DD00F1A14D /* Debug */,
+				2B5184711BE815DD00F1A14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B5184721BE815DD00F1A14D /* Build configuration list for PBXNativeTarget "Marble TrailsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B5184731BE815DD00F1A14D /* Debug */,
+				2B5184741BE815DD00F1A14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B51843C1BE815DD00F1A14D /* Project object */;
+}
