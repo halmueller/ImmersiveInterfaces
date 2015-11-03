@@ -19,6 +19,7 @@
 		2B63E1271BE8552100E9F6E1 /* BlocksSceneOne.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B63E1251BE8552000E9F6E1 /* BlocksSceneOne.sks */; };
 		2B63E1281BE8552100E9F6E1 /* BlocksSceneTwo.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B63E1261BE8552000E9F6E1 /* BlocksSceneTwo.sks */; };
 		2B63E1681BE864E500E9F6E1 /* MarblesSceneTwo.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B63E1671BE864E500E9F6E1 /* MarblesSceneTwo.sks */; };
+		2B63E16B1BE8688100E9F6E1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B63E16A1BE8688100E9F6E1 /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2B63E1251BE8552000E9F6E1 /* BlocksSceneOne.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlocksSceneOne.sks; sourceTree = "<group>"; };
 		2B63E1261BE8552000E9F6E1 /* BlocksSceneTwo.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlocksSceneTwo.sks; sourceTree = "<group>"; };
 		2B63E1671BE864E500E9F6E1 /* MarblesSceneTwo.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MarblesSceneTwo.sks; sourceTree = "<group>"; };
+		2B63E16A1BE8688100E9F6E1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				2B63E1231BE83E3200E9F6E1 /* MarblesScene.swift */,
 				2B51844B1BE815DD00F1A14D /* Main.storyboard */,
 				2B63E1691BE864EF00E9F6E1 /* Scenes */,
+				2B63E16A1BE8688100E9F6E1 /* spark.png */,
 				2B51844E1BE815DD00F1A14D /* Assets.xcassets */,
 				2B5184501BE815DD00F1A14D /* LaunchScreen.storyboard */,
 				2B5184531BE815DD00F1A14D /* Info.plist */,
@@ -257,6 +260,7 @@
 				2B51844F1BE815DD00F1A14D /* Assets.xcassets in Resources */,
 				2B51844D1BE815DD00F1A14D /* Main.storyboard in Resources */,
 				2B5184761BE816B200F1A14D /* MarblesScene.sks in Resources */,
+				2B63E16B1BE8688100E9F6E1 /* spark.png in Resources */,
 				2B63E1681BE864E500E9F6E1 /* MarblesSceneTwo.sks in Resources */,
 				2B63E1271BE8552100E9F6E1 /* BlocksSceneOne.sks in Resources */,
 			);

@@ -24,6 +24,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xln-YS-j6x" appends="YES" id="AAE-kd-JMT"/>
+                                    <outletCollection property="gestureRecognizers" destination="XMH-f0-Mi8" appends="YES" id="QTt-v6-iOc"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -47,6 +48,11 @@
                         <action selector="changeScene:" destination="BYZ-38-t0r" id="nZj-EJ-6qu"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="XMH-f0-Mi8">
+                    <connections>
+                        <action selector="toggleTrails:" destination="BYZ-38-t0r" id="LjY-hw-enD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="240" y="429"/>
         </scene>

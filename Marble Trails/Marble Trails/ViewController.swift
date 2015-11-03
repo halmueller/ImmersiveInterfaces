@@ -62,5 +62,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func toggleTrails(sender: AnyObject) {
+        if let scene = skView.scene as? MarblesScene {
+            scene.showTrails = !scene.showTrails
+        }
+    }
 }
 

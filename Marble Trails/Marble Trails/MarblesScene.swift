@@ -12,6 +12,7 @@ import CoreMotion
 class MarblesScene: SKScene {
 
     var motionManager: CMMotionManager?
+    var showTrails: Bool = true
 
     override init(size: CGSize) {
         super.init(size: size)
@@ -25,6 +26,7 @@ class MarblesScene: SKScene {
         motionManager = CMMotionManager()
         motionManager?.startDeviceMotionUpdatesUsingReferenceFrame(.XTrueNorthZVertical)
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+
     }
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -37,6 +39,16 @@ class MarblesScene: SKScene {
             sprite.physicsBody?.dynamic = true
             sprite.fillColor = SKColor.yellowColor()
             sprite.position = location
+            if (showTrails) {
+                let emitter = SKEmitterNode()
+                emitter.particleTexture = SKTexture(imageNamed: "spark")
+                emitter.targetNode = self
+                emitter.particleBirthRate = 100
+                emitter.particleAlphaSpeed = -1.0
+                emitter.particleLifetime = 2
+                emitter.particleScale = 0.2
+                sprite.addChild(emitter)
+            }
             self.addChild(sprite)
         }
     }
