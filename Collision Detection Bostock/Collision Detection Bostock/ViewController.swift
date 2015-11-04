@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var skView: SKView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let collisionDetectionScene = CollisionDetectionScene(size: skView.bounds.size)
+		let collisionDetectionScene = CollisionDetectionScene(size: self.view.bounds.size)
 		skView.showsFPS = true
 		skView.presentScene(collisionDetectionScene)
 

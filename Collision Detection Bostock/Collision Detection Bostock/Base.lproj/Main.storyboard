@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,9 +21,6 @@
                                 <rect key="frame" x="-69" y="-47" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="rJ5-ca-AjP" secondAttribute="height" multiplier="1:1" id="bk5-us-nPn"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
