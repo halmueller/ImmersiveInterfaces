@@ -9,10 +9,31 @@
 import SpriteKit
 import CoreMotion
 
+enum marbleNodeNames: String {
+    case marble = "Marble"
+    case trail = "MarbleTrail"
+}
 class MarblesScene: SKScene {
 
     var motionManager: CMMotionManager?
-    var showTrails: Bool = true
+    let trailsBirthRate = CGFloat(100.0)
+    var showTrails: Bool = true {
+        didSet {
+            enumerateChildNodesWithName("//" + marbleNodeNames.trail.rawValue) { node, stop in
+                if let emitter = node as? SKEmitterNode {
+                    if self.showTrails {
+                        emitter.particleBirthRate = self.trailsBirthRate
+                    }
+                    else {
+                        emitter.particleBirthRate = 0
+                    }
+                }
+            }
+            enumerateChildNodesWithName(marbleNodeNames.marble.rawValue) { node, stop in
+                print(node)
+            }
+        }
+    }
 
     override init(size: CGSize) {
         super.init(size: size)
@@ -39,16 +60,22 @@ class MarblesScene: SKScene {
             marbleSprite.physicsBody?.dynamic = true
             marbleSprite.fillColor = SKColor.yellowColor()
             marbleSprite.position = location
+            marbleSprite.name = marbleNodeNames.marble.rawValue
+
+            let emitter = SKEmitterNode()
+            emitter.name = marbleNodeNames.trail.rawValue
+            emitter.particleTexture = SKTexture(imageNamed: "spark")
+            emitter.targetNode = self
+            emitter.particleAlphaSpeed = -1.0
+            emitter.particleLifetime = 2
+            emitter.particleScale = 0.2
             if (showTrails) {
-                let emitter = SKEmitterNode()
-                emitter.particleTexture = SKTexture(imageNamed: "spark")
-                emitter.targetNode = self
-                emitter.particleBirthRate = 100
-                emitter.particleAlphaSpeed = -1.0
-                emitter.particleLifetime = 2
-                emitter.particleScale = 0.2
-                marbleSprite.addChild(emitter)
+                emitter.particleBirthRate = trailsBirthRate
             }
+            else {
+                emitter.particleBirthRate = 0
+            }
+            marbleSprite.addChild(emitter)
             self.addChild(marbleSprite)
         }
     }
