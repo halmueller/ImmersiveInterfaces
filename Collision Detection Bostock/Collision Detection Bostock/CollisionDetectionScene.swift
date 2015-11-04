@@ -14,7 +14,6 @@ class CollisionDetectionScene: SKScene {
 
     override init(size: CGSize) {
         super.init(size: size)
-        print("init", size)
 
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         self.physicsWorld.gravity.dx = CGFloat(0)
@@ -22,7 +21,6 @@ class CollisionDetectionScene: SKScene {
 
         let gravityNode = SKFieldNode.radialGravityField()
         gravityNode.minimumRadius = 3.0
-        print(gravityNode.minimumRadius)
         gravityNode.falloff = 1.2
         gravityNode.strength = 3
         gravityNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
