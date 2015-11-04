@@ -10,56 +10,80 @@ import SpriteKit
 import GameplayKit
 
 class CollisionDetectionScene: SKScene {
-	var circles: [SKShapeNode]?
-	
-	override init(size: CGSize) {
-		super.init(size: size)
-		print("init", size)
-		
-		self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
-		self.physicsWorld.gravity.dx = CGFloat(0)
-		self.physicsWorld.gravity.dy = CGFloat(0)
-		
-		let gravityNode = SKFieldNode.radialGravityField()
-		gravityNode.minimumRadius = 3.0
-		print(gravityNode.minimumRadius)
-		gravityNode.falloff = 3
-		gravityNode.strength = 4
-		gravityNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
-		self.addChild(gravityNode)
-		
-		let chargeNode = SKFieldNode.electricField()
-		chargeNode.strength = 1.0
-		chargeNode.falloff = 0.8
-		chargeNode.position = CGPoint(x: CGRectGetMidX(self.frame) + 50.0, y: CGRectGetMidY(self.frame) + 50.0)
-		self.addChild(chargeNode)
-		
-		var circleNodes: [SKShapeNode] = []
-		let colors = [SKColor.redColor(), SKColor.greenColor(), SKColor.blueColor()]
-		for index in 0..<200 {
-			let radius = CGFloat(index % 12 + 6)
-			let marbleSprite = SKShapeNode(circleOfRadius: radius)
+    var circles: [SKShapeNode]?
 
-			marbleSprite.physicsBody = SKPhysicsBody(circleOfRadius: radius)
-			marbleSprite.physicsBody?.affectedByGravity = true
-			marbleSprite.physicsBody?.dynamic = true
-			marbleSprite.physicsBody?.charge = 0.05
+    override init(size: CGSize) {
+        super.init(size: size)
+        print("init", size)
 
-			marbleSprite.strokeColor = colors[index % colors.count]
-			marbleSprite.fillColor = marbleSprite.strokeColor
-			marbleSprite.position = CGPoint(x: CGRectGetMidX(self.frame), y: 1.2 * CGRectGetMidY(self.frame))
-			circleNodes.append(marbleSprite)
-		}
-		self.circles = circleNodes
-		for node in circleNodes {
-			self.addChild(node)
-		}
-		self.backgroundColor = SKColor.yellowColor()
-		
-	}
+        self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        self.physicsWorld.gravity.dx = CGFloat(0)
+        self.physicsWorld.gravity.dy = CGFloat(0)
 
-	required init?(coder aDecoder: NSCoder) {
-	    fatalError("init(coder:) has not been implemented")
-	}
-	
+        let gravityNode = SKFieldNode.radialGravityField()
+        gravityNode.minimumRadius = 3.0
+        print(gravityNode.minimumRadius)
+        gravityNode.falloff = 1.2
+        gravityNode.strength = 3
+        gravityNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
+        self.addChild(gravityNode)
+
+        var circleNodes: [SKShapeNode] = []
+        let colors = [SKColor.redColor(), SKColor.greenColor(), SKColor.blueColor()]
+        for index in 0..<200 {
+            let radius = CGFloat(index % 12 + 6)
+            let marbleSprite = SKShapeNode(circleOfRadius: radius)
+
+            marbleSprite.physicsBody = SKPhysicsBody(circleOfRadius: radius)
+            marbleSprite.physicsBody?.affectedByGravity = true
+            marbleSprite.physicsBody?.dynamic = true
+            marbleSprite.physicsBody?.charge = 0.05
+
+            marbleSprite.strokeColor = colors[index % colors.count]
+            marbleSprite.fillColor = marbleSprite.strokeColor
+            marbleSprite.position = CGPoint(x: CGRectGetMidX(self.frame), y: 1.2 * CGRectGetMidY(self.frame))
+            circleNodes.append(marbleSprite)
+        }
+        self.circles = circleNodes
+        for node in circleNodes {
+            self.addChild(node)
+        }
+        self.backgroundColor = SKColor.yellowColor()
+
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch in touches {
+            let chargeNode = SKFieldNode.electricField()
+            chargeNode.strength = 3
+            chargeNode.falloff = 0.5
+            chargeNode.position = touch.locationInNode(self)
+            chargeNode.name = "ChargeNode"
+            let labelNode = SKShapeNode(circleOfRadius: 10)
+            labelNode.fillColor = SKColor.blackColor()
+            chargeNode.addChild(labelNode)
+            self.addChild(chargeNode)
+        }
+    }
+
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch in touches {
+            let previousLocation = touch.previousLocationInNode(self)
+            let allNodes = self.nodesAtPoint(previousLocation)
+            let chargeNodes = allNodes.filter({$0.name == "ChargeNode"})
+            // probably just one
+            for chargeNode in chargeNodes {
+                chargeNode.position = touch.locationInNode(self)
+            }
+        }
+    }
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        enumerateChildNodesWithName("//ChargeNode") { node, stop in
+            node.removeFromParent()
+        }
+    }
 }
