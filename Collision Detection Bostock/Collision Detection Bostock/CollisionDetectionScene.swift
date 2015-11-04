@@ -23,10 +23,16 @@ class CollisionDetectionScene: SKScene {
 		let gravityNode = SKFieldNode.radialGravityField()
 		gravityNode.minimumRadius = 3.0
 		print(gravityNode.minimumRadius)
-		gravityNode.falloff = 1.2
-		gravityNode.strength = 3
+		gravityNode.falloff = 3
+		gravityNode.strength = 4
 		gravityNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
 		self.addChild(gravityNode)
+		
+		let chargeNode = SKFieldNode.electricField()
+		chargeNode.strength = 1.0
+		chargeNode.falloff = 0.8
+		chargeNode.position = CGPoint(x: CGRectGetMidX(self.frame) + 50.0, y: CGRectGetMidY(self.frame) + 50.0)
+		self.addChild(chargeNode)
 		
 		var circleNodes: [SKShapeNode] = []
 		let colors = [SKColor.redColor(), SKColor.greenColor(), SKColor.blueColor()]
@@ -37,6 +43,7 @@ class CollisionDetectionScene: SKScene {
 			marbleSprite.physicsBody = SKPhysicsBody(circleOfRadius: radius)
 			marbleSprite.physicsBody?.affectedByGravity = true
 			marbleSprite.physicsBody?.dynamic = true
+			marbleSprite.physicsBody?.charge = 0.05
 
 			marbleSprite.strokeColor = colors[index % colors.count]
 			marbleSprite.fillColor = marbleSprite.strokeColor
