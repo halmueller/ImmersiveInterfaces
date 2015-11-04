@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="312" y="429"/>
         </scene>
-        <!--Configuration View Controller-->
+        <!--Configuration Editor View Controller-->
         <scene sceneID="ayO-No-Vow">
             <objects>
-                <viewController id="Ji3-7O-AhT" userLabel="Configuration View Controller" sceneMemberID="viewController">
+                <viewController id="Ji3-7O-AhT" userLabel="Configuration Editor View Controller" customClass="EditorViewController" customModule="Spiral_Illusion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fy9-Cd-bog"/>
                         <viewControllerLayoutGuide type="bottom" id="LwG-TH-eF2"/>
@@ -67,8 +67,35 @@
                     <view key="view" contentMode="scaleToFill" id="xft-hI-1jY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Config Editor Stub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aag-fJ-3EV">
+                                <rect key="frame" x="230" y="119" width="141" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Zcm-KG-IP5"/>
+                                    <constraint firstAttribute="width" constant="141" id="yg4-q9-Qke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-jA-hxR">
+                                <rect key="frame" x="282" y="174" width="37" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="finishEditing:" destination="Ji3-7O-AhT" eventType="touchUpInside" id="j3l-2j-0OC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vL7-jA-hxR" firstAttribute="top" secondItem="aag-fJ-3EV" secondAttribute="bottom" constant="34" id="f4i-eR-kUK"/>
+                            <constraint firstItem="aag-fJ-3EV" firstAttribute="top" secondItem="Fy9-Cd-bog" secondAttribute="bottom" constant="99" id="isZ-S8-EqJ"/>
+                            <constraint firstItem="vL7-jA-hxR" firstAttribute="centerX" secondItem="xft-hI-1jY" secondAttribute="centerX" id="qKe-Rx-Tek"/>
+                            <constraint firstItem="aag-fJ-3EV" firstAttribute="centerX" secondItem="vL7-jA-hxR" secondAttribute="centerX" id="zmW-7x-iEo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKo-Uh-PuL" userLabel="First Responder" sceneMemberID="firstResponder"/>

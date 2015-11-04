@@ -22,6 +22,7 @@
 		2B30CD471BDF479400783566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B30CD461BDF479400783566 /* Assets.xcassets */; };
 		2B30CD4C1BDF47F200783566 /* SpiralIllusionDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD341BDF475B00783566 /* SpiralIllusionDefinition.swift */; };
 		2B30CD4D1BDF47F200783566 /* SpiralIllusionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B30CD351BDF475B00783566 /* SpiralIllusionScene.swift */; };
+		2B75D9A01BE9B99300C4E730 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75D99F1BE9B99300C4E730 /* EditorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		2B30CD441BDF479400783566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B30CD461BDF479400783566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B30CD481BDF479400783566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B75D99F1BE9B99300C4E730 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				203B2CCC1BDB37DF009F1A4F /* AppDelegate.swift */,
 				203B2CCE1BDB37DF009F1A4F /* ViewController.swift */,
+				2B75D99F1BE9B99300C4E730 /* EditorViewController.swift */,
 				203B2CD01BDB37DF009F1A4F /* Main.storyboard */,
 				203B2CD31BDB37DF009F1A4F /* Assets.xcassets */,
 				203B2CD51BDB37DF009F1A4F /* LaunchScreen.storyboard */,
@@ -336,6 +339,7 @@
 				2B30CD371BDF475B00783566 /* SpiralIllusionScene.swift in Sources */,
 				2B30CD361BDF475B00783566 /* SpiralIllusionDefinition.swift in Sources */,
 				203B2CCF1BDB37DF009F1A4F /* ViewController.swift in Sources */,
+				2B75D9A01BE9B99300C4E730 /* EditorViewController.swift in Sources */,
 				203B2CCD1BDB37DF009F1A4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +643,7 @@
 				2B30CD4B1BDF479400783566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
