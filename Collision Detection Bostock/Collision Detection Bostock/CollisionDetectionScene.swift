@@ -27,7 +27,9 @@ class CollisionDetectionScene: SKScene {
         self.addChild(gravityNode)
 
         var circleNodes: [SKShapeNode] = []
-        let colors = [SKColor.redColor(), SKColor.greenColor(), SKColor.blueColor()]
+        let colors = [SKColor(red:0.11, green:0.38, blue:0.65, alpha:1.0),
+			SKColor(red:0.15, green:0.58, blue:0.13, alpha:1.0),
+			SKColor(red:0.99, green:0.41, blue:0.06, alpha:1.0)]
         for index in 0..<200 {
             let radius = CGFloat(index % 12 + 6)
             let marbleSprite = SKShapeNode(circleOfRadius: radius)
@@ -46,7 +48,7 @@ class CollisionDetectionScene: SKScene {
         for node in circleNodes {
             self.addChild(node)
         }
-        self.backgroundColor = SKColor.yellowColor()
+        self.backgroundColor = SKColor.whiteColor()
 
     }
 
