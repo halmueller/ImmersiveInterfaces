@@ -290,6 +290,7 @@
 				2B75D99A1BE883B500C4E730 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
