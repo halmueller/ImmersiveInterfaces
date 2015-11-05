@@ -63,7 +63,7 @@
                                     <action selector="loadCNNUnsecure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LyL-aR-Lx3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-3i-N1O">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-3i-N1O">
                                 <rect key="frame" x="20" y="550" width="63" height="30"/>
                                 <animations/>
                                 <state key="normal" title="D3 Other"/>
@@ -77,6 +77,7 @@
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="dLL-t8-gQB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3Lf-mt-Ckz"/>
+                            <constraint firstItem="VUH-3i-N1O" firstAttribute="leading" secondItem="UFg-J5-qzx" secondAttribute="leading" id="Aw6-4z-lNC"/>
                             <constraint firstAttribute="bottom" secondItem="IHV-CQ-hC1" secondAttribute="bottom" constant="20" symbolic="YES" id="KO0-6b-mTd"/>
                             <constraint firstItem="IHV-CQ-hC1" firstAttribute="top" secondItem="Jmd-94-QMj" secondAttribute="bottom" constant="7" id="OCd-Yg-OtZ"/>
                             <constraint firstItem="UFg-J5-qzx" firstAttribute="baseline" secondItem="Jmd-94-QMj" secondAttribute="baseline" id="QOZ-dy-ian"/>
@@ -87,6 +88,7 @@
                             <constraint firstItem="BBG-c1-ZP0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="gzy-Rt-iSi"/>
                             <constraint firstAttribute="trailing" secondItem="BBG-c1-ZP0" secondAttribute="trailing" id="hZt-hx-tcj"/>
                             <constraint firstItem="UFg-J5-qzx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mo8-lN-8ux"/>
+                            <constraint firstItem="VUH-3i-N1O" firstAttribute="baseline" secondItem="IHV-CQ-hC1" secondAttribute="baseline" id="oqf-4Y-hbj"/>
                             <constraint firstItem="Jmd-94-QMj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oyY-z0-xxF"/>
                             <constraint firstItem="dLL-t8-gQB" firstAttribute="top" secondItem="640-rd-zb3" secondAttribute="bottom" constant="8" symbolic="YES" id="vF2-Ca-XDW"/>
                             <constraint firstItem="BBG-c1-ZP0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wPm-fR-cuJ"/>

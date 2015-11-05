@@ -75,6 +75,9 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 	}
 
 	@IBAction func loadOtherD3(sender: AnyObject) {
+		let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
+		print ("local path", localPath)
+		webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/abc"))
 	}
 	func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!,
 		withError error: NSError) {
