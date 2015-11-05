@@ -26,11 +26,29 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 		webView = newWebView
 		webView?.backgroundColor = UIColor.greenColor()
 		webView?.navigationDelegate = self
-		print(webView)
+        
+
+        print(webView)
 		self.subView.addSubview(newWebView)
-		print (subView.frame, subView.bounds)
-		print (newWebView.frame, newWebView.bounds)
+//		print (subView.frame, subView.bounds)
+//		print (newWebView.frame, newWebView.bounds)
 //		print (sampleRequest)
+        
+        // Struts and springs
+        // newWebView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
+        
+        // Autolayout
+        newWebView.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            NSLayoutConstraint(item: newWebView, attribute: .Leading, relatedBy: .Equal, toItem: subView, attribute: .Leading, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: newWebView, attribute: .Trailing, relatedBy: .Equal, toItem: subView, attribute: .Trailing, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: newWebView, attribute: .Top, relatedBy: .Equal, toItem: subView, attribute: .Top, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: newWebView, attribute: .Bottom, relatedBy: .Equal, toItem: subView, attribute: .Bottom, multiplier: 1.0, constant: 0.0),
+        ]
+        NSLayoutConstraint.activateConstraints(constraints)
+        
+        
+
 
 	}
 
