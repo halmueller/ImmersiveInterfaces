@@ -63,12 +63,11 @@
                                     <action selector="loadCNNUnsecure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LyL-aR-Lx3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-3i-N1O">
-                                <rect key="frame" x="20" y="550" width="63" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-3i-N1O">
+                                <rect key="frame" x="22" y="550" width="59" height="30"/>
                                 <animations/>
-                                <state key="normal" title="D3 Other"/>
+                                <state key="normal" title="D3 Hello"/>
                                 <connections>
-                                    <action selector="loadLocalCollisionDetection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKH-gw-9L3"/>
                                     <action selector="loadOtherD3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdG-X1-5GR"/>
                                 </connections>
                             </button>
