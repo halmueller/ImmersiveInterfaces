@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206CD5231BEDA52D00ABAFD6 /* MarbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CD5221BEDA52D00ABAFD6 /* MarbleNode.swift */; };
 		2B5184481BE815DD00F1A14D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5184471BE815DD00F1A14D /* AppDelegate.swift */; };
 		2B51844A1BE815DD00F1A14D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5184491BE815DD00F1A14D /* ViewController.swift */; };
 		2B51844D1BE815DD00F1A14D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B51844B1BE815DD00F1A14D /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		206CD5221BEDA52D00ABAFD6 /* MarbleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarbleNode.swift; sourceTree = "<group>"; };
 		2B5184441BE815DD00F1A14D /* Marble Trails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marble Trails.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5184471BE815DD00F1A14D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B5184491BE815DD00F1A14D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				2B5184471BE815DD00F1A14D /* AppDelegate.swift */,
 				2B5184491BE815DD00F1A14D /* ViewController.swift */,
 				2B63E1231BE83E3200E9F6E1 /* MarblesScene.swift */,
+				206CD5221BEDA52D00ABAFD6 /* MarbleNode.swift */,
 				2B51844B1BE815DD00F1A14D /* Main.storyboard */,
 				2B63E1691BE864EF00E9F6E1 /* Scenes */,
 				2B63E16A1BE8688100E9F6E1 /* spark.png */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206CD5231BEDA52D00ABAFD6 /* MarbleNode.swift in Sources */,
 				2B51844A1BE815DD00F1A14D /* ViewController.swift in Sources */,
 				2B5184481BE815DD00F1A14D /* AppDelegate.swift in Sources */,
 				2B63E1241BE83E3200E9F6E1 /* MarblesScene.swift in Sources */,
