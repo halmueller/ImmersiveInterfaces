@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var skView: SKView!
 
-    let sceneNames = ["Intro", "BlocksSceneOne", "BlocksSceneTwo", "MarblesScene", "MarblesSceneTwo"]
+    let sceneNames = ["Intro", "MarblesScene", "BlocksSceneOne", "BlocksSceneTwo", "MarblesSceneTwo"]
     var sceneIndex = 0
 
     override func viewDidLoad() {
