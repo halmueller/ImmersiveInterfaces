@@ -31,8 +31,8 @@
                                     <action selector="loadLocalHelloWorld:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tp3-cZ-BxC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLL-t8-gQB">
-                                <rect key="frame" x="535" y="550" width="45" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLL-t8-gQB">
+                                <rect key="frame" x="535" y="551" width="45" height="30"/>
                                 <animations/>
                                 <state key="normal" title="D3 CD"/>
                                 <connections>
@@ -47,24 +47,24 @@
                                     <action selector="loadApple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7e-U4-HsO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHV-CQ-hC1">
-                                <rect key="frame" x="265" y="550" width="72" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHV-CQ-hC1">
+                                <rect key="frame" x="264" y="550" width="72" height="30"/>
                                 <animations/>
                                 <state key="normal" title="https CNN"/>
                                 <connections>
                                     <action selector="loadCNNSecure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNI-NX-gEM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmd-94-QMj">
-                                <rect key="frame" x="269" y="513" width="65" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmd-94-QMj">
+                                <rect key="frame" x="268" y="513" width="65" height="30"/>
                                 <animations/>
                                 <state key="normal" title="http CNN"/>
                                 <connections>
                                     <action selector="loadCNNUnsecure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LyL-aR-Lx3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-3i-N1O">
-                                <rect key="frame" x="22" y="550" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-3i-N1O">
+                                <rect key="frame" x="20" y="550" width="59" height="30"/>
                                 <animations/>
                                 <state key="normal" title="D3 Hello"/>
                                 <connections>
