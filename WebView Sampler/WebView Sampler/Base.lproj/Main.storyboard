@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebView_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBG-c1-ZP0">
+                                <rect key="frame" x="0.0" y="39" width="600" height="457"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0009043345303" blue="0.93554482999999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFg-J5-qzx">
+                                <rect key="frame" x="20" y="513" width="80" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Hello World"/>
+                                <connections>
+                                    <action selector="loadLocalHelloWorld:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tp3-cZ-BxC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLL-t8-gQB">
+                                <rect key="frame" x="535" y="550" width="45" height="30"/>
+                                <animations/>
+                                <state key="normal" title="D3 CD"/>
+                                <connections>
+                                    <action selector="loadLocalCollisionDetection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ge7-jn-Ifq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="640-rd-zb3">
+                                <rect key="frame" x="540" y="513" width="40" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Apple"/>
+                                <connections>
+                                    <action selector="loadApple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7e-U4-HsO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHV-CQ-hC1">
+                                <rect key="frame" x="265" y="550" width="72" height="30"/>
+                                <animations/>
+                                <state key="normal" title="https CNN"/>
+                                <connections>
+                                    <action selector="loadCNNSecure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNI-NX-gEM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmd-94-QMj">
+                                <rect key="frame" x="269" y="513" width="65" height="30"/>
+                                <animations/>
+                                <state key="normal" title="http CNN"/>
+                                <connections>
+                                    <action selector="loadCNNUnsecure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LyL-aR-Lx3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUH-3i-N1O">
+                                <rect key="frame" x="22" y="550" width="59" height="30"/>
+                                <animations/>
+                                <state key="normal" title="D3 Hello"/>
+                                <connections>
+                                    <action selector="loadOtherD3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdG-X1-5GR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="dLL-t8-gQB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3Lf-mt-Ckz"/>
+                            <constraint firstItem="VUH-3i-N1O" firstAttribute="leading" secondItem="UFg-J5-qzx" secondAttribute="leading" id="Aw6-4z-lNC"/>
+                            <constraint firstAttribute="bottom" secondItem="IHV-CQ-hC1" secondAttribute="bottom" constant="20" symbolic="YES" id="KO0-6b-mTd"/>
+                            <constraint firstItem="IHV-CQ-hC1" firstAttribute="top" secondItem="Jmd-94-QMj" secondAttribute="bottom" constant="7" id="OCd-Yg-OtZ"/>
+                            <constraint firstItem="UFg-J5-qzx" firstAttribute="baseline" secondItem="Jmd-94-QMj" secondAttribute="baseline" id="QOZ-dy-ian"/>
+                            <constraint firstItem="640-rd-zb3" firstAttribute="baseline" secondItem="Jmd-94-QMj" secondAttribute="baseline" id="Wt6-dM-CGU"/>
+                            <constraint firstItem="640-rd-zb3" firstAttribute="trailing" secondItem="dLL-t8-gQB" secondAttribute="trailing" id="cZf-XX-WRc"/>
+                            <constraint firstItem="UFg-J5-qzx" firstAttribute="top" secondItem="BBG-c1-ZP0" secondAttribute="bottom" constant="17" id="e1Y-iZ-3Yi"/>
+                            <constraint firstItem="IHV-CQ-hC1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="exr-VB-agO"/>
+                            <constraint firstItem="BBG-c1-ZP0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="gzy-Rt-iSi"/>
+                            <constraint firstAttribute="trailing" secondItem="BBG-c1-ZP0" secondAttribute="trailing" id="hZt-hx-tcj"/>
+                            <constraint firstItem="UFg-J5-qzx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mo8-lN-8ux"/>
+                            <constraint firstItem="VUH-3i-N1O" firstAttribute="baseline" secondItem="IHV-CQ-hC1" secondAttribute="baseline" id="oqf-4Y-hbj"/>
+                            <constraint firstItem="Jmd-94-QMj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oyY-z0-xxF"/>
+                            <constraint firstItem="dLL-t8-gQB" firstAttribute="top" secondItem="640-rd-zb3" secondAttribute="bottom" constant="8" symbolic="YES" id="vF2-Ca-XDW"/>
+                            <constraint firstItem="BBG-c1-ZP0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wPm-fR-cuJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subView" destination="BBG-c1-ZP0" id="dQk-w3-OGq"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="BDd-Ey-a12"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="303"/>
+        </scene>
+    </scenes>
+</document>
