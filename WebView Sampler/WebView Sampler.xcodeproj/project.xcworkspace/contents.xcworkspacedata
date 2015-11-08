@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/hal/DevelopmentSandbox/ImmersiveInterfaces/Collision Detection Bostock D3/WebView Sampler.xcodeproj">
+      location = "self:WebView Sampler.xcodeproj">
    </FileRef>
 </Workspace>

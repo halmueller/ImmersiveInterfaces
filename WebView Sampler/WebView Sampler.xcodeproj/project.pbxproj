@@ -7,34 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B75DA2F1BEEFF1200262F52 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA281BEEFF1200262F52 /* Info.plist */; };
-		2B75DA301BEEFF1200262F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA291BEEFF1200262F52 /* AppDelegate.swift */; };
-		2B75DA311BEEFF1200262F52 /* collisionDetection.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA2A1BEEFF1200262F52 /* collisionDetection.html */; };
-		2B75DA321BEEFF1200262F52 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA2B1BEEFF1200262F52 /* index.html */; };
-		2B75DA331BEEFF1200262F52 /* simpleD3.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA2C1BEEFF1200262F52 /* simpleD3.html */; };
-		2B75DA341BEEFF1200262F52 /* two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA2D1BEEFF1200262F52 /* two.html */; };
-		2B75DA351BEEFF1200262F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA2E1BEEFF1200262F52 /* ViewController.swift */; };
-		2B75DA371BEEFF7B00262F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA361BEEFF7B00262F52 /* Assets.xcassets */; };
-		2B75DA411BEF008D00262F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA3D1BEF008D00262F52 /* LaunchScreen.storyboard */; };
-		2B75DA421BEF008D00262F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA3F1BEF008D00262F52 /* Main.storyboard */; };
+		2B75DA501BEF05FA00262F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */; };
+		2B75DA521BEF05FA00262F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA511BEF05FA00262F52 /* ViewController.swift */; };
+		2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA531BEF05FA00262F52 /* Main.storyboard */; };
+		2B75DA571BEF05FA00262F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA561BEF05FA00262F52 /* Assets.xcassets */; };
+		2B75DA5A1BEF05FA00262F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA581BEF05FA00262F52 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B75DA281BEEFF1200262F52 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../WebView Sampler/Info.plist"; sourceTree = "<group>"; };
-		2B75DA291BEEFF1200262F52 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../WebView Sampler/AppDelegate.swift"; sourceTree = "<group>"; };
-		2B75DA2A1BEEFF1200262F52 /* collisionDetection.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = collisionDetection.html; path = "../WebView Sampler/collisionDetection.html"; sourceTree = "<group>"; };
-		2B75DA2B1BEEFF1200262F52 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = "../WebView Sampler/index.html"; sourceTree = "<group>"; };
-		2B75DA2C1BEEFF1200262F52 /* simpleD3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = simpleD3.html; path = "../WebView Sampler/simpleD3.html"; sourceTree = "<group>"; };
-		2B75DA2D1BEEFF1200262F52 /* two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = two.html; path = "../WebView Sampler/two.html"; sourceTree = "<group>"; };
-		2B75DA2E1BEEFF1200262F52 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../WebView Sampler/ViewController.swift"; sourceTree = "<group>"; };
-		2B75DA361BEEFF7B00262F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../WebView Sampler/Assets.xcassets"; sourceTree = "<group>"; };
-		2B75DA3E1BEF008D00262F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "WebView Sampler/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		2B75DA401BEF008D00262F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "WebView Sampler/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		2BE0904A1BE9D2770007482C /* WebView Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebView Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B75DA4C1BEF05FA00262F52 /* WebView Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebView Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B75DA511BEF05FA00262F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B75DA541BEF05FA00262F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B75DA561BEF05FA00262F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B75DA591BEF05FA00262F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B75DA5B1BEF05FA00262F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2BE090471BE9D2770007482C /* Frameworks */ = {
+		2B75DA491BEF05FA00262F52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,84 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B62172C1BEB1C15009ECC51 /* Simple HTML */ = {
+		2B75DA431BEF05F900262F52 = {
 			isa = PBXGroup;
 			children = (
-				2B75DA2B1BEEFF1200262F52 /* index.html */,
-				2B75DA2D1BEEFF1200262F52 /* two.html */,
-			);
-			name = "Simple HTML";
-			sourceTree = "<group>";
-		};
-		2BE090411BE9D2770007482C = {
-			isa = PBXGroup;
-			children = (
-				2BE0904C1BE9D2770007482C /* WebView Sampler */,
-				2BE0904B1BE9D2770007482C /* Products */,
+				2B75DA4E1BEF05FA00262F52 /* WebView Sampler */,
+				2B75DA4D1BEF05FA00262F52 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2BE0904B1BE9D2770007482C /* Products */ = {
+		2B75DA4D1BEF05FA00262F52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BE0904A1BE9D2770007482C /* WebView Sampler.app */,
+				2B75DA4C1BEF05FA00262F52 /* WebView Sampler.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2BE0904C1BE9D2770007482C /* WebView Sampler */ = {
+		2B75DA4E1BEF05FA00262F52 /* WebView Sampler */ = {
 			isa = PBXGroup;
 			children = (
-				2B75DA291BEEFF1200262F52 /* AppDelegate.swift */,
-				2B75DA2A1BEEFF1200262F52 /* collisionDetection.html */,
-				2B75DA2C1BEEFF1200262F52 /* simpleD3.html */,
-				2B75DA2E1BEEFF1200262F52 /* ViewController.swift */,
-				2B75DA3F1BEF008D00262F52 /* Main.storyboard */,
-				2B62172C1BEB1C15009ECC51 /* Simple HTML */,
-				2B75DA361BEEFF7B00262F52 /* Assets.xcassets */,
-				2B75DA3D1BEF008D00262F52 /* LaunchScreen.storyboard */,
-				2B75DA281BEEFF1200262F52 /* Info.plist */,
+				2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */,
+				2B75DA511BEF05FA00262F52 /* ViewController.swift */,
+				2B75DA531BEF05FA00262F52 /* Main.storyboard */,
+				2B75DA561BEF05FA00262F52 /* Assets.xcassets */,
+				2B75DA581BEF05FA00262F52 /* LaunchScreen.storyboard */,
+				2B75DA5B1BEF05FA00262F52 /* Info.plist */,
 			);
-			name = "WebView Sampler";
-			path = "Collision Detection Bostock D3";
+			path = "WebView Sampler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BE090491BE9D2770007482C /* WebView Sampler */ = {
+		2B75DA4B1BEF05FA00262F52 /* WebView Sampler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BE0905C1BE9D2770007482C /* Build configuration list for PBXNativeTarget "WebView Sampler" */;
+			buildConfigurationList = 2B75DA5E1BEF05FA00262F52 /* Build configuration list for PBXNativeTarget "WebView Sampler" */;
 			buildPhases = (
-				2BE090461BE9D2770007482C /* Sources */,
-				2BE090471BE9D2770007482C /* Frameworks */,
-				2BE090481BE9D2770007482C /* Resources */,
+				2B75DA481BEF05FA00262F52 /* Sources */,
+				2B75DA491BEF05FA00262F52 /* Frameworks */,
+				2B75DA4A1BEF05FA00262F52 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "WebView Sampler";
-			productName = "Collision Detection Bostock D3";
-			productReference = 2BE0904A1BE9D2770007482C /* WebView Sampler.app */;
+			productName = "WebView Sampler";
+			productReference = 2B75DA4C1BEF05FA00262F52 /* WebView Sampler.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2BE090421BE9D2770007482C /* Project object */ = {
+		2B75DA441BEF05F900262F52 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Hal Mueller";
 				TargetAttributes = {
-					2BE090491BE9D2770007482C = {
+					2B75DA4B1BEF05FA00262F52 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
-			buildConfigurationList = 2BE090451BE9D2770007482C /* Build configuration list for PBXProject "WebView Sampler" */;
+			buildConfigurationList = 2B75DA471BEF05F900262F52 /* Build configuration list for PBXProject "WebView Sampler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -129,69 +107,62 @@
 				en,
 				Base,
 			);
-			mainGroup = 2BE090411BE9D2770007482C;
-			productRefGroup = 2BE0904B1BE9D2770007482C /* Products */;
+			mainGroup = 2B75DA431BEF05F900262F52;
+			productRefGroup = 2B75DA4D1BEF05FA00262F52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BE090491BE9D2770007482C /* WebView Sampler */,
+				2B75DA4B1BEF05FA00262F52 /* WebView Sampler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2BE090481BE9D2770007482C /* Resources */ = {
+		2B75DA4A1BEF05FA00262F52 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B75DA2F1BEEFF1200262F52 /* Info.plist in Resources */,
-				2B75DA331BEEFF1200262F52 /* simpleD3.html in Resources */,
-				2B75DA341BEEFF1200262F52 /* two.html in Resources */,
-				2B75DA421BEF008D00262F52 /* Main.storyboard in Resources */,
-				2B75DA321BEEFF1200262F52 /* index.html in Resources */,
-				2B75DA411BEF008D00262F52 /* LaunchScreen.storyboard in Resources */,
-				2B75DA311BEEFF1200262F52 /* collisionDetection.html in Resources */,
-				2B75DA371BEEFF7B00262F52 /* Assets.xcassets in Resources */,
+				2B75DA5A1BEF05FA00262F52 /* LaunchScreen.storyboard in Resources */,
+				2B75DA571BEF05FA00262F52 /* Assets.xcassets in Resources */,
+				2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2BE090461BE9D2770007482C /* Sources */ = {
+		2B75DA481BEF05FA00262F52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B75DA301BEEFF1200262F52 /* AppDelegate.swift in Sources */,
-				2B75DA351BEEFF1200262F52 /* ViewController.swift in Sources */,
+				2B75DA521BEF05FA00262F52 /* ViewController.swift in Sources */,
+				2B75DA501BEF05FA00262F52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2B75DA3D1BEF008D00262F52 /* LaunchScreen.storyboard */ = {
+		2B75DA531BEF05FA00262F52 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2B75DA3E1BEF008D00262F52 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		2B75DA3F1BEF008D00262F52 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B75DA401BEF008D00262F52 /* Base */,
+				2B75DA541BEF05FA00262F52 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
+			sourceTree = "<group>";
+		};
+		2B75DA581BEF05FA00262F52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B75DA591BEF05FA00262F52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2BE0905A1BE9D2770007482C /* Debug */ = {
+		2B75DA5C1BEF05FA00262F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		2BE0905B1BE9D2770007482C /* Release */ = {
+		2B75DA5D1BEF05FA00262F52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,52 +245,49 @@
 			};
 			name = Release;
 		};
-		2BE0905D1BE9D2770007482C /* Debug */ = {
+		2B75DA5F1BEF05FA00262F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/WebView Sampler/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				INFOPLIST_FILE = "WebView Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.WebView-Sampler";
-				PRODUCT_NAME = "WebView Sampler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		2BE0905E1BE9D2770007482C /* Release */ = {
+		2B75DA601BEF05FA00262F52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/WebView Sampler/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				INFOPLIST_FILE = "WebView Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.WebView-Sampler";
-				PRODUCT_NAME = "WebView Sampler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BE090451BE9D2770007482C /* Build configuration list for PBXProject "WebView Sampler" */ = {
+		2B75DA471BEF05F900262F52 /* Build configuration list for PBXProject "WebView Sampler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2BE0905A1BE9D2770007482C /* Debug */,
-				2BE0905B1BE9D2770007482C /* Release */,
+				2B75DA5C1BEF05FA00262F52 /* Debug */,
+				2B75DA5D1BEF05FA00262F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BE0905C1BE9D2770007482C /* Build configuration list for PBXNativeTarget "WebView Sampler" */ = {
+		2B75DA5E1BEF05FA00262F52 /* Build configuration list for PBXNativeTarget "WebView Sampler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2BE0905D1BE9D2770007482C /* Debug */,
-				2BE0905E1BE9D2770007482C /* Release */,
+				2B75DA5F1BEF05FA00262F52 /* Debug */,
+				2B75DA601BEF05FA00262F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2BE090421BE9D2770007482C /* Project object */;
+	rootObject = 2B75DA441BEF05F900262F52 /* Project object */;
 }
