@@ -97,7 +97,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     @IBAction func loadD3Bars(sender: AnyObject) {
         let localPath = NSBundle.mainBundle().pathForResource("barchart", ofType: "html")
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath:"/"))
+        
+        //        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: NSBundle.mainBundle().resourcePath!))
+        
+        // throws error: ... is not a file URL
+        //webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(string:"https://faculty.washington.edu/hmueller/barchartData.tsv")!)
     }
     
     // MARK: - WKNavigationDelegate
