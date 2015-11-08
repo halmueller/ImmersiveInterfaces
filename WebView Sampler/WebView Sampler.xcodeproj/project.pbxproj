@@ -45,14 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20691CD71BEF1B9900AA250B /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				2B75DA641BEF063900262F52 /* simpleD3.html */,
+				2B75DA611BEF063900262F52 /* collisionDetection.html */,
+				2B75DA621BEF063900262F52 /* index.html */,
+				2B75DA651BEF063900262F52 /* two.html */,
+			);
+			name = HTML;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		2B75DA431BEF05F900262F52 = {
 			isa = PBXGroup;
 			children = (
-				2B75DA611BEF063900262F52 /* collisionDetection.html */,
-				2B75DA621BEF063900262F52 /* index.html */,
 				2B75DA631BEF063900262F52 /* Info.plist */,
-				2B75DA641BEF063900262F52 /* simpleD3.html */,
-				2B75DA651BEF063900262F52 /* two.html */,
 				2B75DA4E1BEF05FA00262F52 /* WebView Sampler */,
 				2B75DA4D1BEF05FA00262F52 /* Products */,
 			);
@@ -69,6 +77,7 @@
 		2B75DA4E1BEF05FA00262F52 /* WebView Sampler */ = {
 			isa = PBXGroup;
 			children = (
+				20691CD71BEF1B9900AA250B /* HTML */,
 				2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */,
 				2B75DA511BEF05FA00262F52 /* ViewController.swift */,
 				2B75DA531BEF05FA00262F52 /* Main.storyboard */,
@@ -306,6 +315,7 @@
 				2B75DA601BEF05FA00262F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

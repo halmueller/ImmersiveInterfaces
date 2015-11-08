@@ -46,10 +46,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
             NSLayoutConstraint(item: newWebView, attribute: .Bottom, relatedBy: .Equal, toItem: subView, attribute: .Bottom, multiplier: 1.0, constant: 0.0),
         ]
         NSLayoutConstraint.activateConstraints(constraints)
-
-
-
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,8 +60,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 
     @IBAction func loadLocalHelloWorld(sender: AnyObject) {
         let localPath = NSBundle.mainBundle().pathForResource("index", ofType: "html")
-        print ("local path", localPath)
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/abc"))
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
 
     @IBAction func loadCNNUnsecure(sender: AnyObject) {
@@ -94,15 +89,20 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     @IBAction func loadLocalCollisionDetection(sender: AnyObject) {
         // http://bl.ocks.org/mbostock/3231298
         let localPath = NSBundle.mainBundle().pathForResource("collisionDetection", ofType: "html")
-        print ("local path", localPath)
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/abc"))
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
 
     @IBAction func loadOtherD3(sender: AnyObject) {
         let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
-        print ("local path", localPath)
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/abc"))
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
+    
+    @IBAction func loadD3Bars(sender: AnyObject) {
+        let localPath = NSBundle.mainBundle().pathForResource("barchart", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
+    
+    // MARK: - WKNavigationDelegate
     func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!,
         withError error: NSError) {
             print(navigation, error.localizedDescription, error.localizedFailureReason)
