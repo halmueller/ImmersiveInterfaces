@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20691CD91BEF2AB600AA250B /* barchart.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CD81BEF2AB600AA250B /* barchart.html */; };
+		20691CDB1BEF2B6900AA250B /* barchartData.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 20691CDA1BEF2B6900AA250B /* barchartData.tsv */; };
+		20691CDD1BEF379300AA250B /* simpleBars.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CDC1BEF379300AA250B /* simpleBars.html */; };
+		20691CDF1BEFE01900AA250B /* barchartSVG.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CDE1BEFE01900AA250B /* barchartSVG.html */; };
 		2B75DA501BEF05FA00262F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */; };
 		2B75DA521BEF05FA00262F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA511BEF05FA00262F52 /* ViewController.swift */; };
 		2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA531BEF05FA00262F52 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20691CD81BEF2AB600AA250B /* barchart.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barchart.html; sourceTree = "<group>"; };
+		20691CDA1BEF2B6900AA250B /* barchartData.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = barchartData.tsv; sourceTree = "<group>"; };
+		20691CDC1BEF379300AA250B /* simpleBars.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = simpleBars.html; path = "WebView Sampler/simpleBars.html"; sourceTree = "<group>"; };
+		20691CDE1BEFE01900AA250B /* barchartSVG.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barchartSVG.html; sourceTree = "<group>"; };
 		2B75DA4C1BEF05FA00262F52 /* WebView Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebView Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B75DA511BEF05FA00262F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +60,10 @@
 				2B75DA611BEF063900262F52 /* collisionDetection.html */,
 				2B75DA621BEF063900262F52 /* index.html */,
 				2B75DA651BEF063900262F52 /* two.html */,
+				20691CD81BEF2AB600AA250B /* barchart.html */,
+				20691CDE1BEFE01900AA250B /* barchartSVG.html */,
+				20691CDA1BEF2B6900AA250B /* barchartData.tsv */,
+				20691CDC1BEF379300AA250B /* simpleBars.html */,
 			);
 			name = HTML;
 			path = ..;
@@ -146,11 +158,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20691CD91BEF2AB600AA250B /* barchart.html in Resources */,
 				2B75DA671BEF063900262F52 /* index.html in Resources */,
+				20691CDB1BEF2B6900AA250B /* barchartData.tsv in Resources */,
 				2B75DA5A1BEF05FA00262F52 /* LaunchScreen.storyboard in Resources */,
 				2B75DA681BEF063900262F52 /* Info.plist in Resources */,
 				2B75DA661BEF063900262F52 /* collisionDetection.html in Resources */,
+				20691CDF1BEFE01900AA250B /* barchartSVG.html in Resources */,
 				2B75DA571BEF05FA00262F52 /* Assets.xcassets in Resources */,
+				20691CDD1BEF379300AA250B /* simpleBars.html in Resources */,
 				2B75DA6A1BEF063900262F52 /* two.html in Resources */,
 				2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */,
 				2B75DA691BEF063900262F52 /* simpleD3.html in Resources */,

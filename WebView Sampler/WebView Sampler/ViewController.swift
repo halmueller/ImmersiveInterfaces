@@ -27,8 +27,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         webView?.backgroundColor = UIColor.greenColor()
         webView?.navigationDelegate = self
 
-
-        print(webView)
         self.subView.addSubview(newWebView)
         //		print (subView.frame, subView.bounds)
         //		print (newWebView.frame, newWebView.bounds)
@@ -51,11 +49,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    /// MARK: -
-    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        print (webView.URL?.path)
     }
 
     @IBAction func loadLocalHelloWorld(sender: AnyObject) {
@@ -92,6 +85,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
 
+    @IBAction func loadBarsOne(sender: AnyObject) {
+        let localPath = NSBundle.mainBundle().pathForResource("simpleBars", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
+
     @IBAction func loadOtherD3(sender: AnyObject) {
         let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
@@ -103,9 +101,13 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     }
     
     // MARK: - WKNavigationDelegate
+    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print ("loading", webView.URL?.path)
+    }
+    
     func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!,
         withError error: NSError) {
-            print(navigation, error.localizedDescription, error.localizedFailureReason)
+            print("didFailProvisionalNavigation", navigation, error.localizedDescription, error.localizedFailureReason)
             let alertController = UIAlertController(title:"Load failed", message: error.localizedDescription, preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
             self.presentViewController(alertController, animated: true) { }

@@ -78,6 +78,13 @@
                                     <action selector="loadD3Bars:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEw-bk-IjY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9S-ja-xcu">
+                                <rect key="frame" x="517" y="512" width="63" height="30"/>
+                                <state key="normal" title="Bars One"/>
+                                <connections>
+                                    <action selector="loadBarsOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCK-bC-Bq3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -101,6 +108,8 @@
                             <constraint firstItem="xde-Il-4CU" firstAttribute="leading" secondItem="hor-eI-nSb" secondAttribute="leading" id="i6a-LY-eng"/>
                             <constraint firstItem="OVI-Hr-ujH" firstAttribute="trailing" secondItem="tqr-DG-nZL" secondAttribute="trailing" id="nEz-bK-DPu"/>
                             <constraint firstItem="SaK-u6-yJN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qT0-mW-wW0"/>
+                            <constraint firstItem="f9S-ja-xcu" firstAttribute="baseline" secondItem="pdF-g2-icT" secondAttribute="baseline" id="umx-wW-0eZ"/>
+                            <constraint firstItem="f9S-ja-xcu" firstAttribute="trailing" secondItem="tqr-DG-nZL" secondAttribute="trailing" id="z1D-9c-Odc"/>
                         </constraints>
                     </view>
                     <connections>
