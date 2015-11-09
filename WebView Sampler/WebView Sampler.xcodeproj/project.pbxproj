@@ -13,6 +13,8 @@
 		20691CDF1BEFE01900AA250B /* barchartSVG.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CDE1BEFE01900AA250B /* barchartSVG.html */; };
 		20691CE11BEFEC0B00AA250B /* barchartD3SVG.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CE01BEFEC0B00AA250B /* barchartD3SVG.html */; };
 		20691CE31BF006F800AA250B /* barchartExternalTSV.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CE21BF006F800AA250B /* barchartExternalTSV.html */; };
+		20691CE51BF017B200AA250B /* SamplePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20691CE41BF017B100AA250B /* SamplePickerTableViewController.swift */; };
+		20691CE71BF01AAF00AA250B /* HTMLSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20691CE61BF01AAF00AA250B /* HTMLSample.swift */; };
 		2B75DA501BEF05FA00262F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */; };
 		2B75DA521BEF05FA00262F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA511BEF05FA00262F52 /* ViewController.swift */; };
 		2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA531BEF05FA00262F52 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		20691CDE1BEFE01900AA250B /* barchartSVG.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barchartSVG.html; sourceTree = "<group>"; };
 		20691CE01BEFEC0B00AA250B /* barchartD3SVG.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barchartD3SVG.html; sourceTree = "<group>"; };
 		20691CE21BF006F800AA250B /* barchartExternalTSV.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barchartExternalTSV.html; sourceTree = "<group>"; };
+		20691CE41BF017B100AA250B /* SamplePickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePickerTableViewController.swift; sourceTree = "<group>"; };
+		20691CE61BF01AAF00AA250B /* HTMLSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLSample.swift; sourceTree = "<group>"; };
 		2B75DA4C1BEF05FA00262F52 /* WebView Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebView Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B75DA511BEF05FA00262F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +102,9 @@
 				20691CD71BEF1B9900AA250B /* HTML */,
 				2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */,
 				2B75DA511BEF05FA00262F52 /* ViewController.swift */,
+				20691CE61BF01AAF00AA250B /* HTMLSample.swift */,
 				2B75DA531BEF05FA00262F52 /* Main.storyboard */,
+				20691CE41BF017B100AA250B /* SamplePickerTableViewController.swift */,
 				2B75DA561BEF05FA00262F52 /* Assets.xcassets */,
 				2B75DA581BEF05FA00262F52 /* LaunchScreen.storyboard */,
 				2B75DA5B1BEF05FA00262F52 /* Info.plist */,
@@ -190,6 +196,8 @@
 			files = (
 				2B75DA521BEF05FA00262F52 /* ViewController.swift in Sources */,
 				2B75DA501BEF05FA00262F52 /* AppDelegate.swift in Sources */,
+				20691CE71BF01AAF00AA250B /* HTMLSample.swift in Sources */,
+				20691CE51BF017B200AA250B /* SamplePickerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

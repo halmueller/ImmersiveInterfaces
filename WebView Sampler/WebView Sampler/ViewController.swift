@@ -10,31 +10,62 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
-
+    
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var webView: WKWebView?
-
+    
+    var chosenSample: HTMLSample? {
+        didSet {
+            print("now playing", chosenSample)
+            if let sample = chosenSample {
+                if sample.isFile {
+                    let localPath = NSBundle.mainBundle().pathForResource(sample.URLString, ofType: sample.filenameExtension)
+                    webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+                }
+                else {
+                    let sampleURL = NSURL(string: sample.URLString)
+                    let sampleRequest = NSURLRequest(URL: sampleURL!)
+                    webView?.loadRequest(sampleRequest)
+                }
+            }
+        }
+    }
+    
+    let sampleOptions = [
+        HTMLSample(description: "Hello World", URLString: "index", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "D3 Hello World", URLString: "simpleD3", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "D3 Collision Detection", URLString: "collisionDetection", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "Bar Chart (raw)", URLString: "simpleBars", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "Bar Chart (SVG)", URLString: "barchartSVG", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "Bar Chart (D3 SVG)", URLString: "barchartD3SVG", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "Bar Chart (JSON string)", URLString: "barchart", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "Apple", URLString: "https://www.apple.com", isFile: false, filenameExtension: nil),
+        HTMLSample(description: "CNN (insecure)", URLString: "http://www.cnn.com", isFile: false, filenameExtension: nil),
+        HTMLSample(description: "CNN (secure)", URLString: "https://www.cnn.com", isFile: false, filenameExtension: nil),
+        HTMLSample(description: "USGS (insecure, ATS exception)", URLString: "http://waterdata.usgs.gov/nwis/uv?12048000", isFile: false, filenameExtension: nil),
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let webViewConfiguration = WKWebViewConfiguration()
-
+        
         let newWebView = WKWebView(frame: self.subView.bounds, configuration: webViewConfiguration)
         newWebView.navigationDelegate = self
         newWebView.UIDelegate = self
-
+        
         webView = newWebView
         webView?.backgroundColor = UIColor.greenColor()
         webView?.navigationDelegate = self
-
+        
         self.subView.addSubview(newWebView)
         //		print (subView.frame, subView.bounds)
         //		print (newWebView.frame, newWebView.bounds)
         //		print (sampleRequest)
-
+        
         // Struts and springs
         // newWebView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
-
+        
         // Autolayout
         newWebView.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
@@ -45,35 +76,35 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         ]
         NSLayoutConstraint.activateConstraints(constraints)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func loadLocalHelloWorld(sender: AnyObject) {
         let localPath = NSBundle.mainBundle().pathForResource("index", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
-
+    
     @IBAction func loadCNNUnsecure(sender: AnyObject) {
         let sampleURL = NSURL(string: "http://www.cnn.com")
         let sampleRequest = NSURLRequest(URL: sampleURL!)
         webView?.loadRequest(sampleRequest)
     }
-
+    
     @IBAction func loadCNNSecure(sender: AnyObject) {
         let sampleURL = NSURL(string: "https://www.cnn.com")
         let sampleRequest = NSURLRequest(URL: sampleURL!)
         webView?.loadRequest(sampleRequest)
     }
-
+    
     @IBAction func loadUSGSUnsecure(sender: AnyObject) {
         let sampleURL = NSURL(string: "http://waterdata.usgs.gov/nwis/uv?12048000")
         let sampleRequest = NSURLRequest(URL: sampleURL!)
         webView?.loadRequest(sampleRequest)
     }
-
+    
     @IBAction func loadApple(sender: AnyObject) {
         let sampleURL = NSURL(string: "https://www.apple.com")
         let sampleRequest = NSURLRequest(URL: sampleURL!)
@@ -84,12 +115,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         let localPath = NSBundle.mainBundle().pathForResource("collisionDetection", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
-
+    
     @IBAction func loadBarsOne(sender: AnyObject) {
         let localPath = NSBundle.mainBundle().pathForResource("simpleBars", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
-
+    
     @IBAction func loadOtherD3(sender: AnyObject) {
         let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
@@ -103,6 +134,13 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         
         // throws error: ... is not a file URL
         //webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(string:"https://faculty.washington.edu/hmueller/barchartData.tsv")!)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destinationViewController = segue.destinationViewController as? SamplePickerTableViewController {
+            destinationViewController.sampleOptions = sampleOptions
+            destinationViewController.samplePresenter = self
+        }
     }
     
     // MARK: - WKNavigationDelegate
