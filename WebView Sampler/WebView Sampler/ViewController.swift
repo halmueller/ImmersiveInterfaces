@@ -39,10 +39,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         HTMLSample(description: "Bar Chart (SVG)", URLString: "barchartSVG", isFile: true, filenameExtension: "html"),
         HTMLSample(description: "Bar Chart (D3 SVG)", URLString: "barchartD3SVG", isFile: true, filenameExtension: "html"),
         HTMLSample(description: "Bar Chart (JSON string)", URLString: "barchart", isFile: true, filenameExtension: "html"),
+        HTMLSample(description: "Bar Chart (external TSV, doesn't work)", URLString: "barchartExternalTSV", isFile: true, filenameExtension: "html"),
         HTMLSample(description: "Apple", URLString: "https://www.apple.com", isFile: false, filenameExtension: nil),
         HTMLSample(description: "CNN (insecure)", URLString: "http://www.cnn.com", isFile: false, filenameExtension: nil),
         HTMLSample(description: "CNN (secure)", URLString: "https://www.cnn.com", isFile: false, filenameExtension: nil),
-        HTMLSample(description: "USGS (insecure, ATS exception)", URLString: "http://waterdata.usgs.gov/nwis/uv?12048000", isFile: false, filenameExtension: nil),
+        HTMLSample(description: "USGS (insecure, but has ATS exception)", URLString: "http://waterdata.usgs.gov/nwis/uv?12048000", isFile: false, filenameExtension: nil),
     ]
     
     override func viewDidLoad() {
