@@ -82,60 +82,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loadLocalHelloWorld(sender: AnyObject) {
-        let localPath = NSBundle.mainBundle().pathForResource("index", ofType: "html")
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
-    }
-    
-    @IBAction func loadCNNUnsecure(sender: AnyObject) {
-        let sampleURL = NSURL(string: "http://www.cnn.com")
-        let sampleRequest = NSURLRequest(URL: sampleURL!)
-        webView?.loadRequest(sampleRequest)
-    }
-    
-    @IBAction func loadCNNSecure(sender: AnyObject) {
-        let sampleURL = NSURL(string: "https://www.cnn.com")
-        let sampleRequest = NSURLRequest(URL: sampleURL!)
-        webView?.loadRequest(sampleRequest)
-    }
-    
-    @IBAction func loadUSGSUnsecure(sender: AnyObject) {
-        let sampleURL = NSURL(string: "http://waterdata.usgs.gov/nwis/uv?12048000")
-        let sampleRequest = NSURLRequest(URL: sampleURL!)
-        webView?.loadRequest(sampleRequest)
-    }
-    
-    @IBAction func loadApple(sender: AnyObject) {
-        let sampleURL = NSURL(string: "https://www.apple.com")
-        let sampleRequest = NSURLRequest(URL: sampleURL!)
-        webView?.loadRequest(sampleRequest)
-    }
-    @IBAction func loadLocalCollisionDetection(sender: AnyObject) {
-        // http://bl.ocks.org/mbostock/3231298
-        let localPath = NSBundle.mainBundle().pathForResource("collisionDetection", ofType: "html")
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
-    }
-    
-    @IBAction func loadBarsOne(sender: AnyObject) {
-        let localPath = NSBundle.mainBundle().pathForResource("simpleBars", ofType: "html")
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
-    }
-    
-    @IBAction func loadOtherD3(sender: AnyObject) {
-        let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
-    }
-    
-    @IBAction func loadD3Bars(sender: AnyObject) {
-        let localPath = NSBundle.mainBundle().pathForResource("barchart", ofType: "html")
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath:"/"))
-        
-        //        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: NSBundle.mainBundle().resourcePath!))
-        
-        // throws error: ... is not a file URL
-        //webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(string:"https://faculty.washington.edu/hmueller/barchartData.tsv")!)
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destinationViewController = segue.destinationViewController as? SamplePickerTableViewController {
             destinationViewController.sampleOptions = sampleOptions
