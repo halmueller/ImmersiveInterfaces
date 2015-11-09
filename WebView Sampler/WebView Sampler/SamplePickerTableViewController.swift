@@ -10,7 +10,6 @@ import UIKit
 
 class SamplePickerTableViewController: UITableViewController {
 
-    var sampleOptions: [HTMLSample]?
     var samplePresenter: ViewController?
     
     override func viewDidLoad() {
@@ -40,8 +39,8 @@ class SamplePickerTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if sampleOptions != nil {
-            return sampleOptions!.count
+        if samplePresenter?.sampleOptions != nil {
+            return samplePresenter!.sampleOptions.count
         }
         else {
             return 0
@@ -52,7 +51,7 @@ class SamplePickerTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("samplePicker", forIndexPath: indexPath)
 
         // Configure the cell...
-        let sampleForThisRow = sampleOptions![indexPath.row]
+        let sampleForThisRow = samplePresenter!.sampleOptions[indexPath.row]
         cell.textLabel?.text = sampleForThisRow.description
         cell.detailTextLabel?.text = sampleForThisRow.URLString
         
@@ -60,7 +59,7 @@ class SamplePickerTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let sampleForThisRow = sampleOptions![indexPath.row]
+        let sampleForThisRow = samplePresenter!.sampleOptions[indexPath.row]
         samplePresenter?.chosenSample = sampleForThisRow
         self.finish(self)
     }

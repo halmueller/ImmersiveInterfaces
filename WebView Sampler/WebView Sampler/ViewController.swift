@@ -84,7 +84,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destinationViewController = segue.destinationViewController as? SamplePickerTableViewController {
-            destinationViewController.sampleOptions = sampleOptions
             destinationViewController.samplePresenter = self
         }
     }
