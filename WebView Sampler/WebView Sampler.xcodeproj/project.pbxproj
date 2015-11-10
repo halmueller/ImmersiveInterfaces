@@ -26,6 +26,8 @@
 		2B75DA691BEF063900262F52 /* simpleD3.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA641BEF063900262F52 /* simpleD3.html */; };
 		2B75DA6A1BEF063900262F52 /* two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA651BEF063900262F52 /* two.html */; };
 		2B75DA6C1BF1316400262F52 /* fillMurray284x196.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA6B1BF1316400262F52 /* fillMurray284x196.jpg */; };
+		2B75DA6F1BF1849000262F52 /* d3.js in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA6D1BF1849000262F52 /* d3.js */; };
+		2B75DA701BF1849000262F52 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA6E1BF1849000262F52 /* d3.min.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		2B75DA641BEF063900262F52 /* simpleD3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = simpleD3.html; sourceTree = "<group>"; };
 		2B75DA651BEF063900262F52 /* two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = two.html; sourceTree = "<group>"; };
 		2B75DA6B1BF1316400262F52 /* fillMurray284x196.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fillMurray284x196.jpg; sourceTree = "<group>"; };
+		2B75DA6D1BF1849000262F52 /* d3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.js; sourceTree = "<group>"; };
+		2B75DA6E1BF1849000262F52 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				20691CDE1BEFE01900AA250B /* barchartSVG.html */,
 				20691CDA1BEF2B6900AA250B /* barchartData.tsv */,
 				20691CDC1BEF379300AA250B /* simpleBars.html */,
+				2B75DA6D1BF1849000262F52 /* d3.js */,
+				2B75DA6E1BF1849000262F52 /* d3.min.js */,
 			);
 			name = HTML;
 			path = ..;
@@ -180,8 +186,10 @@
 				2B75DA681BEF063900262F52 /* Info.plist in Resources */,
 				2B75DA661BEF063900262F52 /* collisionDetection.html in Resources */,
 				20691CDF1BEFE01900AA250B /* barchartSVG.html in Resources */,
+				2B75DA6F1BF1849000262F52 /* d3.js in Resources */,
 				2B75DA571BEF05FA00262F52 /* Assets.xcassets in Resources */,
 				20691CDD1BEF379300AA250B /* simpleBars.html in Resources */,
+				2B75DA701BF1849000262F52 /* d3.min.js in Resources */,
 				2B75DA6C1BF1316400262F52 /* fillMurray284x196.jpg in Resources */,
 				2B75DA6A1BEF063900262F52 /* two.html in Resources */,
 				20691CE11BEFEC0B00AA250B /* barchartD3SVG.html in Resources */,

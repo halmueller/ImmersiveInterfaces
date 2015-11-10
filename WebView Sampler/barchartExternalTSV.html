@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
         <meta name="viewport" content="initial-scale=1.0" />
         <title>D3 Barchart III</title>
-        <script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
+        <script src="d3.v3.js" charset="utf-8"></script>
     </head>
     <body>
         <!DOCTYPE html>
@@ -36,7 +36,7 @@
             // Triggers error:
             // XMLHttpRequest cannot load file:///Users/cp120/Library/Developer/CoreSimulator/Devices/66D36676-7A9B-43DF-B7FC-DFC3639C141A/data/Containers/Bundle/Application/5B26748A-1550-4856-880F-CD40FA7D1319/WebView%20Sampler.app/data.tsv. Cross origin requests are only supported for HTTP.
             
-            d3.tsv("barchartData.tsv", type, function(error, data) {
+            d3.tsv("/barchartData.tsv", type, function(error, data) {
                    console.log(error)
                    x.domain([0, d3.max(data, function(d) { return d.value; })]);
                    
@@ -62,6 +62,7 @@
                        d.value = +d.value; // coerce to number
                        return d;
                    }
+            });
         
             </script>
     </body>
