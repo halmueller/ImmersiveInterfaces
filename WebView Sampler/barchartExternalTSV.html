@@ -37,7 +37,7 @@
             // XMLHttpRequest cannot load file:///Users/cp120/Library/Developer/CoreSimulator/Devices/66D36676-7A9B-43DF-B7FC-DFC3639C141A/data/Containers/Bundle/Application/5B26748A-1550-4856-880F-CD40FA7D1319/WebView%20Sampler.app/data.tsv. Cross origin requests are only supported for HTTP.
             
             d3.tsv("/barchartData.tsv", type, function(error, data) {
-                   console.log(error)
+                   if (error) throw error;
                    x.domain([0, d3.max(data, function(d) { return d.value; })]);
                    
                    chart.attr("height", barHeight * data.length);

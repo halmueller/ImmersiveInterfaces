@@ -28,6 +28,12 @@
 		2B75DA6C1BF1316400262F52 /* fillMurray284x196.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA6B1BF1316400262F52 /* fillMurray284x196.jpg */; };
 		2B75DA6F1BF1849000262F52 /* d3.js in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA6D1BF1849000262F52 /* d3.js */; };
 		2B75DA701BF1849000262F52 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA6E1BF1849000262F52 /* d3.min.js */; };
+		2B75DA721BF18E9500262F52 /* streamgraph.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA711BF18E9500262F52 /* streamgraph.html */; };
+		2B75DA741BF190C400262F52 /* interactiveStreamgraph.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA731BF190C400262F52 /* interactiveStreamgraph.html */; };
+		2B75DA761BF1911100262F52 /* streamgraphData.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA751BF1911100262F52 /* streamgraphData.csv */; };
+		2B75DA781BF193CF00262F52 /* mobilePatentSuits.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA771BF193CF00262F52 /* mobilePatentSuits.html */; };
+		2B75DA7A1BF19C8600262F52 /* superformulas.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA791BF19C8600262F52 /* superformulas.html */; };
+		2B75DA7C1BF19CBB00262F52 /* superformula.js in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA7B1BF19CBB00262F52 /* superformula.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		2B75DA6B1BF1316400262F52 /* fillMurray284x196.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fillMurray284x196.jpg; sourceTree = "<group>"; };
 		2B75DA6D1BF1849000262F52 /* d3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.js; sourceTree = "<group>"; };
 		2B75DA6E1BF1849000262F52 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
+		2B75DA711BF18E9500262F52 /* streamgraph.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = streamgraph.html; sourceTree = "<group>"; };
+		2B75DA731BF190C400262F52 /* interactiveStreamgraph.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = interactiveStreamgraph.html; sourceTree = "<group>"; };
+		2B75DA751BF1911100262F52 /* streamgraphData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = streamgraphData.csv; sourceTree = "<group>"; };
+		2B75DA771BF193CF00262F52 /* mobilePatentSuits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mobilePatentSuits.html; sourceTree = "<group>"; };
+		2B75DA791BF19C8600262F52 /* superformulas.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = superformulas.html; sourceTree = "<group>"; };
+		2B75DA7B1BF19CBB00262F52 /* superformula.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = superformula.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,17 +82,23 @@
 		20691CD71BEF1B9900AA250B /* HTML */ = {
 			isa = PBXGroup;
 			children = (
-				2B75DA641BEF063900262F52 /* simpleD3.html */,
-				2B75DA611BEF063900262F52 /* collisionDetection.html */,
 				2B75DA621BEF063900262F52 /* index.html */,
 				2B75DA6B1BF1316400262F52 /* fillMurray284x196.jpg */,
 				2B75DA651BEF063900262F52 /* two.html */,
+				2B75DA641BEF063900262F52 /* simpleD3.html */,
+				2B75DA611BEF063900262F52 /* collisionDetection.html */,
+				20691CDC1BEF379300AA250B /* simpleBars.html */,
+				20691CDE1BEFE01900AA250B /* barchartSVG.html */,
+				20691CE01BEFEC0B00AA250B /* barchartD3SVG.html */,
 				20691CD81BEF2AB600AA250B /* barchart.html */,
 				20691CE21BF006F800AA250B /* barchartExternalTSV.html */,
-				20691CE01BEFEC0B00AA250B /* barchartD3SVG.html */,
-				20691CDE1BEFE01900AA250B /* barchartSVG.html */,
 				20691CDA1BEF2B6900AA250B /* barchartData.tsv */,
-				20691CDC1BEF379300AA250B /* simpleBars.html */,
+				2B75DA711BF18E9500262F52 /* streamgraph.html */,
+				2B75DA731BF190C400262F52 /* interactiveStreamgraph.html */,
+				2B75DA751BF1911100262F52 /* streamgraphData.csv */,
+				2B75DA771BF193CF00262F52 /* mobilePatentSuits.html */,
+				2B75DA791BF19C8600262F52 /* superformulas.html */,
+				2B75DA7B1BF19CBB00262F52 /* superformula.js */,
 				2B75DA6D1BF1849000262F52 /* d3.js */,
 				2B75DA6E1BF1849000262F52 /* d3.min.js */,
 			);
@@ -180,10 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				20691CD91BEF2AB600AA250B /* barchart.html in Resources */,
+				2B75DA781BF193CF00262F52 /* mobilePatentSuits.html in Resources */,
 				2B75DA671BEF063900262F52 /* index.html in Resources */,
 				20691CDB1BEF2B6900AA250B /* barchartData.tsv in Resources */,
 				2B75DA5A1BEF05FA00262F52 /* LaunchScreen.storyboard in Resources */,
 				2B75DA681BEF063900262F52 /* Info.plist in Resources */,
+				2B75DA761BF1911100262F52 /* streamgraphData.csv in Resources */,
+				2B75DA721BF18E9500262F52 /* streamgraph.html in Resources */,
 				2B75DA661BEF063900262F52 /* collisionDetection.html in Resources */,
 				20691CDF1BEFE01900AA250B /* barchartSVG.html in Resources */,
 				2B75DA6F1BF1849000262F52 /* d3.js in Resources */,
@@ -194,8 +215,11 @@
 				2B75DA6A1BEF063900262F52 /* two.html in Resources */,
 				20691CE11BEFEC0B00AA250B /* barchartD3SVG.html in Resources */,
 				2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */,
+				2B75DA741BF190C400262F52 /* interactiveStreamgraph.html in Resources */,
 				20691CE31BF006F800AA250B /* barchartExternalTSV.html in Resources */,
 				2B75DA691BEF063900262F52 /* simpleD3.html in Resources */,
+				2B75DA7A1BF19C8600262F52 /* superformulas.html in Resources */,
+				2B75DA7C1BF19CBB00262F52 /* superformula.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
