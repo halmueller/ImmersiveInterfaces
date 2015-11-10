@@ -15,6 +15,7 @@
 		20691CE31BF006F800AA250B /* barchartExternalTSV.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CE21BF006F800AA250B /* barchartExternalTSV.html */; };
 		20691CE51BF017B200AA250B /* SamplePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20691CE41BF017B100AA250B /* SamplePickerTableViewController.swift */; };
 		20691CE71BF01AAF00AA250B /* HTMLSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20691CE61BF01AAF00AA250B /* HTMLSample.swift */; };
+		2B0B7D4A1BF1CEE500152553 /* simpleD3Push.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B0B7D491BF1CEE500152553 /* simpleD3Push.html */; };
 		2B75DA501BEF05FA00262F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */; };
 		2B75DA521BEF05FA00262F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA511BEF05FA00262F52 /* ViewController.swift */; };
 		2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA531BEF05FA00262F52 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		20691CE21BF006F800AA250B /* barchartExternalTSV.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barchartExternalTSV.html; sourceTree = "<group>"; };
 		20691CE41BF017B100AA250B /* SamplePickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePickerTableViewController.swift; sourceTree = "<group>"; };
 		20691CE61BF01AAF00AA250B /* HTMLSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLSample.swift; sourceTree = "<group>"; };
+		2B0B7D491BF1CEE500152553 /* simpleD3Push.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = simpleD3Push.html; sourceTree = SOURCE_ROOT; };
 		2B75DA4C1BEF05FA00262F52 /* WebView Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebView Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B75DA511BEF05FA00262F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				2B75DA771BF193CF00262F52 /* mobilePatentSuits.html */,
 				2B75DA791BF19C8600262F52 /* superformulas.html */,
 				2B75DA7B1BF19CBB00262F52 /* superformula.js */,
+				2B0B7D491BF1CEE500152553 /* simpleD3Push.html */,
 				2B75DA6D1BF1849000262F52 /* d3.js */,
 				2B75DA6E1BF1849000262F52 /* d3.min.js */,
 			);
@@ -210,6 +213,7 @@
 				2B75DA6F1BF1849000262F52 /* d3.js in Resources */,
 				2B75DA571BEF05FA00262F52 /* Assets.xcassets in Resources */,
 				20691CDD1BEF379300AA250B /* simpleBars.html in Resources */,
+				2B0B7D4A1BF1CEE500152553 /* simpleD3Push.html in Resources */,
 				2B75DA701BF1849000262F52 /* d3.min.js in Resources */,
 				2B75DA6C1BF1316400262F52 /* fillMurray284x196.jpg in Resources */,
 				2B75DA6A1BEF063900262F52 /* two.html in Resources */,

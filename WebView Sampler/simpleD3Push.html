@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- modified from source: http://alignedleft.com/tutorials/d3/using-your-data -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0" />
+		<title>D3 Simple Data Push</title>
+		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var dataset = [ 5, 10, 15, 20, 25 ];
+			var jsonString = '[{"name": "Locke", "value":	4},            {"name": "Reyes", "value":	8},            {"name": "Ford", "value":	15},            {"name": "Jarrah", "value":	16},            {"name": "Shephard", "value":	23},            {"name": "Kwon", "value":	42}]';
+			var data = JSON.parse(jsonString)
+
+			d3.select("body").selectAll("p")
+			.data(data)
+			.enter()
+			.append("p")
+			.text(function(d) {
+				  return "I can count up to " + d.value;
+				  });
+			</script>
+	</body>
+</html>
