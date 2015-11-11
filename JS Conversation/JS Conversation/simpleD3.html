@@ -7,38 +7,56 @@
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script type="text/javascript">
             function marinersAlert() {
-            reload(jsonString1)
             alert("Go Mariners!");
             }
         function seahawksAlert() {
-            reload(jsonString2)
             alert("Go Seahawks!")
         }
         function soundersAlert() {
-            reload(jsonString1)
             alert("Go Sounders!")
         }
         function stormAlert() {
-            reload(jsonString2)
             alert("Go Storm!")
         }
         </script>
     </head>
     <body>
+
         <script type="text/javascript">
-            var jsonString1 = '[            {"name": "Jarrah", "value":	16},            {"name": "Shephard", "value":	23},            {"name": "Kwon", "value":	42}]';
-            var jsonString2 = '[{"name": "Jarrah", "value":	16},            {"name": "Shephard", "value":	23},            {"name": "Kwon", "value":	42}]';
+            var jsonString1 = '[{"name": "One", "value":	16}, {"name": "Three", "value":	42}, {"name": "Five", "value":	555}]';
+            var jsonString2 = '[{"name": "Two", "value":	23}, {"name": "Four", "value":	463}]';
+
+	    function loadOne () {
+	    reload(jsonString1)
+	    }
+	    function loadTwo () {
+	    reload(jsonString2)
+	    }
             function reload(jsonString) {
             var data = JSON.parse(jsonString)
+	    console.log(data)
 
-            d3.select("body").selectAll("p")
-            .data(data)
-            .enter()
+            var selection = d3.select("#testing").selectAll("p")
+            .data(data);
+
+	    console.log(selection)
+
+            selection.enter()
             .append("p")
-            .text(function(d) {
+//            .text(function(d) {
+//                  return d.name + " has a value of " + d.value;
+//                  })
+;
+                  
+            selection.exit().remove();
+
+	    // update
+            selection.text(function(d) {
+	        console.log(d)
                   return d.name + " has a value of " + d.value;
-                  });
-            }
+            });
+	    
+            };
             </script>
         <p>
         <button onclick="marinersAlert()">Mariners</button>
@@ -46,5 +64,10 @@
         <button onclick="soundersAlert()">Sounders</button>
         <button onclick="stormAlert()">Storm</button>
         </p>
+        <p>
+	  <button onclick="loadOne()">Version One</button>
+          <button onclick="loadTwo()">Version Two</button>
+	</p>
+	<div id="testing">foo</div>
     </body>
 </html>

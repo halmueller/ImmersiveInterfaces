@@ -36,14 +36,16 @@
     <script>
       var numbers = [15, 8, 42, 4, 32];
       function update() {
-      var selection = d3.select("#chart")
-      .selectAll(".bar").data(numbers)
-      .style("height", function(d){ 
+
+      var selection = d3.select("#chart").selectAll(".bar").data(numbers); // selectAll() returns object that has enters, updates, exits marked
+      // single or multiple selection makes a difference on whether subsequent operations mark enters, updates, exits marked
+      selection.style("height", function(d){  // .style stuff could be done in .enter(), once
           return d; 
       })
       .style("margin-top", function(d){ 
       return 100 - d; 
       });
+
       selection.enter()
       .append("div").attr("class", "bar")
       .style("height", function(d){ 
@@ -56,8 +58,10 @@
       numbers.splice(i, 1);
       update();
       });
+
       selection.exit().remove();
       };
+
       update();
 
       // Add a new datum to the set
