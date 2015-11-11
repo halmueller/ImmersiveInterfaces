@@ -121,9 +121,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         print("allowing", navigationAction)
         decisionHandler(.Allow)
     }
+    
     func webView(webView: WKWebView,
         decidePolicyForNavigationResponse navigationResponse: WKNavigationResponse,
         decisionHandler: (WKNavigationResponsePolicy) -> Void) {
             print("deciding", navigationResponse)
             decisionHandler(.Allow)
     }
+
+}
