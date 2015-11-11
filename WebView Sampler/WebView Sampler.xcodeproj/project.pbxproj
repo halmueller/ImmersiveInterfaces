@@ -15,6 +15,7 @@
 		20691CE31BF006F800AA250B /* barchartExternalTSV.html in Resources */ = {isa = PBXBuildFile; fileRef = 20691CE21BF006F800AA250B /* barchartExternalTSV.html */; };
 		20691CE51BF017B200AA250B /* SamplePickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20691CE41BF017B100AA250B /* SamplePickerTableViewController.swift */; };
 		20691CE71BF01AAF00AA250B /* HTMLSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20691CE61BF01AAF00AA250B /* HTMLSample.swift */; };
+		2B0B7D4A1BF1CEE500152553 /* simpleD3Push.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B0B7D491BF1CEE500152553 /* simpleD3Push.html */; };
 		2B75DA501BEF05FA00262F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */; };
 		2B75DA521BEF05FA00262F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B75DA511BEF05FA00262F52 /* ViewController.swift */; };
 		2B75DA551BEF05FA00262F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA531BEF05FA00262F52 /* Main.storyboard */; };
@@ -22,7 +23,6 @@
 		2B75DA5A1BEF05FA00262F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA581BEF05FA00262F52 /* LaunchScreen.storyboard */; };
 		2B75DA661BEF063900262F52 /* collisionDetection.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA611BEF063900262F52 /* collisionDetection.html */; };
 		2B75DA671BEF063900262F52 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA621BEF063900262F52 /* index.html */; };
-		2B75DA681BEF063900262F52 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA631BEF063900262F52 /* Info.plist */; };
 		2B75DA691BEF063900262F52 /* simpleD3.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA641BEF063900262F52 /* simpleD3.html */; };
 		2B75DA6A1BEF063900262F52 /* two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA651BEF063900262F52 /* two.html */; };
 		2B75DA6C1BF1316400262F52 /* fillMurray284x196.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA6B1BF1316400262F52 /* fillMurray284x196.jpg */; };
@@ -45,6 +45,7 @@
 		20691CE21BF006F800AA250B /* barchartExternalTSV.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barchartExternalTSV.html; sourceTree = "<group>"; };
 		20691CE41BF017B100AA250B /* SamplePickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePickerTableViewController.swift; sourceTree = "<group>"; };
 		20691CE61BF01AAF00AA250B /* HTMLSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLSample.swift; sourceTree = "<group>"; };
+		2B0B7D491BF1CEE500152553 /* simpleD3Push.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = simpleD3Push.html; sourceTree = SOURCE_ROOT; };
 		2B75DA4C1BEF05FA00262F52 /* WebView Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebView Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B75DA4F1BEF05FA00262F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B75DA511BEF05FA00262F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		2B75DA5B1BEF05FA00262F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B75DA611BEF063900262F52 /* collisionDetection.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = collisionDetection.html; sourceTree = "<group>"; };
 		2B75DA621BEF063900262F52 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		2B75DA631BEF063900262F52 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B75DA641BEF063900262F52 /* simpleD3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = simpleD3.html; sourceTree = "<group>"; };
 		2B75DA651BEF063900262F52 /* two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = two.html; sourceTree = "<group>"; };
 		2B75DA6B1BF1316400262F52 /* fillMurray284x196.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fillMurray284x196.jpg; sourceTree = "<group>"; };
@@ -99,6 +99,7 @@
 				2B75DA771BF193CF00262F52 /* mobilePatentSuits.html */,
 				2B75DA791BF19C8600262F52 /* superformulas.html */,
 				2B75DA7B1BF19CBB00262F52 /* superformula.js */,
+				2B0B7D491BF1CEE500152553 /* simpleD3Push.html */,
 				2B75DA6D1BF1849000262F52 /* d3.js */,
 				2B75DA6E1BF1849000262F52 /* d3.min.js */,
 			);
@@ -109,7 +110,6 @@
 		2B75DA431BEF05F900262F52 = {
 			isa = PBXGroup;
 			children = (
-				2B75DA631BEF063900262F52 /* Info.plist */,
 				2B75DA4E1BEF05FA00262F52 /* WebView Sampler */,
 				2B75DA4D1BEF05FA00262F52 /* Products */,
 			);
@@ -202,7 +202,6 @@
 				2B75DA671BEF063900262F52 /* index.html in Resources */,
 				20691CDB1BEF2B6900AA250B /* barchartData.tsv in Resources */,
 				2B75DA5A1BEF05FA00262F52 /* LaunchScreen.storyboard in Resources */,
-				2B75DA681BEF063900262F52 /* Info.plist in Resources */,
 				2B75DA761BF1911100262F52 /* streamgraphData.csv in Resources */,
 				2B75DA721BF18E9500262F52 /* streamgraph.html in Resources */,
 				2B75DA661BEF063900262F52 /* collisionDetection.html in Resources */,
@@ -210,6 +209,7 @@
 				2B75DA6F1BF1849000262F52 /* d3.js in Resources */,
 				2B75DA571BEF05FA00262F52 /* Assets.xcassets in Resources */,
 				20691CDD1BEF379300AA250B /* simpleBars.html in Resources */,
+				2B0B7D4A1BF1CEE500152553 /* simpleD3Push.html in Resources */,
 				2B75DA701BF1849000262F52 /* d3.min.js in Resources */,
 				2B75DA6C1BF1316400262F52 /* fillMurray284x196.jpg in Resources */,
 				2B75DA6A1BEF063900262F52 /* two.html in Resources */,

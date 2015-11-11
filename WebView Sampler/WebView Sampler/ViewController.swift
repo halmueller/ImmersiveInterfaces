@@ -9,28 +9,39 @@
 import UIKit
 import WebKit
 
+let barchartJSONString = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("barchartData", ofType: "tsv")!, encoding: NSUTF8StringEncoding)
+
+
+let streamgraphCSVString = try! String(contentsOfFile: NSBundle.mainBundle().pathForResource("streamgraphData", ofType: "csv")!, encoding: NSUTF8StringEncoding)
+
+
 class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var webView: WKWebView?
     
-    var chosenSample: HTMLSample? {
-        didSet {
-            print("now playing", chosenSample)
-            if let sample = chosenSample {
-                if sample.isFile {
-                    let localPath = NSBundle.mainBundle().pathForResource(sample.URLString, ofType: sample.filenameExtension)
-                    webView?.loadFileURL(NSURL(fileURLWithPath: localPath!), allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
-                }
-                else {
-                    let sampleURL = NSURL(string: sample.URLString)
-                    let sampleRequest = NSURLRequest(URL: sampleURL!)
-                    webView?.loadRequest(sampleRequest)
-                }
-            }
-        }
-    }
-    
+	var chosenSample: HTMLSample? {
+		didSet {
+			print("now playing", chosenSample)
+			if let sample = chosenSample {
+				if sample.isFile {
+					let localPath = NSBundle.mainBundle().pathForResource(sample.URLString, ofType: sample.filenameExtension)
+					webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
+					// FIXME: what does this parameter mean? Must be a fileURL (undocumented)
+						allowingReadAccessToURL: NSURL(fileURLWithPath: "/abc"))
+					if sample.dataString != nil {
+						print(sample.dataString)
+					}
+				}
+				else {
+					let sampleURL = NSURL(string: sample.URLString)
+					let sampleRequest = NSURLRequest(URL: sampleURL!)
+					webView?.loadRequest(sampleRequest)
+				}
+			}
+		}
+	}
+	
     let sampleOptions = [
         HTMLSample(description: "Hello World", URLString: "index", isFile: true, filenameExtension: "html"),
         HTMLSample(description: "D3 Hello World", URLString: "simpleD3", isFile: true, filenameExtension: "html"),
@@ -116,5 +127,3 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
             print("deciding", navigationResponse)
             decisionHandler(.Allow)
     }
-}
-
