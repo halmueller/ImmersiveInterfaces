@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
         <meta name="viewport" content="initial-scale=1.0" />
-		<title>D3 Hello World</title>
-		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	</head>
-	<body>
-		<script type="text/javascript">
-			d3.select("body").append("span")
-			.text("Hello, world!");
-			</script>
-	</body>
+        <title>D3 Hello World</title>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            function marinersAlert() {
+            reload(jsonString1)
+            alert("Go Mariners!");
+            }
+        function seahawksAlert() {
+            reload(jsonString2)
+            alert("Go Seahawks!")
+        }
+        function soundersAlert() {
+            reload(jsonString1)
+            alert("Go Sounders!")
+        }
+        function stormAlert() {
+            reload(jsonString2)
+            alert("Go Storm!")
+        }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var jsonString1 = '[            {"name": "Jarrah", "value":	16},            {"name": "Shephard", "value":	23},            {"name": "Kwon", "value":	42}]';
+            var jsonString2 = '[{"name": "Jarrah", "value":	16},            {"name": "Shephard", "value":	23},            {"name": "Kwon", "value":	42}]';
+            function reload(jsonString) {
+            var data = JSON.parse(jsonString)
+
+            d3.select("body").selectAll("p")
+            .data(data)
+            .enter()
+            .append("p")
+            .text(function(d) {
+                  return d.name + " has a value of " + d.value;
+                  });
+            }
+            </script>
+        <p>
+        <button onclick="marinersAlert()">Mariners</button>
+        <button onclick="seahawksAlert()">Seahawks</button>
+        <button onclick="soundersAlert()">Sounders</button>
+        <button onclick="stormAlert()">Storm</button>
+        </p>
+    </body>
 </html>

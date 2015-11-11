@@ -34,6 +34,7 @@
 		2B75DA781BF193CF00262F52 /* mobilePatentSuits.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA771BF193CF00262F52 /* mobilePatentSuits.html */; };
 		2B75DA7A1BF19C8600262F52 /* superformulas.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA791BF19C8600262F52 /* superformulas.html */; };
 		2B75DA7C1BF19CBB00262F52 /* superformula.js in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA7B1BF19CBB00262F52 /* superformula.js */; };
+		2B75DA861BF2A0B800262F52 /* barcharPushedTSV.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA851BF2A0B800262F52 /* barcharPushedTSV.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		2B75DA771BF193CF00262F52 /* mobilePatentSuits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mobilePatentSuits.html; sourceTree = "<group>"; };
 		2B75DA791BF19C8600262F52 /* superformulas.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = superformulas.html; sourceTree = "<group>"; };
 		2B75DA7B1BF19CBB00262F52 /* superformula.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = superformula.js; sourceTree = "<group>"; };
+		2B75DA851BF2A0B800262F52 /* barcharPushedTSV.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barcharPushedTSV.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				20691CE01BEFEC0B00AA250B /* barchartD3SVG.html */,
 				20691CD81BEF2AB600AA250B /* barchart.html */,
 				20691CE21BF006F800AA250B /* barchartExternalTSV.html */,
+				2B75DA851BF2A0B800262F52 /* barcharPushedTSV.html */,
 				20691CDA1BEF2B6900AA250B /* barchartData.tsv */,
 				2B75DA711BF18E9500262F52 /* streamgraph.html */,
 				2B75DA731BF190C400262F52 /* interactiveStreamgraph.html */,
@@ -206,6 +209,7 @@
 				2B75DA721BF18E9500262F52 /* streamgraph.html in Resources */,
 				2B75DA661BEF063900262F52 /* collisionDetection.html in Resources */,
 				20691CDF1BEFE01900AA250B /* barchartSVG.html in Resources */,
+				2B75DA861BF2A0B800262F52 /* barcharPushedTSV.html in Resources */,
 				2B75DA6F1BF1849000262F52 /* d3.js in Resources */,
 				2B75DA571BEF05FA00262F52 /* Assets.xcassets in Resources */,
 				20691CDD1BEF379300AA250B /* simpleBars.html in Resources */,
