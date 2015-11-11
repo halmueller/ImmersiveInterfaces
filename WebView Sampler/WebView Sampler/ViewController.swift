@@ -106,5 +106,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
             self.presentViewController(alertController, animated: true) { }
     }
     
+    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
+        print("allowing", navigationAction)
+        decisionHandler(.Allow)
+    }
+    func webView(webView: WKWebView,
+        decidePolicyForNavigationResponse navigationResponse: WKNavigationResponse,
+        decisionHandler: (WKNavigationResponsePolicy) -> Void) {
+            print("deciding", navigationResponse)
+            decisionHandler(.Allow)
+    }
 }
 
