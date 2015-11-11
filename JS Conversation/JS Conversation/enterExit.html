@@ -1,0 +1,75 @@
+<html>
+<!-- source: http://niceone.org/examples/d3-selections/ 
+     and https://medium.com/@c_behrens/enter-update-exit-6cafc6014c36 -->  
+  <head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+    <title>D3 Example: Selections and Data Joins</title>
+    
+    <style type="text/css">
+      
+      #data-field {
+      height: 30px;
+      padding-right: 20px;
+      }
+      
+      .bar {
+      width: 30px;
+      margin-right: 20px;
+      background-color: #F4F5F7;
+      border: 1px solid #C5C5C5;
+      float: left;
+      }
+      
+    </style>
+    
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    
+  </head>
+  <body>
+    <div id="data-field"></div>
+    <button id="add-btn">Add Element</button> Click on a bar to remove it
+      
+    <div id="chart"></div>
+
+    <script>
+      var numbers = [15, 8, 42, 4, 32];
+      function update() {
+      var selection = d3.select("#chart")
+      .selectAll(".bar").data(numbers)
+      .style("height", function(d){ 
+          return d; 
+      })
+      .style("margin-top", function(d){ 
+      return 100 - d; 
+      });
+      selection.enter()
+      .append("div").attr("class", "bar")
+      .style("height", function(d){ 
+      return d; 
+      })
+      .style("margin-top", function(d){ 
+      return 100 - d; 
+      })
+      .on("click", function(e, i){
+      numbers.splice(i, 1);
+      update();
+      });
+      selection.exit().remove();
+      };
+      update();
+
+      // Add a new datum to the set
+      d3.select("#add-btn").on("click", function(e){
+      
+      numbers.push(Math.round(Math.random() * 100));
+
+      update();
+      });
+
+    </script>
+    
+  </body>
+  
+</html>
