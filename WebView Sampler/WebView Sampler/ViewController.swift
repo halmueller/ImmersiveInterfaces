@@ -69,7 +69,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         let newWebView = WKWebView(frame: self.subView.bounds, configuration: webViewConfiguration)
         newWebView.navigationDelegate = self
         newWebView.UIDelegate = self
-        
+        newWebView.allowsBackForwardNavigationGestures = true
+
         webView = newWebView
         webView?.backgroundColor = UIColor.greenColor()
         webView?.navigationDelegate = self
