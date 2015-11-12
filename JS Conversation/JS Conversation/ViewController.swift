@@ -14,12 +14,16 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var webView: WKWebView?
     
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var hitherButton: UIButton!
+    @IBOutlet weak var yonButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         let webViewConfiguration = WKWebViewConfiguration()
         let newWebView = WKWebView(frame: self.subView.bounds, configuration: webViewConfiguration)
         newWebView.navigationDelegate = self
         newWebView.UIDelegate = self
+        newWebView.allowsBackForwardNavigationGestures = true
 
         webView = newWebView
         webView?.backgroundColor = UIColor.greenColor()
@@ -34,16 +38,58 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
             NSLayoutConstraint(item: newWebView, attribute: .Bottom, relatedBy: .Equal, toItem: subView, attribute: .Bottom, multiplier: 1.0, constant: 0.0),
         ]
         NSLayoutConstraint.activateConstraints(constraints)
-
-        let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
-        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
-            // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
-            allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func loadSimpleD3(sender: AnyObject) {
+        hitherButton.enabled = false
+        yonButton.enabled = false
+        
+        let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
+            // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
+            allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
+    @IBAction func loadEnterExit(sender: AnyObject) {
+        hitherButton.enabled = true
+        yonButton.enabled = true
+
+        let localPath = NSBundle.mainBundle().pathForResource("enterExit", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
+            // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
+            allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
+    
+    @IBAction func loadBarsOne(sender: AnyObject) {
+        hitherButton.enabled = true
+        yonButton.enabled = true
+
+        let localPath = NSBundle.mainBundle().pathForResource("barsOne", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
+            // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
+            allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
+    
+    @IBAction func loadBarsTwo(sender: AnyObject) {
+        hitherButton.enabled = true
+        yonButton.enabled = true
+
+        let localPath = NSBundle.mainBundle().pathForResource("barsTwo", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
+            // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
+            allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
+    
+    @IBAction func yon(sender: AnyObject) {
+        print("running yon")
+    }
+
+    @IBAction func hither(sender: AnyObject) {
+        print("running hither")
     }
 
     // MARK: - WKNavigationDelegate

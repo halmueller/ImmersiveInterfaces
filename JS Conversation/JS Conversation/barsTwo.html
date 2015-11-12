@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0" />
+        <title>Barcharts</title>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <script type="text/javascript">
+    function reload(jsonString) {
+        var data = JSON.parse(jsonString)
+        console.log(data)
+
+        var selection = d3.select("#chart").selectAll("p")
+        .data(data);
+
+        console.log(selection)
+
+        selection.enter()
+        .append("p");
+
+        selection.exit().remove();
+
+        // update
+        selection.text(function(d) {
+                       console.log(d)
+                       return d.name + " has a value of " + d.value;
+                       });
+
+    };
+    </script>
+    <body onload="reload(jsonString1)">
+        <div id="chart"></div>
+    </body>
+</html>

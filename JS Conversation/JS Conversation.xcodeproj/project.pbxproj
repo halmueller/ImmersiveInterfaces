@@ -13,6 +13,9 @@
 		2B75DA9B1BF2A8F700262F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA9A1BF2A8F700262F52 /* Assets.xcassets */; };
 		2B75DA9E1BF2A8F700262F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DA9C1BF2A8F700262F52 /* LaunchScreen.storyboard */; };
 		2B75DAA61BF2ADB400262F52 /* simpleD3.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B75DAA51BF2ADB400262F52 /* simpleD3.html */; };
+		2BAAF68A1BF3C9C700B068AB /* barsOne.html in Resources */ = {isa = PBXBuildFile; fileRef = 2BAAF6891BF3C9C700B068AB /* barsOne.html */; };
+		2BAAF68C1BF3E25600B068AB /* enterExit.html in Resources */ = {isa = PBXBuildFile; fileRef = 2BAAF68B1BF3E25600B068AB /* enterExit.html */; };
+		2BAAF68E1BF4055E00B068AB /* barsTwo.html in Resources */ = {isa = PBXBuildFile; fileRef = 2BAAF68D1BF4055E00B068AB /* barsTwo.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2B75DA9D1BF2A8F700262F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B75DA9F1BF2A8F700262F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B75DAA51BF2ADB400262F52 /* simpleD3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = simpleD3.html; sourceTree = "<group>"; };
+		2BAAF6891BF3C9C700B068AB /* barsOne.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barsOne.html; sourceTree = "<group>"; };
+		2BAAF68B1BF3E25600B068AB /* enterExit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = enterExit.html; sourceTree = "<group>"; };
+		2BAAF68D1BF4055E00B068AB /* barsTwo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = barsTwo.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				2B75DA931BF2A8F700262F52 /* AppDelegate.swift */,
 				2B75DA951BF2A8F700262F52 /* ViewController.swift */,
 				2B75DAA51BF2ADB400262F52 /* simpleD3.html */,
+				2BAAF68B1BF3E25600B068AB /* enterExit.html */,
+				2BAAF6891BF3C9C700B068AB /* barsOne.html */,
+				2BAAF68D1BF4055E00B068AB /* barsTwo.html */,
 				2B75DA971BF2A8F700262F52 /* Main.storyboard */,
 				2B75DA9A1BF2A8F700262F52 /* Assets.xcassets */,
 				2B75DA9C1BF2A8F700262F52 /* LaunchScreen.storyboard */,
@@ -125,8 +134,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAAF68E1BF4055E00B068AB /* barsTwo.html in Resources */,
 				2B75DA9E1BF2A8F700262F52 /* LaunchScreen.storyboard in Resources */,
+				2BAAF68A1BF3C9C700B068AB /* barsOne.html in Resources */,
 				2B75DAA61BF2ADB400262F52 /* simpleD3.html in Resources */,
+				2BAAF68C1BF3E25600B068AB /* enterExit.html in Resources */,
 				2B75DA9B1BF2A8F700262F52 /* Assets.xcassets in Resources */,
 				2B75DA991BF2A8F700262F52 /* Main.storyboard in Resources */,
 			);

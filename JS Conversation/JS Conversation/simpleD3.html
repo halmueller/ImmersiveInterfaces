@@ -3,11 +3,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
         <meta name="viewport" content="initial-scale=1.0" />
-        <title>D3 Hello World</title>
+        <title>Simple D3</title>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script type="text/javascript">
             function marinersAlert() {
-            alert("Go Mariners!");
+                alert("Go Mariners!");
             }
         function seahawksAlert() {
             alert("Go Seahawks!")
@@ -23,37 +23,37 @@
     <body>
 
         <script type="text/javascript">
-            var jsonString1 = '[{"name": "One", "value":	16}, {"name": "Three", "value":	42}, {"name": "Five", "value":	555}]';
-            var jsonString2 = '[{"name": "Two", "value":	23}, {"name": "Four", "value":	463}]';
+            var jsonString1 = '[{"name": "Larry", "value":	16}, {"name": "Moe", "value":	42}, {"name": "Curly", "value":	555}, {"name": "Shemp", "value": 1234}, {"name": "Curly Joe", "value":	12}, {"name": "Joe", "value": 112}]';
+            var jsonString2 = '[{"name": "Groucho", "value":	23}, {"name": "Chico", "value":	463}, {"name": "Harpo", "value": 28}, {"name": "Karl", "value": 92}]';
 
-	    function loadOne () {
-	    reload(jsonString1)
-	    }
-	    function loadTwo () {
-	    reload(jsonString2)
-	    }
-            function reload(jsonString) {
+            function loadOne () {
+                reload(jsonString1)
+            }
+        function loadTwo () {
+            reload(jsonString2)
+        }
+        function reload(jsonString) {
             var data = JSON.parse(jsonString)
-	    console.log(data)
+            console.log(data)
 
             var selection = d3.select("#testing").selectAll("p")
             .data(data);
 
-	    console.log(selection)
+            console.log(selection)
 
             selection.enter()
             .append("p");
-                  
+
             selection.exit().remove();
 
-	    // update
+            // update
             selection.text(function(d) {
-	        console.log(d)
-                  return d.name + " has a value of " + d.value;
-            });
-	    
-            };
-            </script>
+                           console.log(d)
+                           return d.name + " has a value of " + d.value + ".";
+                           });
+
+        };
+        </script>
         <p>
         <button onclick="marinersAlert()">Mariners</button>
         <button onclick="seahawksAlert()">Seahawks</button>
@@ -61,9 +61,9 @@
         <button onclick="stormAlert()">Storm</button>
         </p>
         <p>
-	  <button onclick="loadOne()">Version One</button>
-          <button onclick="loadTwo()">Version Two</button>
-	</p>
-	<div id="testing">foo</div>
+        <button onclick="loadOne()">Version One</button>
+        <button onclick="loadTwo()">Version Two</button>
+        </p>
+        <div id="testing">foo</div>
     </body>
 </html>
