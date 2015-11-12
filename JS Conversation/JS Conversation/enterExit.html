@@ -29,12 +29,23 @@
   </head>
   <body>
     <div id="data-field"></div>
-    <button id="add-btn">Add Element</button> Click on a bar to remove it
-      
+    <p><button id="add-btn">Add Element</button> Click on a bar to remove it
+    <button onclick="returnNumbers()">Return Numbers</button></p>
+    
     <div id="chart"></div>
 
     <script>
       var numbers = [15, 8, 42, 4, 32];
+
+      function reset() {
+          numbers = [1, 2, 3, 4, 5, 4];
+          update();
+      }
+
+      function returnNumbers() {
+          window.webkit.messageHandlers.barsCounted.postMessage(numbers)
+      }
+
       function update() {
 
       var selection = d3.select("#chart").selectAll(".bar").data(numbers); // selectAll() returns object that has enters, updates, exits marked
@@ -73,7 +84,6 @@
       });
 
     </script>
-    
   </body>
   
 </html>

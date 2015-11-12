@@ -34,50 +34,58 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9U-ME-5pc">
-                                <rect key="frame" x="550" y="569" width="30" height="30"/>
+                                <rect key="frame" x="397" y="569" width="30" height="30"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="CBe-Sr-a4t"/>
-                                </constraints>
                                 <state key="normal" title="Yon"/>
                                 <connections>
                                     <action selector="yon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDs-JG-j0C"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-eG-4IQ">
-                                <rect key="frame" x="147" y="573" width="306" height="21"/>
+                                <rect key="frame" x="300" y="573" width="0.0" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="258" placeholderIntrinsicHeight="46" layoutMarginsFollowReadableWidth="YES" distribution="equalSpacing" alignment="firstBaseline" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eYo-X9-Fw0">
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="258" placeholderIntrinsicHeight="46" layoutMarginsFollowReadableWidth="YES" distribution="fillEqually" alignment="firstBaseline" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eYo-X9-Fw0">
                                 <rect key="frame" x="20" y="20" width="560" height="46"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ES8-jg-GXp">
-                                        <rect key="frame" x="8" y="8" width="65" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ES8-jg-GXp">
+                                        <rect key="frame" x="8" y="8" width="107" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="simpleD3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="XHE-qV-X5p"/>
+                                        </constraints>
+                                        <state key="normal" title="D3"/>
                                         <connections>
                                             <action selector="loadSimpleD3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B19-Gq-Z6x"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4U-Q4-241">
-                                        <rect key="frame" x="158" y="8" width="77" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXh-DA-avC">
+                                        <rect key="frame" x="117" y="8" width="107" height="30"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="77" id="51J-OM-igw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="39" id="tnX-i7-5LH"/>
                                         </constraints>
+                                        <state key="normal" title="script"/>
+                                        <connections>
+                                            <action selector="loadSimplePlusInit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="meV-QB-Wu5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4U-Q4-241">
+                                        <rect key="frame" x="226" y="8" width="108" height="30"/>
+                                        <animations/>
                                         <state key="normal" title="enterExit"/>
                                         <connections>
                                             <action selector="loadEnterExit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbH-me-Dkz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bV-8H-K6Q">
-                                        <rect key="frame" x="320" y="8" width="75" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bV-8H-K6Q">
+                                        <rect key="frame" x="336" y="8" width="107" height="30"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="Wbr-V0-VvE"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Zyn-QG-UEs"/>
                                         </constraints>
                                         <state key="normal" title="barsOne"/>
                                         <connections>
@@ -85,10 +93,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTb-gw-qzM">
-                                        <rect key="frame" x="480" y="8" width="72" height="30"/>
+                                        <rect key="frame" x="445" y="8" width="107" height="30"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="72" id="vom-bp-ubt"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="MY2-3J-vPr"/>
                                         </constraints>
                                         <state key="normal" title="barsTwo"/>
                                         <connections>
@@ -97,27 +105,34 @@
                                     </button>
                                 </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="BXh-DA-avC" firstAttribute="leading" secondItem="ES8-jg-GXp" secondAttribute="trailing" constant="54" id="4yS-oZ-UmC"/>
+                                </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4yS-oZ-UmC"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="O84-Eb-fGb" firstAttribute="centerX" secondItem="eYo-X9-Fw0" secondAttribute="centerX" id="4bm-ab-mq9"/>
-                            <constraint firstItem="zAp-Ym-FEP" firstAttribute="baseline" secondItem="AMF-eG-4IQ" secondAttribute="firstBaseline" id="7aA-vB-m04"/>
-                            <constraint firstItem="zAp-Ym-FEP" firstAttribute="top" secondItem="O84-Eb-fGb" secondAttribute="bottom" constant="8" symbolic="YES" id="BJJ-ie-KKT"/>
-                            <constraint firstItem="O84-Eb-fGb" firstAttribute="top" secondItem="eYo-X9-Fw0" secondAttribute="bottom" constant="9" id="Kjl-cL-C6L"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zAp-Ym-FEP" secondAttribute="bottom" constant="1" id="MW7-Tw-UKG"/>
-                            <constraint firstItem="zAp-Ym-FEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N7F-JH-Ju8"/>
-                            <constraint firstItem="u9U-ME-5pc" firstAttribute="leading" secondItem="AMF-eG-4IQ" secondAttribute="trailing" constant="97" id="NAp-li-y1d"/>
-                            <constraint firstAttribute="trailing" secondItem="O84-Eb-fGb" secondAttribute="trailing" id="T3u-UD-dWA"/>
-                            <constraint firstItem="eYo-X9-Fw0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Z8h-77-dDT"/>
-                            <constraint firstItem="O84-Eb-fGb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dGD-Eb-aRP"/>
-                            <constraint firstItem="u9U-ME-5pc" firstAttribute="baseline" secondItem="AMF-eG-4IQ" secondAttribute="baseline" id="kQ5-kC-NeT"/>
-                            <constraint firstItem="zAp-Ym-FEP" firstAttribute="baseline" secondItem="AMF-eG-4IQ" secondAttribute="baseline" id="mKh-kH-V05"/>
-                            <constraint firstItem="eYo-X9-Fw0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mhk-oX-IHI"/>
-                            <constraint firstItem="u9U-ME-5pc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rIv-I3-old"/>
-                            <constraint firstItem="AMF-eG-4IQ" firstAttribute="centerX" secondItem="O84-Eb-fGb" secondAttribute="centerX" id="ygf-6o-mvp"/>
+                            <constraint firstItem="eYo-X9-Fw0" firstAttribute="leading" secondItem="zAp-Ym-FEP" secondAttribute="leading" id="Auu-DA-CTW"/>
+                            <constraint firstItem="O84-Eb-fGb" firstAttribute="top" secondItem="eYo-X9-Fw0" secondAttribute="bottom" constant="9" id="Ley-gH-wTE"/>
+                            <constraint firstItem="zAp-Ym-FEP" firstAttribute="baseline" secondItem="AMF-eG-4IQ" secondAttribute="baseline" id="MSc-5b-kfo"/>
+                            <constraint firstItem="eYo-X9-Fw0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QCk-Ic-iNh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zAp-Ym-FEP" secondAttribute="bottom" constant="1" id="QMy-jr-Fnb"/>
+                            <constraint firstItem="u9U-ME-5pc" firstAttribute="leading" secondItem="AMF-eG-4IQ" secondAttribute="trailing" constant="97" id="aYd-8l-ifQ"/>
+                            <constraint firstItem="AMF-eG-4IQ" firstAttribute="centerX" secondItem="O84-Eb-fGb" secondAttribute="centerX" id="c3X-7i-1Gf"/>
+                            <constraint firstItem="O84-Eb-fGb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ejw-A8-gcH"/>
+                            <constraint firstItem="u9U-ME-5pc" firstAttribute="baseline" secondItem="AMF-eG-4IQ" secondAttribute="firstBaseline" id="g6h-B0-YMV"/>
+                            <constraint firstItem="u9U-ME-5pc" firstAttribute="baseline" secondItem="AMF-eG-4IQ" secondAttribute="baseline" id="hEe-o8-cDN"/>
+                            <constraint firstItem="zAp-Ym-FEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pG5-11-tQY"/>
+                            <constraint firstItem="eYo-X9-Fw0" firstAttribute="centerX" secondItem="O84-Eb-fGb" secondAttribute="centerX" id="uks-xk-Y3L"/>
+                            <constraint firstAttribute="trailing" secondItem="O84-Eb-fGb" secondAttribute="trailing" id="vgB-fr-BXH"/>
+                            <constraint firstItem="zAp-Ym-FEP" firstAttribute="top" secondItem="O84-Eb-fGb" secondAttribute="bottom" constant="8" symbolic="YES" id="vpg-Rc-v04"/>
                         </constraints>
                     </view>
                     <connections>
@@ -129,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240" y="357"/>
+            <point key="canvasLocation" x="232" y="362"/>
         </scene>
     </scenes>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
 
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var webView: WKWebView?
@@ -24,9 +24,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         newWebView.navigationDelegate = self
         newWebView.UIDelegate = self
         newWebView.allowsBackForwardNavigationGestures = true
+        newWebView.backgroundColor = UIColor.greenColor()
+
+        newWebView.configuration.userContentController.addScriptMessageHandler(self, name: "barsCounted")
 
         webView = newWebView
-        webView?.backgroundColor = UIColor.greenColor()
         webView?.navigationDelegate = self
 
         self.subView.addSubview(newWebView)
@@ -48,15 +50,34 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     @IBAction func loadSimpleD3(sender: AnyObject) {
         hitherButton.enabled = false
         yonButton.enabled = false
-        
+        webView?.configuration.userContentController.removeAllUserScripts()
+
         let localPath = NSBundle.mainBundle().pathForResource("simpleD3", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
             // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
             allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
     }
+
+    @IBAction func loadSimplePlusInit(sender: AnyObject) {
+        hitherButton.enabled = true
+        yonButton.enabled = true
+        webView?.configuration.userContentController.removeAllUserScripts()
+
+        let startupScriptSource = "jsonString1 = '[{\"name\": \"Lou\", \"value\": 129}, {\"name\": \"Lloyd\", \"value\": 2}, {\"name\": \"Scott\", \"value\": 0}]';"
+        let userScript = WKUserScript(source: startupScriptSource, injectionTime: .AtDocumentStart, forMainFrameOnly: true)
+        webView?.configuration.userContentController.addUserScript(userScript)
+
+        let localPath = NSBundle.mainBundle().pathForResource("simplePlusInit", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
+            // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
+            allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
+    
+
     @IBAction func loadEnterExit(sender: AnyObject) {
         hitherButton.enabled = true
         yonButton.enabled = true
+        webView?.configuration.userContentController.removeAllUserScripts()
 
         let localPath = NSBundle.mainBundle().pathForResource("enterExit", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
@@ -67,6 +88,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     @IBAction func loadBarsOne(sender: AnyObject) {
         hitherButton.enabled = true
         yonButton.enabled = true
+        webView?.configuration.userContentController.removeAllUserScripts()
 
         let localPath = NSBundle.mainBundle().pathForResource("barsOne", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
@@ -77,6 +99,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     @IBAction func loadBarsTwo(sender: AnyObject) {
         hitherButton.enabled = true
         yonButton.enabled = true
+        webView?.configuration.userContentController.removeAllUserScripts()
+
+        let startupScriptSource = "jsonString1 = '[{\"name\": \"Lou\", \"value\": 129}, {\"name\": \"Lloyd\", \"value\": 2}, {\"name\": \"Scott\", \"value\": 0}]';"
+        let userScript = WKUserScript(source: startupScriptSource, injectionTime: .AtDocumentStart, forMainFrameOnly: true)
+        webView?.configuration.userContentController.addUserScript(userScript)
 
         let localPath = NSBundle.mainBundle().pathForResource("barsTwo", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
@@ -86,6 +113,9 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     @IBAction func yon(sender: AnyObject) {
         print("running yon")
+        let newValues = [["name": "Kirk", "value": 1], ["name": "Picard", "value": 2], ["name": "Sisko", "value": 3], ["name": "Janeway", "value": 4], ["name": "Archer", "value": 0]]
+        let jsonString = try! NSJSONSerialization.dataWithJSONObject(newValues, options: .PrettyPrinted)
+        print (jsonString)
     }
 
     @IBAction func hither(sender: AnyObject) {
@@ -103,6 +133,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
             let alertController = UIAlertController(title:"Load failed", message: error.localizedDescription, preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
             self.presentViewController(alertController, animated: true) { }
+    }
+
+    // MARK: - WKScriptMessageHandler
+    func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
+        if message.name == "barsCounted" {
+            let numbers = message.body as! NSArray
+            print (numbers.count)
+        }
     }
 
     // MARK: - WKUIDelegate
