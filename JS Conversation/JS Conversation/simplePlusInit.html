@@ -8,26 +8,25 @@
     </head>
     <script type="text/javascript">
         function reload(jsonString) {
-        var data = JSON.parse(jsonString)
-        console.log(data)
+            var data = JSON.parse(jsonString)
 
-        var selection = d3.select("#chart").selectAll("p")
-        .data(data);
+            var selection = d3.select("#chart").selectAll("p")
+            .data(data);
 
-        console.log(selection)
+            console.log(selection)
 
-        selection.enter()
-        .append("p");
+            selection.enter()
+            .append("p");
 
-        selection.exit().remove();
+            selection.exit().remove();
 
-        // update
-        selection.text(function(d) {
-                       console.log(d)
-                       return d.name + " has a delta of " + d.value + ".";
-                       });
+            // update
+            selection.text(function(d) {
+                           console.log(d)
+                           return d.name + " has a value of " + d.value + ".";
+                           });
 
-    };
+        };
     </script>
     <body onload="reload(jsonString1)">
         <div id="chart"></div>
