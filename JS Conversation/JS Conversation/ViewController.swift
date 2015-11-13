@@ -113,9 +113,16 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     
     @IBAction func yon(sender: AnyObject) {
         print("running yon")
-        let newValues = [["name": "Kirk", "value": 1], ["name": "Picard", "value": 2], ["name": "Sisko", "value": 3], ["name": "Janeway", "value": 4], ["name": "Archer", "value": 0]]
-        let jsonString = try! NSJSONSerialization.dataWithJSONObject(newValues, options: .PrettyPrinted)
-        print (jsonString)
+        let newValuesAsArray = [["name": "Kirk", "value": 1], ["name": "Picard", "value": 2], ["name": "Sisko", "value": 3], ["name": "Janeway", "value": 4], ["name": "Archer", "value": 0]]
+        let valuesAsJSONData = try! NSJSONSerialization.dataWithJSONObject(newValuesAsArray, options: NSJSONWritingOptions(rawValue: 0))
+        print (valuesAsJSONData)
+        let valuesAsJSONString = NSString(data: valuesAsJSONData, encoding: NSUTF8StringEncoding)! as String
+        print (valuesAsJSONString)
+        let fullJavaScriptCall = "reload('\(valuesAsJSONString)')"
+        print (fullJavaScriptCall)
+        self.webView?.evaluateJavaScript(fullJavaScriptCall, completionHandler: { (result, error) -> Void in
+            print(error)
+        })
     }
 
     @IBAction func hither(sender: AnyObject) {
@@ -140,6 +147,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         if message.name == "barsCounted" {
             let numbers = message.body as! NSArray
             print (numbers.count)
+            self.resultLabel.text = "\(numbers.count) numbers"
         }
     }
 
