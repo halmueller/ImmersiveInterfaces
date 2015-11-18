@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B1C748D1BFC3E7200545FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C748C1BFC3E7200545FCE /* AppDelegate.swift */; };
+		2B1C748F1BFC3E7200545FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C748E1BFC3E7200545FCE /* ViewController.swift */; };
+		2B1C74921BFC3E7200545FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C74901BFC3E7200545FCE /* Main.storyboard */; };
+		2B1C74941BFC3E7200545FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C74931BFC3E7200545FCE /* Assets.xcassets */; };
+		2B1C74971BFC3E7200545FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C74951BFC3E7200545FCE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B1C74891BFC3E7200545FCE /* CIRIMS Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CIRIMS Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1C748C1BFC3E7200545FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B1C748E1BFC3E7200545FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B1C74911BFC3E7200545FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B1C74931BFC3E7200545FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B1C74961BFC3E7200545FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B1C74981BFC3E7200545FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B1C74861BFC3E7200545FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B1C74801BFC3E7200545FCE = {
+			isa = PBXGroup;
+			children = (
+				2B1C748B1BFC3E7200545FCE /* CIRIMS Viewer */,
+				2B1C748A1BFC3E7200545FCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B1C748A1BFC3E7200545FCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C74891BFC3E7200545FCE /* CIRIMS Viewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B1C748B1BFC3E7200545FCE /* CIRIMS Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C748C1BFC3E7200545FCE /* AppDelegate.swift */,
+				2B1C748E1BFC3E7200545FCE /* ViewController.swift */,
+				2B1C74901BFC3E7200545FCE /* Main.storyboard */,
+				2B1C74931BFC3E7200545FCE /* Assets.xcassets */,
+				2B1C74951BFC3E7200545FCE /* LaunchScreen.storyboard */,
+				2B1C74981BFC3E7200545FCE /* Info.plist */,
+			);
+			path = "CIRIMS Viewer";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B1C74881BFC3E7200545FCE /* CIRIMS Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B1C749B1BFC3E7200545FCE /* Build configuration list for PBXNativeTarget "CIRIMS Viewer" */;
+			buildPhases = (
+				2B1C74851BFC3E7200545FCE /* Sources */,
+				2B1C74861BFC3E7200545FCE /* Frameworks */,
+				2B1C74871BFC3E7200545FCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CIRIMS Viewer";
+			productName = "CIRIMS Viewer";
+			productReference = 2B1C74891BFC3E7200545FCE /* CIRIMS Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B1C74811BFC3E7200545FCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hal Mueller";
+				TargetAttributes = {
+					2B1C74881BFC3E7200545FCE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 2B1C74841BFC3E7200545FCE /* Build configuration list for PBXProject "CIRIMS Viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B1C74801BFC3E7200545FCE;
+			productRefGroup = 2B1C748A1BFC3E7200545FCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B1C74881BFC3E7200545FCE /* CIRIMS Viewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B1C74871BFC3E7200545FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1C74971BFC3E7200545FCE /* LaunchScreen.storyboard in Resources */,
+				2B1C74941BFC3E7200545FCE /* Assets.xcassets in Resources */,
+				2B1C74921BFC3E7200545FCE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B1C74851BFC3E7200545FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1C748F1BFC3E7200545FCE /* ViewController.swift in Sources */,
+				2B1C748D1BFC3E7200545FCE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B1C74901BFC3E7200545FCE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B1C74911BFC3E7200545FCE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B1C74951BFC3E7200545FCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B1C74961BFC3E7200545FCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B1C74991BFC3E7200545FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B1C749A1BFC3E7200545FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B1C749C1BFC3E7200545FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "CIRIMS Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.CIRIMS-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B1C749D1BFC3E7200545FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "CIRIMS Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.CIRIMS-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B1C74841BFC3E7200545FCE /* Build configuration list for PBXProject "CIRIMS Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1C74991BFC3E7200545FCE /* Debug */,
+				2B1C749A1BFC3E7200545FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B1C749B1BFC3E7200545FCE /* Build configuration list for PBXNativeTarget "CIRIMS Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1C749C1BFC3E7200545FCE /* Debug */,
+				2B1C749D1BFC3E7200545FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B1C74811BFC3E7200545FCE /* Project object */;
+}
