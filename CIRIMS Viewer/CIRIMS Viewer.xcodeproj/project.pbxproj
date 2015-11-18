@@ -12,6 +12,7 @@
 		2B1C74921BFC3E7200545FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C74901BFC3E7200545FCE /* Main.storyboard */; };
 		2B1C74941BFC3E7200545FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C74931BFC3E7200545FCE /* Assets.xcassets */; };
 		2B1C74971BFC3E7200545FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C74951BFC3E7200545FCE /* LaunchScreen.storyboard */; };
+		2B1C749F1BFC41D300545FCE /* CIRIMSTimeSeries.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B1C749E1BFC41D300545FCE /* CIRIMSTimeSeries.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2B1C74931BFC3E7200545FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B1C74961BFC3E7200545FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B1C74981BFC3E7200545FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B1C749E1BFC41D300545FCE /* CIRIMSTimeSeries.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = CIRIMSTimeSeries.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				2B1C748C1BFC3E7200545FCE /* AppDelegate.swift */,
 				2B1C748E1BFC3E7200545FCE /* ViewController.swift */,
+				2B1C749E1BFC41D300545FCE /* CIRIMSTimeSeries.html */,
 				2B1C74901BFC3E7200545FCE /* Main.storyboard */,
 				2B1C74931BFC3E7200545FCE /* Assets.xcassets */,
 				2B1C74951BFC3E7200545FCE /* LaunchScreen.storyboard */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B1C74971BFC3E7200545FCE /* LaunchScreen.storyboard in Resources */,
+				2B1C749F1BFC41D300545FCE /* CIRIMSTimeSeries.html in Resources */,
 				2B1C74941BFC3E7200545FCE /* Assets.xcassets in Resources */,
 				2B1C74921BFC3E7200545FCE /* Main.storyboard in Resources */,
 			);
