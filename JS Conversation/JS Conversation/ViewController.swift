@@ -101,11 +101,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         yonButton.enabled = true
         webView?.configuration.userContentController.removeAllUserScripts()
 
-        let startupScriptSource = "jsonString1 = '[{\"name\": \"Lou\", \"value\": 129}, {\"name\": \"Lloyd\", \"value\": 2}, {\"name\": \"Scott\", \"value\": 0}]';"
+        let startupScriptSource = "jsonString = '[{\"name\": \"Lou\", \"value\": 129}, {\"name\": \"Lloyd\", \"value\": 2}, {\"name\": \"Scott\", \"value\": 1}]';"
         let userScript = WKUserScript(source: startupScriptSource, injectionTime: .AtDocumentStart, forMainFrameOnly: true)
         webView?.configuration.userContentController.addUserScript(userScript)
-
-        let localPath = NSBundle.mainBundle().pathForResource("barsTwo", ofType: "html")
+		
+		let reloadScript = WKUserScript(source: "reload(jsonString)",
+			injectionTime: .AtDocumentEnd, forMainFrameOnly: true)
+        webView?.configuration.userContentController.addUserScript(reloadScript)
+		
+        let localPath = NSBundle.mainBundle().pathForResource("barsOne", ofType: "html")
         webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
             // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
             allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
@@ -113,10 +117,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     
     @IBAction func yon(sender: AnyObject) {
         print("running yon")
-        let newValuesAsArray = [["name": "Kirk", "value": 1], ["name": "Picard", "value": 2], ["name": "Sisko", "value": 3], ["name": "Janeway", "value": 4], ["name": "Archer", "value": 0]]
-        let valuesAsJSONData = try! NSJSONSerialization.dataWithJSONObject(newValuesAsArray, options: NSJSONWritingOptions(rawValue: 0))
-        print (valuesAsJSONData)
-        let valuesAsJSONString = NSString(data: valuesAsJSONData, encoding: NSUTF8StringEncoding)! as String
+		let valuesAsJSONString = "[{\"name\": \"Lou\", \"value\": 129}, {\"name\": \"Lloyd\", \"value\": 2}, {\"name\": \"Scott\", \"value\": 1}]"
+
         print (valuesAsJSONString)
         let fullJavaScriptCall = "reload('\(valuesAsJSONString)')"
         print (fullJavaScriptCall)
@@ -127,6 +129,16 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
 
     @IBAction func hither(sender: AnyObject) {
         print("running hither")
+		let newValuesAsArray = [["name": "Kirk", "value": 1], ["name": "Picard", "value": 2], ["name": "Sisko", "value": 3], ["name": "Janeway", "value": 4], ["name": "Archer", "value": 5]]
+		let valuesAsJSONData = try! NSJSONSerialization.dataWithJSONObject(newValuesAsArray, options: NSJSONWritingOptions(rawValue: 0))
+		print (valuesAsJSONData)
+		let valuesAsJSONString = NSString(data: valuesAsJSONData, encoding: NSUTF8StringEncoding)! as String
+		print (valuesAsJSONString)
+		let fullJavaScriptCall = "reload('\(valuesAsJSONString)')"
+		print (fullJavaScriptCall)
+		self.webView?.evaluateJavaScript(fullJavaScriptCall, completionHandler: { (result, error) -> Void in
+			print(error)
+		})
     }
 
     // MARK: - WKNavigationDelegate
