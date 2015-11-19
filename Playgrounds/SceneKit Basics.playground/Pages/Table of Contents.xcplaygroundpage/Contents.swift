@@ -2,9 +2,9 @@
 ## SceneKit Basics
 * [Hello World](Hello%20World)
 * [Simple Geometry](Simple%20Geometry)
-* [](%20)
-* [](%20)
-* [](%20)
+* [Cube](Cube)
+* [Materials Fun](Materials%20Fun)
+* [Multiple Materials](Multiple%20Materials)
 * [](%20)
 * [](%20)
 */
