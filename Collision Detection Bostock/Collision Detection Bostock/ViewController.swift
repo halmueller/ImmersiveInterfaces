@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		let collisionDetectionScene = CollisionDetectionScene(size: self.view.bounds.size)
 		skView.showsFPS = true
+        skView.showsFields = true
 		skView.presentScene(collisionDetectionScene)
 
 	}
