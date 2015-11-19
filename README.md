@@ -12,13 +12,13 @@ For the Swift unit, we used Daniel Steinberg's excellent book [A Swift Kickstart
 
 [Playgrounds/SpriteKit Basics.playground](Playgrounds/Playgrounds/SpriteKit%20Basics.playground): Illustrations of some SpriteKit concepts. Shown are node hierachies; automatic and explicit Z ordering; a sample of each SKNode type; animations and actions; "look at" and "follow" constraints; simple physics; and a sample of each SCNTransition.
 
-[Plummet](Plummet): A gravity indicator, or plumb bob.
+[Plummet](Plummet): A gravity indicator, or plumb bob, using CMMotionManager and SpriteKit.
 
 [SpriteKit Particle System Sampler](SpriteKit%20Particle%20System%20Sampler/): A sample of each of the Xcode-supplied particle systems.
 
 [Spiral Illusion](Spiral%20Illusion/) An optical illusion. Targets for both iOS and tvOS.
 
-[Marble Trails](Marble%20Trails/) Demonstration of physics bodies, variable gravity, and gravity fields.
+[Marble Trails](Marble%20Trails/) Demonstration of physics bodies, variable gravity based on CMMotionManager, and gravity fields.
 
 [Collision Detection Bostock](Collision%20Detection%20Bostock) A SpriteKit reimplementation of Mike Bostock's D3.js (force-directed graph demonstration)[http://bl.ocks.org/mbostock/3231298].
 
