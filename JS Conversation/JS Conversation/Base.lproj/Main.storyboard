@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -22,12 +22,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O84-Eb-fGb">
                                 <rect key="frame" x="0.0" y="75" width="600" height="486"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0009043345303" blue="0.93554482999999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAp-Ym-FEP">
                                 <rect key="frame" x="20" y="569" width="43" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Hither"/>
                                 <connections>
                                     <action selector="hither:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8e-yY-62I"/>
@@ -35,7 +33,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9U-ME-5pc">
                                 <rect key="frame" x="397" y="569" width="30" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Yon"/>
                                 <connections>
                                     <action selector="yon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDs-JG-j0C"/>
@@ -43,7 +40,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMF-eG-4IQ">
                                 <rect key="frame" x="300" y="573" width="0.0" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +49,6 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ES8-jg-GXp">
                                         <rect key="frame" x="8" y="8" width="107" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="XHE-qV-X5p"/>
                                         </constraints>
@@ -63,8 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXh-DA-avC">
-                                        <rect key="frame" x="117" y="8" width="107" height="30"/>
-                                        <animations/>
+                                        <rect key="frame" x="117" y="8" width="108" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="39" id="tnX-i7-5LH"/>
                                         </constraints>
@@ -73,17 +67,15 @@
                                             <action selector="loadSimplePlusInit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="meV-QB-Wu5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4U-Q4-241">
-                                        <rect key="frame" x="226" y="8" width="108" height="30"/>
-                                        <animations/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4U-Q4-241">
+                                        <rect key="frame" x="227" y="8" width="107" height="30"/>
                                         <state key="normal" title="enterExit"/>
                                         <connections>
                                             <action selector="loadEnterExit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbH-me-Dkz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bV-8H-K6Q">
-                                        <rect key="frame" x="336" y="8" width="107" height="30"/>
-                                        <animations/>
+                                        <rect key="frame" x="336" y="8" width="108" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Zyn-QG-UEs"/>
                                         </constraints>
@@ -94,7 +86,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTb-gw-qzM">
                                         <rect key="frame" x="445" y="8" width="107" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="MY2-3J-vPr"/>
                                         </constraints>
@@ -104,7 +95,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="BXh-DA-avC" firstAttribute="leading" secondItem="ES8-jg-GXp" secondAttribute="trailing" constant="54" id="4yS-oZ-UmC"/>
                                 </constraints>
@@ -116,7 +106,6 @@
                                 </variation>
                             </stackView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eYo-X9-Fw0" firstAttribute="leading" secondItem="zAp-Ym-FEP" secondAttribute="leading" id="Auu-DA-CTW"/>
