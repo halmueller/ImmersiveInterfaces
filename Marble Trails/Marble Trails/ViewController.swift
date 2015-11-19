@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.showsDrawCount = true
+        skView.showsFields = true
         if let scene = MarblesScene.unarchiveFromFile(sceneNames[sceneIndex++]) as? MarblesScene {
             scene.scaleMode = .AspectFit
             skView.presentScene(scene)
@@ -62,6 +63,18 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func previousScene(sender: AnyObject) {
+        let sceneName = sceneNames[sceneIndex]
+
+        if --sceneIndex < 0 {
+            sceneIndex =  sceneNames.count - 1
+        }
+
+        if let scene = MarblesScene.unarchiveFromFile(sceneName) as? MarblesScene {
+            scene.scaleMode = .AspectFit
+            skView.presentScene(scene)
+        }
+    }
     @IBAction func toggleTrails(sender: AnyObject) {
         if let scene = skView.scene as? MarblesScene {
             scene.showTrails = !scene.showTrails
