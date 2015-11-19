@@ -2,7 +2,7 @@
 ## SpriteKit Basics
 * [Hello World](Hello%20World)
 * [Custom Scene](Custom%20Scene)
-* [Z Order](Z%20Scene)
+* [Z Order](Z%20Order)
 * [Sprites Gallery](Sprites%20Gallery)
 * [Node Hierarchies](%20)
 * [Constraints](Constraints)

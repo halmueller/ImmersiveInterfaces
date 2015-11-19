@@ -2,11 +2,6 @@
 //: [TOC](TOC) - [Previous](@previous) - [Next](@next)
 
 import Foundation
-
-var str = "Hello, playground"
-
-//: [Next](@next)
-//: [TOC](TOC) - [Previous](@previous) - [Next](@next)
 import SpriteKit
 import XCPlayground
 
