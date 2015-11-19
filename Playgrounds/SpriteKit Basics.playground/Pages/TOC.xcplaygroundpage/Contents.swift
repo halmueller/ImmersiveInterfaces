@@ -2,7 +2,12 @@
 ## SpriteKit Basics
 * [Hello World](Hello%20World)
 * [Custom Scene](Custom%20Scene)
-* [Spaceship](Spaceship)
+* [Z Order](Z%20Scene)
+* [Sprites Gallery](Sprites%20Gallery)
+* [Node Hierarchies](%20)
+* [Constraints](Constraints)
+* [Simple Physics](Simple%20Physics)
+* [SCNTransition examples](Transitions)
 */
 
 /*:

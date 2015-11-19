@@ -1,4 +1,6 @@
+//: ## Sprites Gallery
 //: [TOC](TOC) - [Previous](@previous) - [Next](@next)
+
 import SpriteKit
 import XCPlayground
 
