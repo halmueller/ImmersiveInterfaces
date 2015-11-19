@@ -10,7 +10,7 @@ For the Swift unit, we used Daniel Steinberg's excellent book [A Swift Kickstart
 
 [Playgrounds/Crawl.playground](Playgrounds/Crawl.playground): A text crawl at the bottom of the screen, as you might see on a TV news or sports broadcast.
 
-[Playgrounds/SpriteKit Basics.playground](Playgrounds/Playgrounds/SpriteKit%20Basics.playground): Illustrations of some SpriteKit concepts. Shown are node hierachies; automatic and explicit Z ordering; a sample of each SKNode type; animations and actions; lookAt and follow constraints; simple physics; and a sample of each SCNTransition.
+[Playgrounds/SpriteKit Basics.playground](Playgrounds/Playgrounds/SpriteKit%20Basics.playground): Illustrations of some SpriteKit concepts. Shown are node hierachies; automatic and explicit Z ordering; a sample of each SKNode type; animations and actions; "look at" and "follow" constraints; simple physics; and a sample of each SCNTransition.
 
 [Plummet](Plummet): A gravity indicator, or plumb bob.
 
@@ -28,10 +28,10 @@ For the Swift unit, we used Daniel Steinberg's excellent book [A Swift Kickstart
 
 ## D3.js
 
-[WebView Sampler](WebView%20Sampler) Demonstration of WKWebView, loading various websites, local pages, and D3.js samples.
+[WebView Sampler](WebView%20Sampler): Demonstration of WKWebView, loading various websites, local pages, and D3.js samples.
 
-[JS Conversation](JS%20Conversation) Illustrates converting Swift data to JavaScript and sending to a WKWebView, triggering Swift alerts from JavaScript, and sending information from JavaScript to Swift.
+[JS Conversation](JS%20Conversation): Communication between Swift code and JavaScript/WKWebView. Illustrates converting Swift data to JavaScript and sending to a WKWebView, triggering Swift alerts from JavaScript, sending a JavaScript object to Swift, and conversion back to a native Swift object.
 
-[CIRIMS Viewer](CIRIMS%20Viewer) Visualization of some oceanographic data from UW Applied Physical Laboratory.
+[CIRIMS Viewer](CIRIMS%20Viewer): Visualization of some oceanographic data from UW Applied Physical Laboratory.
 
 ## SceneKit
