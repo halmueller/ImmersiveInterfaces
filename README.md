@@ -1,4 +1,4 @@
-# ImmersiveInterfaces
+# Immersive Interfaces and Visualization for iOS
 Samples and solutions for a Swift/SpriteKit/SceneKit course taught Autumn Quarter 2015, through University of Washington Professional and Continuing Education. The course was organized into four units: Swift, SpriteKit, D3.js, and SceneKit.
 
 The full [bibliograpny](Supporting%20material/CP135%20Bibliography.pdf) is included.
