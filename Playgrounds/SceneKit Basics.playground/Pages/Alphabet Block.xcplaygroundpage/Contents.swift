@@ -41,16 +41,23 @@ greenMaterial.diffuse.contents = NSColor.greenColor()
 let blueMaterial = SCNMaterial()
 blueMaterial.diffuse.contents = NSColor.blueColor()
 
-let cyanMaterial = SCNMaterial()
-cyanMaterial.diffuse.contents = NSColor.cyanColor()
+let orangeMaterial = SCNMaterial()
+orangeMaterial.diffuse.contents = NSColor.orangeColor()
 
 let magentaMaterial = SCNMaterial()
 magentaMaterial.diffuse.contents = NSColor.magentaColor()
 
 let yellowMaterial = SCNMaterial()
+yellowMaterial.locksAmbientWithDiffuse = false
 yellowMaterial.diffuse.contents = NSColor.yellowColor()
+yellowMaterial.ambient.contents = NSColor.blackColor()
 
-cube.materials = [redMaterial, greenMaterial, magentaMaterial, yellowMaterial]
+cube.materials = [blueMaterial,
+    yellowMaterial,
+    blueMaterial,
+    greenMaterial,
+    orangeMaterial,
+    magentaMaterial]
 
 // configure the geometry object
 //cube.firstMaterial?.diffuse.contents  = NSColor.greenColor()   // (or UIColor on iOS)

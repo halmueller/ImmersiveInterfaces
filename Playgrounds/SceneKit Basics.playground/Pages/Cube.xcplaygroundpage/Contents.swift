@@ -27,13 +27,13 @@ cameraNode.position = SCNVector3(x: 0, y: 0, z: 3)
 scene.rootNode.addChildNode(cameraNode)
 
 // a geometry object
-var cube = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.1)
+var cube = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.0)
 var cubeNode = SCNNode(geometry: cube)
 scene.rootNode.addChildNode(cubeNode)
 
 // configure the geometry object
 cube.firstMaterial?.diffuse.contents  = NSColor.greenColor()   // (or UIColor on iOS)
-cube.firstMaterial?.specular.contents = NSColor.redColor() // (or UIColor on iOS)
+cube.firstMaterial?.specular.contents = NSColor.whiteColor() // (or UIColor on iOS)
 
 // set a rotation axis (no angle) to be able to
 // use a nicer keypath below and avoid needing
