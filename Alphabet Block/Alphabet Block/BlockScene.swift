@@ -71,6 +71,19 @@ class BlockScene: SCNScene {
                 UIImage(named: "z"),
                 UIImage(named: "X cap"),
                 UIImage(named: "B cap")]
+            
+            var images: [UIImage] = []
+            for i in 0..<letters.count {
+/*                let finalImage = UIImage(
+                finalImage.lockFocus()
+                colors[i].setFill()
+                let rect = NSMakeRect(0, 0, finalImage.size.width, finalImage.size.height)
+                UIBezierPath.fillRect(rect)
+                letters[i]?.drawInRect(rect)
+                finalImage.unlockFocus()
+*/
+                images.append(letters[i]!)
+            }
         #endif
         var result : [SCNMaterial] = []
         for i in 0..<letters.count {
