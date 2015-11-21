@@ -1,4 +1,4 @@
-//: ## Multiple Materials
+//: ## Cube
 //: [Previous](@previous) - [TOC](TOC) - [Next](@next)
 import Cocoa
 import Foundation
@@ -16,7 +16,6 @@ XCPlaygroundPage.currentPage.liveView = sceneView
 
 var scene = SCNScene()
 sceneView.scene = scene
-sceneView.debugOptions = .ShowWireframe
 
 // default lighting
 sceneView.autoenablesDefaultLighting = true
@@ -32,36 +31,9 @@ var cube = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.0)
 var cubeNode = SCNNode(geometry: cube)
 scene.rootNode.addChildNode(cubeNode)
 
-let redMaterial = SCNMaterial()
-redMaterial.diffuse.contents = NSColor.redColor()
-
-let greenMaterial = SCNMaterial()
-greenMaterial.diffuse.contents = NSColor.greenColor()
-
-let blueMaterial = SCNMaterial()
-blueMaterial.diffuse.contents = NSColor.blueColor()
-
-let orangeMaterial = SCNMaterial()
-orangeMaterial.diffuse.contents = NSColor.orangeColor()
-
-let magentaMaterial = SCNMaterial()
-magentaMaterial.diffuse.contents = NSColor.magentaColor()
-
-let yellowMaterial = SCNMaterial()
-yellowMaterial.locksAmbientWithDiffuse = false
-yellowMaterial.diffuse.contents = NSColor.yellowColor()
-yellowMaterial.ambient.contents = NSColor.blackColor()
-
-cube.materials = [blueMaterial,
-    yellowMaterial,
-    blueMaterial,
-    greenMaterial,
-    orangeMaterial,
-    magentaMaterial]
-
 // configure the geometry object
-//cube.firstMaterial?.diffuse.contents  = NSColor.greenColor()   // (or UIColor on iOS)
-//cube.firstMaterial?.specular.contents = NSColor.redColor() // (or UIColor on iOS)
+cube.firstMaterial?.diffuse.contents  = NSColor.greenColor()   // (or UIColor on iOS)
+cube.firstMaterial?.specular.contents = NSColor.whiteColor() // (or UIColor on iOS)
 
 // set a rotation axis (no angle) to be able to
 // use a nicer keypath below and avoid needing
