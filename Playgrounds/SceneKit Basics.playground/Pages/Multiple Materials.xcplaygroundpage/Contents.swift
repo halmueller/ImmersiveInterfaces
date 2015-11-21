@@ -16,6 +16,7 @@ XCPlaygroundPage.currentPage.liveView = sceneView
 
 var scene = SCNScene()
 sceneView.scene = scene
+sceneView.debugOptions = .ShowWireframe
 
 // default lighting
 sceneView.autoenablesDefaultLighting = true
@@ -27,7 +28,7 @@ cameraNode.position = SCNVector3(x: 0, y: 0, z: 3)
 scene.rootNode.addChildNode(cameraNode)
 
 // a geometry object
-var cube = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.2)
+var cube = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.0)
 var cubeNode = SCNNode(geometry: cube)
 scene.rootNode.addChildNode(cubeNode)
 
@@ -49,7 +50,7 @@ magentaMaterial.diffuse.contents = NSColor.magentaColor()
 let yellowMaterial = SCNMaterial()
 yellowMaterial.diffuse.contents = NSColor.yellowColor()
 
-cube.materials = [redMaterial, greenMaterial, blueMaterial, cyanMaterial, magentaMaterial, yellowMaterial]
+cube.materials = [redMaterial, greenMaterial, magentaMaterial, yellowMaterial]
 
 // configure the geometry object
 //cube.firstMaterial?.diffuse.contents  = NSColor.greenColor()   // (or UIColor on iOS)
