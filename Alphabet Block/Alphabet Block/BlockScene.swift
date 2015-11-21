@@ -27,7 +27,7 @@ class BlockScene: SCNScene {
     func colorMaterials() -> [SCNMaterial] {
         #if os(OSX)
             let colors = [
-                NSColor.whiteColor(),
+                NSColor.blueColor(),
                 NSColor.greenColor(),
                 NSColor.orangeColor(),
                 NSColor.purpleColor(),
@@ -42,14 +42,43 @@ class BlockScene: SCNScene {
                 NSImage(named: "z"),
                 NSImage(named: "X cap"),
                 NSImage(named: "B cap")]
+            
+            var images: [NSImage] = []
+            for i in 0..<letters.count {
+                let finalImage = NSImage(size: letters[i]!.size)
+                finalImage.lockFocus()
+                colors[i].setFill()
+                let rect = NSMakeRect(0, 0, finalImage.size.width, finalImage.size.height)
+                NSBezierPath.fillRect(rect)
+                letters[i]?.drawInRect(rect)
+                finalImage.unlockFocus()
+                images.append(finalImage)
+            }
         #else
-            let colors = UIColor.redColor()
+            let colors = [
+                UIColor.whiteColor(),
+                UIColor.greenColor(),
+                UIColor.orangeColor(),
+                UIColor.purpleColor(),
+                UIColor.yellowColor(),
+                UIColor.blueColor()]
+            
+            let letters = [
+                // e, c, x, z, X, B
+                UIImage(named: "e"),
+                UIImage(named: "c"),
+                UIImage(named: "x"),
+                UIImage(named: "z"),
+                UIImage(named: "X cap"),
+                UIImage(named: "B cap")]
         #endif
-        return letters.map({
+        var result : [SCNMaterial] = []
+        for i in 0..<letters.count {
             let material = SCNMaterial()
-            material.diffuse.contents = $0
-            return material
-        })
+            material.diffuse.contents = images[i]
+            result.append(material)
+        }
+        return result
     }
     
 }
