@@ -40,7 +40,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 			NSLayoutConstraint(item: newWebView, attribute: .Bottom, relatedBy: .Equal, toItem: subView, attribute: .Bottom, multiplier: 1.0, constant: 0.0),
 		]
 		NSLayoutConstraint.activateConstraints(constraints)
-		
+		self.loadTheStuff(self)
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -53,17 +53,16 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 		// load http://cirims.apl.washington.edu/DataFiles/CIRIMS04_Guam_Japan_v1.0.txt
 		let fullString = try! String(contentsOfURL: NSURL(string: URLString)!)
         let allRows = fullString.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-        let dataRows = allRows.filter { $0 != "" && !$0.hasPrefix("%")
-        }
+        
+        // omit the comment lines, which start with "%" characters
+        var dataRows = allRows.filter { $0 != "" && !$0.hasPrefix("%") }
+        // now drop the first row, which has the TSV headings (d3.tsv.parseRows can't handle header row)
+        dataRows.removeAtIndex(0)
+
         // This smells a bit. Escape the newline because I'm building a multiline JavaScript string.
         let dataString = dataRows.joinWithSeparator("\\n\\\n")
-        //let dataString = dataRows.joinWithSeparator("\\\n\\")
         
-        let rawString = "sst\tdecimal_yd\tdelta_T\tt_2_m\tt_3_m\tt_air\tt_sky\tlatitude\tlongitude\\n        28.04\t75.356\t0.09\t28.14\t28.14\t27.53\t1.47\t13.455\t144.65"
-        
-        //let startupScriptSource = "dataString = '" + rawString + "';"
         let startupScriptSource = "dataString = '" + dataString + "';"
-        print(startupScriptSource)
         
         let userScript = WKUserScript(source: startupScriptSource, injectionTime: .AtDocumentStart, forMainFrameOnly: true)
         webView?.configuration.userContentController.addUserScript(userScript)

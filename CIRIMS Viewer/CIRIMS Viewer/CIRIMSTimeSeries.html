@@ -8,8 +8,8 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-            zdataString = 'sst	decimal_yd	delta_T	t_2_m	t_3_m	t_air	t_sky	latitude	longitude\n\
-28.04	75.356	0.09	28.14	28.14	27.53	1.47	13.455	144.65\n\
+<!--            sst	decimal_yd	delta_T	t_2_m	t_3_m	t_air	t_sky	latitude	longitude -->
+            dataString = '28.04	75.356	0.09	28.14	28.14	27.53	1.47	13.455	144.65\n\
 28.03	75.36003	0.1	28.12	28.12	27.43	1.32	13.453	144.634\n\
 27.98	75.36407	0.11	28.09	28.09	27.32	2.95	13.451	144.617\n\
 27.95	75.36813	0.05	28	28	27.35	3.11	13.447	144.6\n\
@@ -23,26 +23,26 @@
 
             console.log(dataString)
             dataRows = d3.tsv.parseRows(dataString, function(d) {
-                              return {
-                                    sst: +d.sst,
-                                    julian: +d.decimal_yd,
-                                    delta_T: +d.delta_T,
-                                    t_2_m: +d.t_2_m,
-                                    t_3_m: +d.t_3_m,
-                                    t_air: +d.t_air,
-                                    t_sky: +d.t_sky,
-                                    latitude: +d.latitude,
-                                    longitude: +d.longitude
-                                    };
-                                    }, function(error, rows) {
-                                    console.log(rows);
-                                    });
+                                         return {
+                                         sst: +d[0],
+                                         julian: +d[1],
+                                         delta_T: +d[2],
+                                         t_2_m: +d[3],
+                                         t_3_m: +d[4],
+                                         t_air: +d[5],
+                                         t_sky: +d[6],
+                                         latitude: +d[7],
+                                         longitude: +d[8]
+                                         };
+                                         }, function(error, rows) {
+                                         console.log(rows);
+                                         });
                                     
             console.log(dataRows);
             console.log(dataRows.length);
             console.log(dataString);
 			d3.select("body").append("span")
-			.text(dataRows[3]);
+			.text(dataRows[3].sst);
 			</script>
 	</body>
 </html>
