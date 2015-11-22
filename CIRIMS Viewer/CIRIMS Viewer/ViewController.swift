@@ -48,10 +48,22 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 	// CIRIMS data files: http://cirims.apl.washington.edu/DataFiles/
 	func loadAndViewCIRIMSFileAtURLPath(URLString: String) {
 		// load http://cirims.apl.washington.edu/DataFiles/CIRIMS04_Guam_Japan_v1.0.txt
-		print(URLString)
-		let dataString = try! String(contentsOfURL: NSURL(string: URLString)!)
-		print (dataString)
-	}
+		let fullString = try! String(contentsOfURL: NSURL(string: URLString)!)
+        let allRows = fullString.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        let dataRows = allRows.filter { $0 != "" && !$0.hasPrefix("%")
+        }
+        // This smells a bit. Escape the newline because I'm building a multiline JavaScript string.
+        let dataString = dataRows.joinWithSeparator("\\\r\n")
+
+        let startupScriptSource = "dataString = '" + dataString + "';"
+
+        let userScript = WKUserScript(source: startupScriptSource, injectionTime: .AtDocumentStart, forMainFrameOnly: true)
+        webView?.configuration.userContentController.addUserScript(userScript)
+        let localPath = NSBundle.mainBundle().pathForResource("CIRIMSTimeSeries", ofType: "html")
+        webView?.loadFileURL(NSURL(fileURLWithPath: localPath!),
+            // FIXME: what does this parameter mean? Must be a fileURL (undocumented)
+            allowingReadAccessToURL: NSURL(fileURLWithPath: "/"))
+    }
 	
 	// MARK: - WKNavigationDelegate
 	func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
