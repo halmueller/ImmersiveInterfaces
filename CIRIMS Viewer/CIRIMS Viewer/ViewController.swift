@@ -15,7 +15,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 	@IBOutlet weak var webView: WKWebView?
 	var CIRIMSString: String?
 	
-	override func viewDidLoad() {
+    @IBAction func loadTheStuff(sender: AnyObject) {
+        loadAndViewCIRIMSFileAtURLPath("http://cirims.apl.washington.edu/DataFiles/CIRIMS04_Guam_Japan_v1.0.txt")
+    }
+
+    override func viewDidLoad() {
 		super.viewDidLoad()
 		let webViewConfiguration = WKWebViewConfiguration()
 		let newWebView = WKWebView(frame: self.subView.bounds, configuration: webViewConfiguration)
@@ -37,7 +41,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 		]
 		NSLayoutConstraint.activateConstraints(constraints)
 		
-		loadAndViewCIRIMSFileAtURLPath("http://cirims.apl.washington.edu/DataFiles/CIRIMS04_Guam_Japan_v1.0.txt")
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -53,10 +56,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
         let dataRows = allRows.filter { $0 != "" && !$0.hasPrefix("%")
         }
         // This smells a bit. Escape the newline because I'm building a multiline JavaScript string.
-        let dataString = dataRows.joinWithSeparator("\\\r\n")
-
+        let dataString = dataRows.joinWithSeparator("\\n\\\n")
+        //let dataString = dataRows.joinWithSeparator("\\\n\\")
+        
+        let rawString = "sst\tdecimal_yd\tdelta_T\tt_2_m\tt_3_m\tt_air\tt_sky\tlatitude\tlongitude\\n        28.04\t75.356\t0.09\t28.14\t28.14\t27.53\t1.47\t13.455\t144.65"
+        
+        //let startupScriptSource = "dataString = '" + rawString + "';"
         let startupScriptSource = "dataString = '" + dataString + "';"
-
+        print(startupScriptSource)
+        
         let userScript = WKUserScript(source: startupScriptSource, injectionTime: .AtDocumentStart, forMainFrameOnly: true)
         webView?.configuration.userContentController.addUserScript(userScript)
         let localPath = NSBundle.mainBundle().pathForResource("CIRIMSTimeSeries", ofType: "html")

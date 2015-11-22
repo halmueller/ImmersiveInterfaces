@@ -4,13 +4,45 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 		<meta name="viewport" content="initial-scale=1.0" />
 		<title>D3 Hello World</title>
-		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
 	</head>
 	<body>
 		<script type="text/javascript">
+            zdataString = 'sst	decimal_yd	delta_T	t_2_m	t_3_m	t_air	t_sky	latitude	longitude\n\
+28.04	75.356	0.09	28.14	28.14	27.53	1.47	13.455	144.65\n\
+28.03	75.36003	0.1	28.12	28.12	27.43	1.32	13.453	144.634\n\
+27.98	75.36407	0.11	28.09	28.09	27.32	2.95	13.451	144.617\n\
+27.95	75.36813	0.05	28	28	27.35	3.11	13.447	144.6\n\
+27.81	75.37682	0.21	28.02	28.02	27.29	1.13	13.427	144.565\n\
+27.95	75.38086	0.07	28.02	28.02	27.32	1.42	13.413	144.551\n\
+28	75.38491	0.04	28.03	28.03	27.34	1.72	13.4	144.537\n\
+27.99	75.38896	0.06	28.05	28.05	27.4	1.56	13.388	144.525\n\
+27.97	75.39765	0.08	28.05	28.05	27.45	2.19	13.362	144.5\n\
+27.94	75.40169	0.1	28.05	28.05	27.45	6.96	13.357	144.495\n\
+28.03	75.40574	0.02	28.06	28.05	27.52	3.85	13.356	144.494';
+
             console.log(dataString)
+            dataRows = d3.tsv.parseRows(dataString, function(d) {
+                              return {
+                                    sst: +d.sst,
+                                    julian: +d.decimal_yd,
+                                    delta_T: +d.delta_T,
+                                    t_2_m: +d.t_2_m,
+                                    t_3_m: +d.t_3_m,
+                                    t_air: +d.t_air,
+                                    t_sky: +d.t_sky,
+                                    latitude: +d.latitude,
+                                    longitude: +d.longitude
+                                    };
+                                    }, function(error, rows) {
+                                    console.log(rows);
+                                    });
+                                    
+            console.log(dataRows);
+            console.log(dataRows.length);
+            console.log(dataString);
 			d3.select("body").append("span")
-			.text(dataString);
+			.text(dataRows[3]);
 			</script>
 	</body>
 </html>

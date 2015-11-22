@@ -18,16 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXr-Pr-O3n">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="541"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCx-IZ-yYi">
+                                <rect key="frame" x="283" y="562" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="loadTheStuff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ymV-9e-0qI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="lXr-Pr-O3n" secondAttribute="trailing" id="19x-r6-7wq"/>
-                            <constraint firstItem="lXr-Pr-O3n" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="HRn-iJ-1RV"/>
-                            <constraint firstItem="lXr-Pr-O3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kbN-Ox-X9i"/>
-                            <constraint firstItem="lXr-Pr-O3n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xHf-nl-yo6"/>
+                            <constraint firstItem="lXr-Pr-O3n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AP5-9x-MvM"/>
+                            <constraint firstAttribute="trailing" secondItem="lXr-Pr-O3n" secondAttribute="trailing" id="IHb-9M-xQ9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UCx-IZ-yYi" secondAttribute="bottom" constant="8" symbolic="YES" id="V4s-25-D7U"/>
+                            <constraint firstItem="lXr-Pr-O3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XN8-EG-tV9"/>
+                            <constraint firstItem="UCx-IZ-yYi" firstAttribute="centerX" secondItem="lXr-Pr-O3n" secondAttribute="centerX" id="aUa-5H-ofl"/>
+                            <constraint firstItem="UCx-IZ-yYi" firstAttribute="top" secondItem="lXr-Pr-O3n" secondAttribute="bottom" constant="21" id="j38-Qr-YkL"/>
                         </constraints>
                     </view>
                     <connections>
