@@ -3,13 +3,38 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 		<meta name="viewport" content="initial-scale=1.0" />
-		<title>D3 Hello World</title>
-		<script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
+		<title>CIRIMS Track</title>
+		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	</head>
+    <style> /* set the CSS */
+        
+        body { font: 12px Arial;}
+        
+        path {
+            stroke: steelblue;
+            stroke-width: 2;
+            fill: none;
+        }
+    
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: grey;
+        stroke-width: 1;
+        shape-rendering: crispEdges;
+    }
+    
+    td, th {
+        padding: 1px 4px;
+    }
+    
+        </style>
 	<body>
 		<script type="text/javascript">
 <!--            sst	decimal_yd	delta_T	t_2_m	t_3_m	t_air	t_sky	latitude	longitude -->
-            dataString = '28.04	75.356	0.09	28.14	28.14	27.53	1.47	13.455	144.65\n\
+
+// rename zdataString to dataString for short data set:
+zdataString = '28.04	75.356	0.09	28.14	28.14	27.53	1.47	13.455	144.65\n\
 28.03	75.36003	0.1	28.12	28.12	27.43	1.32	13.453	144.634\n\
 27.98	75.36407	0.11	28.09	28.09	27.32	2.95	13.451	144.617\n\
 27.95	75.36813	0.05	28	28	27.35	3.11	13.447	144.6\n\
@@ -52,28 +77,144 @@
 15.63	108.0973	-0.18	15.47	15.44	24.12	-35.89	35.448	139.665';
 
 
-            console.log(dataString)
-            dataRows = d3.tsv.parseRows(dataString, function(d) {
-                                         return {
-                                         sst: +d[0],
-                                         julian: +d[1],
-                                         delta_T: +d[2],
-                                         t_2_m: +d[3],
-                                         t_3_m: +d[4],
-                                         t_air: +d[5],
-                                         t_sky: +d[6],
-                                         latitude: +d[7],
-                                         longitude: +d[8]
-                                         };
-                                         }, function(error, rows) {
-                                         console.log(rows);
-                                         });
-                                    
-            console.log(dataRows);
-            console.log(dataRows.length);
-            console.log(dataString);
-			d3.select("body").append("span")
-			.text(dataRows.length + " rows; row[4].sst: " + dataRows[3].sst);
-			</script>
+dataRows = d3.tsv.parseRows(dataString, function(d) {
+                            return {
+                            sst: +d[0],
+                            julian: +d[1],
+                            delta_T: +d[2],
+                            t_2_m: +d[3],
+                            t_3_m: +d[4],
+                            t_air: +d[5],
+                            t_sky: +d[6],
+                            latitude: +d[7],
+                            longitude: +d[8]
+                            };
+                            }, function(error, rows) {
+                            console.log(rows);
+                            });
+                            
+
+d3.select("body").append("span")
+   .text(dataRows.length + " rows; row[4].sst: " + dataRows[3].sst);
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+width = 960 - margin.left - margin.right,
+height = 500 - margin.top - margin.bottom;
+
+// Set the ranges
+var x = d3.scale.linear().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+               .orient("bottom").ticks(5);
+
+var yAxis = d3.svg.axis().scale(y)
+              .orient("left").ticks(5);
+
+var deltaTLine = d3.svg.line()
+                  .x(function(d) { return x(d.julian); })
+                  .y(function(d) { return y(d.delta_T); });
+
+var SSTLine = d3.svg.line()
+                  .x(function(d) { return x(d.julian); })
+                  .y(function(d) { return y(d.sst); });
+
+var t2mLine = d3.svg.line()
+                 .x(function(d) { return x(d.julian); })
+                 .y(function(d) { return y(d.t_2_m); });
+
+var t3mLine = d3.svg.line()
+                 .x(function(d) { return x(d.julian); })
+                 .y(function(d) { return y(d.t_3_m); });
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+
+// Scale the range of the data
+x.domain(d3.extent(dataRows, function(d) { return d.julian; }));//<=date1
+y.domain(d3.extent(dataRows, function(d) { return d.sst; }));
+
+// Add the deltaTLine path.
+svg.append("path")
+   .attr("class", "line")
+   .style("stroke", "red")
+   .attr("d", deltaTLine(dataRows));
+
+// Add the SST path.
+svg.append("path")
+   .attr("class", "line")
+   .style("stroke", "green")
+   .attr("d", SSTLine(dataRows));
+
+svg.append("path")
+    .attr("class", "line")
+    .attr("d", t2mLine(dataRows))
+    
+svg.append("path")
+    .attr("class", "line")
+    .style("stroke", "magenta")
+    .attr("d", t3mLine(dataRows))
+    
+svg.append("g")            // Add the X Axis
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+    
+svg.append("g")
+    .attr("class", "y axis")
+    .style("fill", "steelblue")
+    .call(yAxis);
+    
+    
+    
+// render the table
+var peopleTable = tabulate(dataRows, ["julian", "sst", "t_2_m", "t_3_m", "delta_T"]);
+            
+            
+<!--            From http://bl.ocks.org/d3noob/473f0cf66196a008cf99 -->
+// The table generation function
+function tabulate(data, columns) {
+    var table = d3.select("body").append("table")
+    .attr("style", "margin-left: 250px"),
+    thead = table.append("thead"),
+    tbody = table.append("tbody");
+    
+    // append the header row
+    thead.append("tr")
+    .selectAll("th")
+    .data(columns)
+    .enter()
+    .append("th")
+    .text(function(column) { return column; });
+    
+    // create a row for each object in the data
+    var rows = tbody.selectAll("tr")
+    .data(data)
+    .enter()
+    .append("tr");
+    
+    // create a cell in each row for each column
+    var cells = rows.selectAll("td")
+    .data(function(row) {
+          return columns.map(function(column) {
+                             return {column: column, value: row[column]};
+                             });
+          })
+          .enter()
+          .append("td")
+          .attr("style", "font-family: Courier") // sets the font style
+          .html(function(d) { return d.value; });
+          
+          return table;
+}
+        
+
+            </script>
 	</body>
 </html>
