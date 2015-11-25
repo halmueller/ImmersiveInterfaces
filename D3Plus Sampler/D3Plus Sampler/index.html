@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0" />
+		<title>D3plus</title>
+		<script src="d3.js" charset="utf-8"></script>
+		<script src="d3plus.js"></script>
+	</head>
+	<body>
+		<div id="viz"></div>
+		<script type="text/javascript">
+			// load your data
+			var zsample_data = [
+							   {"year": 2001, "name":"concussions", "value": 0},
+							   {"year": 2002, "name":"concussions", "value": 1},
+							   {"year": 2003, "name":"concussions", "value": 3},
+							   {"year": 2004, "name":"concussions", "value": 0},
+							   {"year": 2005, "name":"concussions", "value": 4},
+							   {"year": 2006, "name":"concussions", "value": 2},
+							   {"year": 2007, "name":"concussions", "value": 4},
+							   {"year": 2008, "name":"concussions", "value": 3},
+							   {"year": 2009, "name":"concussions", "value": 6},
+							   {"year": 2010, "name":"concussions", "value": 10},
+							   {"year": 2011, "name":"concussions", "value": 14},
+							   {"year": 2012, "name":"concussions", "value": 14},
+							   {"year": 2013, "name":"concussions", "value": 19},
+							   {"year": 2014, "name":"concussions", "value": 22}
+							   ]
+							   
+		  d3.select("body").append("span")
+			.text("hello world");
+			
+			// instantiate d3plus
+			var visualization = d3plus.viz()
+			.container("#viz")  // container DIV to hold the visualization
+			.data(sample_data)  // data to use with the visualization
+			.type("line")       // visualization type
+			.id("name")         // key for which our data is unique on
+			.text("name")       // key to use for display text
+			.y("value")         // key to use for y-axis
+			.x("year")          // key to use for x-axis
+			.draw()             // finally, draw the visualization!
+
+			</script>
+	</body>
+</html>
