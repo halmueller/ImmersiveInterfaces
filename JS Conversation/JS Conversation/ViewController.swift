@@ -131,11 +131,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         print("running hither")
 		let newValuesAsArray = [["name": "Kirk", "value": 1], ["name": "Picard", "value": 2], ["name": "Sisko", "value": 3], ["name": "Janeway", "value": 4], ["name": "Archer", "value": 5]]
 		let valuesAsJSONData = try! NSJSONSerialization.dataWithJSONObject(newValuesAsArray, options: NSJSONWritingOptions(rawValue: 0))
-		print (valuesAsJSONData)
+		debugPrint (valuesAsJSONData)
 		let valuesAsJSONString = NSString(data: valuesAsJSONData, encoding: NSUTF8StringEncoding)! as String
 		print (valuesAsJSONString)
 		let fullJavaScriptCall = "reload('\(valuesAsJSONString)')"
-		print (fullJavaScriptCall)
+		debugPrint (fullJavaScriptCall)
 		self.webView?.evaluateJavaScript(fullJavaScriptCall, completionHandler: { (result, error) -> Void in
 			print(error)
 		})
