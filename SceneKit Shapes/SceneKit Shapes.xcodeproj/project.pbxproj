@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B005A3F1C0BCCB200040F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B005A3E1C0BCCB200040F37 /* AppDelegate.swift */; };
+		2B005A411C0BCCB200040F37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B005A401C0BCCB200040F37 /* ViewController.swift */; };
+		2B005A431C0BCCB200040F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B005A421C0BCCB200040F37 /* Assets.xcassets */; };
+		2B005A461C0BCCB200040F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B005A441C0BCCB200040F37 /* Main.storyboard */; };
+		2B005A4E1C0BD1E400040F37 /* DemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B005A4D1C0BD1E400040F37 /* DemoScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B005A3B1C0BCCB200040F37 /* SceneKit Shapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SceneKit Shapes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B005A3E1C0BCCB200040F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B005A401C0BCCB200040F37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B005A421C0BCCB200040F37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B005A451C0BCCB200040F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B005A471C0BCCB200040F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B005A4D1C0BD1E400040F37 /* DemoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B005A381C0BCCB200040F37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B005A321C0BCCB200040F37 = {
+			isa = PBXGroup;
+			children = (
+				2B005A3D1C0BCCB200040F37 /* SceneKit Shapes */,
+				2B005A3C1C0BCCB200040F37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B005A3C1C0BCCB200040F37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B005A3B1C0BCCB200040F37 /* SceneKit Shapes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B005A3D1C0BCCB200040F37 /* SceneKit Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				2B005A3E1C0BCCB200040F37 /* AppDelegate.swift */,
+				2B005A401C0BCCB200040F37 /* ViewController.swift */,
+				2B005A421C0BCCB200040F37 /* Assets.xcassets */,
+				2B005A441C0BCCB200040F37 /* Main.storyboard */,
+				2B005A4D1C0BD1E400040F37 /* DemoScene.swift */,
+				2B005A471C0BCCB200040F37 /* Info.plist */,
+			);
+			path = "SceneKit Shapes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B005A3A1C0BCCB200040F37 /* SceneKit Shapes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B005A4A1C0BCCB200040F37 /* Build configuration list for PBXNativeTarget "SceneKit Shapes" */;
+			buildPhases = (
+				2B005A371C0BCCB200040F37 /* Sources */,
+				2B005A381C0BCCB200040F37 /* Frameworks */,
+				2B005A391C0BCCB200040F37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SceneKit Shapes";
+			productName = "SceneKit Shapes";
+			productReference = 2B005A3B1C0BCCB200040F37 /* SceneKit Shapes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B005A331C0BCCB200040F37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Hal Mueller";
+				TargetAttributes = {
+					2B005A3A1C0BCCB200040F37 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 2B005A361C0BCCB200040F37 /* Build configuration list for PBXProject "SceneKit Shapes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B005A321C0BCCB200040F37;
+			productRefGroup = 2B005A3C1C0BCCB200040F37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B005A3A1C0BCCB200040F37 /* SceneKit Shapes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B005A391C0BCCB200040F37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B005A431C0BCCB200040F37 /* Assets.xcassets in Resources */,
+				2B005A461C0BCCB200040F37 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B005A371C0BCCB200040F37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B005A411C0BCCB200040F37 /* ViewController.swift in Sources */,
+				2B005A3F1C0BCCB200040F37 /* AppDelegate.swift in Sources */,
+				2B005A4E1C0BD1E400040F37 /* DemoScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B005A441C0BCCB200040F37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B005A451C0BCCB200040F37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B005A481C0BCCB200040F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B005A491C0BCCB200040F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2B005A4B1C0BCCB200040F37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "SceneKit Shapes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.SceneKit-Shapes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B005A4C1C0BCCB200040F37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "SceneKit Shapes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.SceneKit-Shapes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B005A361C0BCCB200040F37 /* Build configuration list for PBXProject "SceneKit Shapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B005A481C0BCCB200040F37 /* Debug */,
+				2B005A491C0BCCB200040F37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B005A4A1C0BCCB200040F37 /* Build configuration list for PBXNativeTarget "SceneKit Shapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B005A4B1C0BCCB200040F37 /* Debug */,
+				2B005A4C1C0BCCB200040F37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B005A331C0BCCB200040F37 /* Project object */;
+}
