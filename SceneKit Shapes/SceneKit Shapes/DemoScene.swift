@@ -27,7 +27,7 @@ class DemoScene: SCNScene {
 		let carouselRadius = 5 * objectSize
 		let cameraFOVDegrees = 60.0
 		
-		let colors = [MyColor.cyanColor(), MyColor.magentaColor(), MyColor.yellowColor(), MyColor.redColor(), MyColor.blueColor(), MyColor.greenColor()]
+		let colors = [MyColor.redColor(), MyColor.blueColor(), MyColor.greenColor(), MyColor.magentaColor(), MyColor.yellowColor(), MyColor.cyanColor()]
 		var newMaterials: [SCNMaterial] = []
 		for color in colors {
 			let thisMaterial = SCNMaterial()
@@ -67,7 +67,7 @@ class DemoScene: SCNScene {
 		followSpotNode = SCNNode(geometry: sharedCamShape)
 		followSpotNode.camera = followCamera
 		followSpotNode.light = followSpotLight
-		followSpotNode.position = SCNVector3Make(carouselRadius, carouselRadius/2, carouselRadius)
+		followSpotNode.position = SCNVector3Make(1.1*carouselRadius/sqrt(2.0), 3*objectSize, carouselRadius/sqrt(2.0))
 		
 		super.init()
 		
@@ -87,21 +87,16 @@ class DemoScene: SCNScene {
 		carousel.runAction(rotate)
 		self.rootNode.addChildNode(carousel)
 
-		overheadCameraNode.constraints = [SCNLookAtConstraint(target: carousel)]
-		fixedCameraNode.constraints = [SCNLookAtConstraint(target: carousel)]
+		let carouselConstraint = SCNLookAtConstraint(target: carousel)
+		carouselConstraint.gimbalLockEnabled = true
+		overheadCameraNode.constraints = [carouselConstraint]
+		fixedCameraNode.constraints = [carouselConstraint]
 		
-		let centerString = NSAttributedString(string: "center", attributes: [NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
-		 NSFontAttributeName: MyFont(name: "Helvetica", size: 0.5)!])
-		let centerText = SCNText(string: centerString, extrusionDepth: objectSize/10)
-		centerText.materials = materials
-		let centerNode = SCNNode(geometry: centerText)
-		centerNode.constraints = [SCNBillboardConstraint()]
+		let centerMarkerGeometry = SCNSphere(radius: objectSize/4)
+		centerMarkerGeometry.firstMaterial = materials[1]
+		let centerNode = SCNNode(geometry: centerMarkerGeometry)
 		self.rootNode.addChildNode(centerNode)
 
-		let chamferedBox = SCNBox(width: objectSize, height: objectSize, length: objectSize/2, chamferRadius: 0.2)
-		
-		let box = SCNBox(width: objectSize/2, height: objectSize, length: objectSize, chamferRadius: 0)
-		
 		let capsule = SCNCapsule(capRadius: objectSize/4, height: objectSize)
 	
 		let standardSphere = SCNSphere(radius: objectSize/2)
@@ -112,7 +107,9 @@ class DemoScene: SCNScene {
 		let geodesicSphere = SCNSphere(radius: objectSize/2)
 		geodesicSphere.geodesic = true
 		
-		let pyramid = SCNPyramid(width: objectSize/3, height: objectSize/5, length: objectSize)
+		let pyramid = SCNPyramid(width: objectSize/3, height: objectSize, length: objectSize/5)
+		
+		let pyramid2 = SCNPyramid(width: objectSize/2, height: objectSize, length: objectSize/2)
 		
 		let plane = SCNPlane(width: objectSize, height: objectSize)
 		
@@ -125,8 +122,14 @@ class DemoScene: SCNScene {
 		let text = SCNText(string: sourceString, extrusionDepth: objectSize/10)
 		
 		let torus = SCNTorus(ringRadius: objectSize, pipeRadius: objectSize/8)
+		
+		let cylinder = SCNCylinder(radius: objectSize/4, height: objectSize)
 
-		let geometries = [chamferedBox, box, capsule, standardSphere, tube, geodesicSphere, pyramid, text, plane, cone1, cone2, torus]
+		let chamferedBox = SCNBox(width: objectSize, height: objectSize, length: objectSize/2, chamferRadius: 0.2)
+		
+		let box = SCNBox(width: objectSize/2, height: objectSize, length: objectSize, chamferRadius: 0)
+		
+		let geometries = [capsule, standardSphere, tube, geodesicSphere, pyramid, pyramid2, text, plane, cone1, cone2, torus, cylinder, box, chamferedBox]
 		var index = 0
 		let angleIncrement = 2.0 * M_PI/Double(geometries.count)
 		var lastNode: SCNNode!
@@ -137,11 +140,14 @@ class DemoScene: SCNScene {
 			let x = carouselRadius * cos(angle)
 			let y = carouselRadius * sin(angle)
 			node.position = SCNVector3Make(x, 0, y)
+			node.eulerAngles.y = -1.0 * angle
 			carousel.addChildNode(node)
 			lastNode = node
 		}
 		
-		followSpotNode.constraints = [SCNLookAtConstraint(target: lastNode)]
+		let followSpotConstraint = SCNLookAtConstraint(target: lastNode)
+		followSpotConstraint.gimbalLockEnabled = true
+		followSpotNode.constraints = [followSpotConstraint]
 		
 		let floor = SCNFloor()
 		self.rootNode.addChildNode(SCNNode(geometry: floor))
