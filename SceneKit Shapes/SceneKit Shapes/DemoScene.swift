@@ -22,6 +22,24 @@ class DemoScene: SCNScene {
 	let overheadCameraNode: SCNNode
 	let fixedCameraNode: SCNNode
 	
+	class func visibleCamera (fovDegrees: Double) -> SCNNode {
+		let result = SCNNode()
+		
+		let shapeForCamera = SCNCone(topRadius: 0, bottomRadius: 0.1, height: 0.3)
+		let shapeNode = SCNNode(geometry: shapeForCamera)
+		result.addChildNode(shapeNode)
+		// Make bottom of cone point along parent's -Z axis:
+		shapeNode.rotation = SCNVector4Make(1, 0, 0, CGFloat(M_PI_2))
+
+		let fixedCamera = SCNCamera()
+		fixedCamera.xFov = fovDegrees
+		fixedCamera.yFov = fovDegrees
+		print(fixedCamera.xFov, fixedCamera.yFov)
+		result.camera = fixedCamera
+
+		return result
+	}
+	
 	override init() {
 		let objectSize = CGFloat(0.5)
 		let carouselRadius = 5 * objectSize
@@ -37,37 +55,19 @@ class DemoScene: SCNScene {
 		}
 		materials = newMaterials
 	
-		let sharedCamShape = SCNCone(topRadius: 0, bottomRadius: 0.1, height: 0.2)
-		
-		let overheadCamera = SCNCamera()
-		overheadCamera.xFov = cameraFOVDegrees
-		overheadCamera.yFov = cameraFOVDegrees
-		print(overheadCamera.xFov, overheadCamera.yFov)
-		overheadCameraNode = SCNNode(geometry: sharedCamShape)
-		overheadCameraNode.camera = overheadCamera
-		//fixedCameraNode.position = SCNVector3Make(-1 * carouselRadius, carouselRadius, carouselRadius)
+		overheadCameraNode = DemoScene.visibleCamera(cameraFOVDegrees)
 		overheadCameraNode.position = SCNVector3Make(0, 3 * carouselRadius, 0)
 		
-		let fixedCamera = SCNCamera()
-		fixedCamera.xFov = cameraFOVDegrees
-		fixedCamera.yFov = cameraFOVDegrees
-		print(fixedCamera.xFov, fixedCamera.yFov)
-		fixedCameraNode = SCNNode(geometry: sharedCamShape)
-		fixedCameraNode.camera = fixedCamera
+		fixedCameraNode = DemoScene.visibleCamera(cameraFOVDegrees)
 		fixedCameraNode.position = SCNVector3Make(-1 * carouselRadius, carouselRadius, carouselRadius)
 		//fixedCameraNode.position = SCNVector3Make(0, 3 * carouselRadius, 0)
 		
-		let followCamera = SCNCamera()
-		followCamera.xFov = 30
-		followCamera.yFov = 30
-//		followCamera.focalBlurRadius = 3.0
-		let followSpotLight = SCNLight()
+		followSpotNode = DemoScene.visibleCamera(cameraFOVDegrees)
+		followSpotNode.position = SCNVector3Make(1.1*carouselRadius/sqrt(2.0), 3*objectSize, carouselRadius/sqrt(2.0))
+		 let followSpotLight = SCNLight()
 		followSpotLight.type = SCNLightTypeSpot
 		followSpotLight.castsShadow = true
-		followSpotNode = SCNNode(geometry: sharedCamShape)
-		followSpotNode.camera = followCamera
 		followSpotNode.light = followSpotLight
-		followSpotNode.position = SCNVector3Make(1.1*carouselRadius/sqrt(2.0), 3*objectSize, carouselRadius/sqrt(2.0))
 		
 		super.init()
 		
