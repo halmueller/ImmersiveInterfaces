@@ -21,6 +21,7 @@ class DemoScene: SCNScene {
 	let followSpotNode: SCNNode
 	let overheadCameraNode: SCNNode
 	let fixedCameraNode: SCNNode
+	let carousel: SCNNode
 	
 	class func visibleCamera (fovDegrees: Double) -> SCNNode {
 		let result = SCNNode()
@@ -31,11 +32,12 @@ class DemoScene: SCNScene {
 		// Make bottom of cone point along parent's -Z axis:
 		shapeNode.rotation = SCNVector4Make(1, 0, 0, CGFloat(M_PI_2))
 
-		let fixedCamera = SCNCamera()
-		fixedCamera.xFov = fovDegrees
-		fixedCamera.yFov = fovDegrees
-		print(fixedCamera.xFov, fixedCamera.yFov)
-		result.camera = fixedCamera
+		let camera = SCNCamera()
+		camera.xFov = fovDegrees
+		camera.yFov = fovDegrees
+//		camera.zNear = 0.1
+//		camera.zFar = 2.00
+		result.camera = camera
 
 		return result
 	}
@@ -69,6 +71,7 @@ class DemoScene: SCNScene {
 		followSpotLight.castsShadow = true
 		followSpotNode.light = followSpotLight
 		
+		carousel = SCNNode()
 		super.init()
 		
 		let ambientLight = SCNLight()
@@ -81,14 +84,13 @@ class DemoScene: SCNScene {
 		self.rootNode.addChildNode(overheadCameraNode)
 		self.rootNode.addChildNode(fixedCameraNode)
 		
-		let carousel = SCNNode()
 		carousel.position = SCNVector3Make(0, objectSize, 0)
 		let rotate = SCNAction.repeatActionForever(SCNAction.rotateByX(0.0, y: CGFloat(M_PI), z: 0, duration: 20.0))
 		carousel.runAction(rotate)
 		self.rootNode.addChildNode(carousel)
 
 		let carouselConstraint = SCNLookAtConstraint(target: carousel)
-		carouselConstraint.gimbalLockEnabled = true
+		//carouselConstraint.gimbalLockEnabled = true
 		overheadCameraNode.constraints = [carouselConstraint]
 		fixedCameraNode.constraints = [carouselConstraint]
 		
@@ -144,10 +146,7 @@ class DemoScene: SCNScene {
 			carousel.addChildNode(node)
 			lastNode = node
 		}
-		
-		let followSpotConstraint = SCNLookAtConstraint(target: lastNode)
-		followSpotConstraint.gimbalLockEnabled = true
-		followSpotNode.constraints = [followSpotConstraint]
+		self.trackWithSpotlight(lastNode)
 		
 		let floor = SCNFloor()
 		self.rootNode.addChildNode(SCNNode(geometry: floor))
@@ -157,5 +156,27 @@ class DemoScene: SCNScene {
 	required init?(coder aDecoder: NSCoder) {
 	    fatalError("init(coder:) has not been implemented")
 	}
+	
+	func handleTouchHits(hits: [SCNHitTestResult]?) {
+		if hits != nil {
+			for hit in hits! {
+				if hit.node.parentNode == self.carousel {
+					debugPrint (hit.node)
+					self.trackWithSpotlight(hit.node)
+					let animationAction = SCNAction.moveByX(0, y: 1, z: 0, duration: 5)
+					let fadeAction = SCNAction.fadeOpacityTo(0.0, duration: 5)
+					let unfadeAction = SCNAction.fadeOpacityTo(1.0, duration: 5)
+					let sequence = SCNAction.sequence([animationAction, animationAction.reversedAction(), fadeAction, unfadeAction])
+					hit.node.runAction(sequence)
+				}
+			}
+		}
+	}
 
+	func trackWithSpotlight (target: SCNNode) {
+		let followSpotConstraint = SCNLookAtConstraint(target: target)
+		//followSpotConstraint.gimbalLockEnabled = true
+		followSpotNode.constraints = [followSpotConstraint]
+		
+	}
 }

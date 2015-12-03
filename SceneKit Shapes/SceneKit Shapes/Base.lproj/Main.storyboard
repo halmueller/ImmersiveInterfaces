@@ -682,7 +682,7 @@
                                 </constraints>
                                 <animations/>
                             </sceneView>
-                            <sceneView jitteringEnabled="YES" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O8S-wU-ahG">
+                            <sceneView jitteringEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O8S-wU-ahG">
                                 <rect key="frame" x="160" y="0.0" width="160" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="270" id="3Fq-LG-NNC"/>
