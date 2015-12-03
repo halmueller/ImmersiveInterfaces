@@ -166,7 +166,10 @@ class DemoScene: SCNScene {
 					let animationAction = SCNAction.moveByX(0, y: 1, z: 0, duration: 5)
 					let fadeAction = SCNAction.fadeOpacityTo(0.0, duration: 5)
 					let unfadeAction = SCNAction.fadeOpacityTo(1.0, duration: 5)
-					let sequence = SCNAction.sequence([animationAction, animationAction.reversedAction(), fadeAction, unfadeAction])
+					let growAction = SCNAction.scaleBy(2.0, duration: 5)
+					let sequence = SCNAction.sequence([animationAction, animationAction.reversedAction(),
+						fadeAction, unfadeAction,
+						growAction, growAction.reversedAction()])
 					hit.node.runAction(sequence)
 				}
 			}
