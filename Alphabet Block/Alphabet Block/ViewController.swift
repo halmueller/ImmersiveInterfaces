@@ -6,10 +6,15 @@
 //  Copyright © 2015 Hal Mueller. All rights reserved.
 //
 
-import Cocoa
 import SceneKit
 
-class ViewController: NSViewController {
+#if os(iOS) || os(tvOS)
+    typealias ViewControllerSuper = UIViewController
+#elseif os(OSX)
+    typealias ViewControllerSuper = NSViewController
+#endif
+
+class ViewController: ViewControllerSuper {
 
     @IBOutlet weak var sceneView: SCNView!
     
@@ -18,13 +23,6 @@ class ViewController: NSViewController {
 
         self.sceneView.scene = BlockScene()
     }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
 
 }
 

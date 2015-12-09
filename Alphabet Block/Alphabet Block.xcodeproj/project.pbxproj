@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2068298B1C17EC7900902F99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081490F1C002F6F002835CB /* ViewController.swift */; };
 		2081490E1C002F6F002835CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081490D1C002F6F002835CB /* AppDelegate.swift */; };
 		208149101C002F6F002835CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081490F1C002F6F002835CB /* ViewController.swift */; };
 		208149121C002F6F002835CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208149111C002F6F002835CB /* Assets.xcassets */; };
 		208149151C002F6F002835CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208149131C002F6F002835CB /* Main.storyboard */; };
 		2081491D1C002FD1002835CB /* BlockScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081491C1C002FD1002835CB /* BlockScene.swift */; };
 		208149291C00429B002835CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208149281C00429B002835CB /* AppDelegate.swift */; };
-		2081492B1C00429B002835CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081492A1C00429B002835CB /* ViewController.swift */; };
 		2081492E1C00429B002835CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2081492C1C00429B002835CB /* Main.storyboard */; };
 		208149331C00429B002835CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208149311C00429B002835CB /* LaunchScreen.storyboard */; };
 		208149381C00436C002835CB /* BlockScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081491C1C002FD1002835CB /* BlockScene.swift */; };
@@ -23,14 +23,13 @@
 /* Begin PBXFileReference section */
 		2081490A1C002F6F002835CB /* Alphabet Block.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alphabet Block.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2081490D1C002F6F002835CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2081490F1C002F6F002835CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2081490F1C002F6F002835CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../Alphabet Block/ViewController.swift"; sourceTree = "<group>"; };
 		208149111C002F6F002835CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../Alphabet Block/Assets.xcassets"; sourceTree = "<group>"; };
 		208149141C002F6F002835CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		208149161C002F6F002835CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2081491C1C002FD1002835CB /* BlockScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockScene.swift; path = "../Alphabet Block/BlockScene.swift"; sourceTree = "<group>"; };
 		208149261C00429B002835CB /* Alphabet Block iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alphabet Block iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		208149281C00429B002835CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2081492A1C00429B002835CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2081492D1C00429B002835CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		208149321C00429B002835CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		208149341C00429B002835CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				2081490D1C002F6F002835CB /* AppDelegate.swift */,
-				2081490F1C002F6F002835CB /* ViewController.swift */,
 				208149131C002F6F002835CB /* Main.storyboard */,
 				208149161C002F6F002835CB /* Info.plist */,
 			);
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				208149281C00429B002835CB /* AppDelegate.swift */,
-				2081492A1C00429B002835CB /* ViewController.swift */,
 				2081492C1C00429B002835CB /* Main.storyboard */,
 				208149311C00429B002835CB /* LaunchScreen.storyboard */,
 				208149341C00429B002835CB /* Info.plist */,
@@ -101,6 +98,7 @@
 			children = (
 				208149111C002F6F002835CB /* Assets.xcassets */,
 				2081491C1C002FD1002835CB /* BlockScene.swift */,
+				2081490F1C002F6F002835CB /* ViewController.swift */,
 			);
 			name = Shared;
 			path = "Alphabet Block iOS";
@@ -217,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2081492B1C00429B002835CB /* ViewController.swift in Sources */,
+				2068298B1C17EC7900902F99 /* ViewController.swift in Sources */,
 				208149291C00429B002835CB /* AppDelegate.swift in Sources */,
 				208149381C00436C002835CB /* BlockScene.swift in Sources */,
 			);
