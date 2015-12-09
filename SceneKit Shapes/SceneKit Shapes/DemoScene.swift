@@ -35,6 +35,7 @@ class DemoScene: SCNScene {
 		let camera = SCNCamera()
 		camera.xFov = fovDegrees
 		camera.yFov = fovDegrees
+        // MARK: Camera near/far clipping. Uncomment both of these, then keep zNear but omit zFar:
 //		camera.zNear = 0.1
 //		camera.zFar = 2.00
 		result.camera = camera
@@ -51,6 +52,8 @@ class DemoScene: SCNScene {
 		var newMaterials: [SCNMaterial] = []
 		for color in colors {
 			let thisMaterial = SCNMaterial()
+            // MARK: uncomment this to get back of SCNPlane visible:
+//            thisMaterial.doubleSided = true
 			thisMaterial.diffuse.contents = color
 			thisMaterial.specular.contents = MyColor.whiteColor()
 			newMaterials.append(thisMaterial)
@@ -90,6 +93,7 @@ class DemoScene: SCNScene {
 		self.rootNode.addChildNode(carousel)
 
 		let carouselConstraint = SCNLookAtConstraint(target: carousel)
+        // MARK: uncomment this to correct horizon:
 		//carouselConstraint.gimbalLockEnabled = true
 		overheadCameraNode.constraints = [carouselConstraint]
 		fixedCameraNode.constraints = [carouselConstraint]
@@ -142,7 +146,8 @@ class DemoScene: SCNScene {
 			let x = carouselRadius * cos(angle)
 			let y = carouselRadius * sin(angle)
 			node.position = SCNVector3Make(x, 0, y)
-			node.eulerAngles.y = -1.0 * angle
+            // MARK: uncomment this to get nodes parallel to radius:
+//			node.eulerAngles.y = -1.0 * angle
 			carousel.addChildNode(node)
 			lastNode = node
 		}
@@ -178,6 +183,7 @@ class DemoScene: SCNScene {
 
 	func trackWithSpotlight (target: SCNNode) {
 		let followSpotConstraint = SCNLookAtConstraint(target: target)
+        // MARK: uncomment this to correct horizon:
 		//followSpotConstraint.gimbalLockEnabled = true
 		followSpotNode.constraints = [followSpotConstraint]
 		
