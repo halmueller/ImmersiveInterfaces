@@ -25,36 +25,56 @@ class BlockScene: SCNScene {
     }
 
     #if os(OSX)
+    typealias BLColor = NSColor
+    typealias BLImage = NSImage
+    #else
+    typealias BLColor = UIColor
+    typealias BLImage = UIImage
+    #endif
     func colorMaterials() -> [SCNMaterial] {
         let colors = [
-            NSColor.blueColor(),
-            NSColor.greenColor(),
-            NSColor.orangeColor(),
-            NSColor.purpleColor(),
-            NSColor.yellowColor(),
-            NSColor.blueColor()]
+            BLColor.blueColor(),
+            BLColor.greenColor(),
+            BLColor.orangeColor(),
+            BLColor.purpleColor(),
+            BLColor.yellowColor(),
+            BLColor.blueColor()]
 
         let letters = [
             // e, c, x, z, X, B
-            NSImage(named: "e"),
-            NSImage(named: "c"),
-            NSImage(named: "x"),
-            NSImage(named: "z"),
-            NSImage(named: "X cap"),
-            NSImage(named: "B cap")]
+            BLImage(named: "e"),
+            BLImage(named: "c"),
+            BLImage(named: "x"),
+            BLImage(named: "z"),
+            BLImage(named: "X cap"),
+            BLImage(named: "B cap")]
 
-        var images: [NSImage] = []
-        for i in 0..<letters.count {
-            let finalImage = NSImage(size: letters[i]!.size)
-            finalImage.lockFocus()
-            colors[i].setFill()
-            let rect = NSMakeRect(0, 0, finalImage.size.width, finalImage.size.height)
-            NSBezierPath.fillRect(rect)
-            letters[i]?.drawInRect(rect)
-            finalImage.unlockFocus()
-            images.append(finalImage)
-        }
         var result : [SCNMaterial] = []
+        var images: [BLImage] = []
+        #if os(OSX)
+            for i in 0..<letters.count {
+                let finalImage = NSImage(size: letters[i]!.size)
+                finalImage.lockFocus()
+                colors[i].setFill()
+                let rect = NSMakeRect(0, 0, finalImage.size.width, finalImage.size.height)
+                NSBezierPath.fillRect(rect)
+                letters[i]?.drawInRect(rect)
+                finalImage.unlockFocus()
+                images.append(finalImage)
+            }
+        #else
+            for i in 0..<letters.count {
+                /*                let finalImage = UIImage(
+                finalImage.lockFocus()
+                colors[i].setFill()
+                let rect = NSMakeRect(0, 0, finalImage.size.width, finalImage.size.height)
+                UIBezierPath.fillRect(rect)
+                letters[i]?.drawInRect(rect)
+                finalImage.unlockFocus()
+                */
+                images.append(letters[i]!)
+            }
+        #endif
         for i in 0..<letters.count {
             let material = SCNMaterial()
             material.diffuse.contents = images[i]
@@ -62,41 +82,5 @@ class BlockScene: SCNScene {
         }
         return result
     }
-    #else
-    func colorMaterials() -> [SCNMaterial] {
-        let colors = [
-            UIColor.blueColor(),
-            UIColor.greenColor(),
-            UIColor.orangeColor(),
-            UIColor.purpleColor(),
-            UIColor.yellowColor(),
-            UIColor.blueColor()]
-
-        let letters = [
-            // e, c, x, z, X, B
-            UIImage(named: "e"),
-            UIImage(named: "c"),
-            UIImage(named: "x"),
-            UIImage(named: "z"),
-            UIImage(named: "X cap"),
-            UIImage(named: "B cap")]
-
-        var result : [SCNMaterial] = []
-        for i in 0..<letters.count {
-            /*                let finalImage = UIImage(
-            finalImage.lockFocus()
-            colors[i].setFill()
-            let rect = NSMakeRect(0, 0, finalImage.size.width, finalImage.size.height)
-            UIBezierPath.fillRect(rect)
-            letters[i]?.drawInRect(rect)
-            finalImage.unlockFocus()
-            */
-            let material = SCNMaterial()
-            material.diffuse.contents = colors[i]
-            result.append(material)
-        }
-        return result
-    }
-    #endif
     
 }
