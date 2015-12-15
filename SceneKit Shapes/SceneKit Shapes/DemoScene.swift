@@ -154,6 +154,9 @@ class DemoScene: SCNScene {
 		self.trackWithSpotlight(lastNode)
 		
 		let floor = SCNFloor()
+		floor.firstMaterial?.diffuse.contents = NSImage(named: "WoodFine0001_1_S")
+		floor.firstMaterial?.diffuse.wrapS = .Repeat
+		floor.firstMaterial?.diffuse.wrapT = .Repeat
 		self.rootNode.addChildNode(SCNNode(geometry: floor))
 		
 	}
