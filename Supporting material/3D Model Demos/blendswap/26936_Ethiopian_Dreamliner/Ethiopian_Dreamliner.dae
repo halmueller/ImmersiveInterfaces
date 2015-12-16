@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.76.0 commit date:2015-10-11, commit time:06:55, hash:48f7dd6</authoring_tool>
     </contributor>
-    <created>2015-12-09T21:42:05</created>
-    <modified>2015-12-09T21:42:05</modified>
+    <created>2015-12-10T18:32:07</created>
+    <modified>2015-12-10T18:32:07</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -182,14 +182,7 @@
       </extra>
     </light>
   </library_lights>
-  <library_images>
-    <image id="uv3t_png" name="uv3t_png">
-      <init_from>uv3t.png</init_from>
-    </image>
-    <image id="uv1t_png" name="uv1t_png">
-      <init_from>uv1t.png</init_from>
-    </image>
-  </library_images>
+  <library_images/>
   <library_effects>
     <effect id="Pilots-effect">
       <profile_COMMON>
@@ -257,16 +250,6 @@
     </effect>
     <effect id="Main_White_002-effect">
       <profile_COMMON>
-        <newparam sid="uv3t_png-surface">
-          <surface type="2D">
-            <init_from>uv3t_png</init_from>
-          </surface>
-        </newparam>
-        <newparam sid="uv3t_png-sampler">
-          <sampler2D>
-            <source>uv3t_png-surface</source>
-          </sampler2D>
-        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -276,7 +259,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="uv3t_png-sampler" texcoord="UVTex"/>
+              <color sid="diffuse">1 1 1 1</color>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -299,16 +282,6 @@
     </effect>
     <effect id="Main_White_003-effect">
       <profile_COMMON>
-        <newparam sid="adj_top_png-surface">
-          <surface type="2D">
-            <init_from>adj_top_png</init_from>
-          </surface>
-        </newparam>
-        <newparam sid="adj_top_png-sampler">
-          <sampler2D>
-            <source>adj_top_png-surface</source>
-          </sampler2D>
-        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -330,13 +303,6 @@
               <float sid="index_of_refraction">1</float>
             </index_of_refraction>
           </phong>
-          <extra>
-            <technique profile="FCOLLADA">
-              <bump>
-                <texture texture="adj_top_png-sampler" texcoord="UVTex"/>
-              </bump>
-            </technique>
-          </extra>
         </technique>
         <extra>
           <technique profile="GOOGLEEARTH">
@@ -380,16 +346,6 @@
     </effect>
     <effect id="Tail-effect">
       <profile_COMMON>
-        <newparam sid="uv1t_png-surface">
-          <surface type="2D">
-            <init_from>uv1t_png</init_from>
-          </surface>
-        </newparam>
-        <newparam sid="uv1t_png-sampler">
-          <sampler2D>
-            <source>uv1t_png-surface</source>
-          </sampler2D>
-        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -399,7 +355,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="uv1t_png-sampler" texcoord="UVTex"/>
+              <color sid="diffuse">1 1 1 1</color>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -486,16 +442,6 @@
     </effect>
     <effect id="Backdrop-effect">
       <profile_COMMON>
-        <newparam sid="Clouds-in-Sky-clouds--surface">
-          <surface type="2D">
-            <init_from>Clouds-in-Sky-clouds-</init_from>
-          </surface>
-        </newparam>
-        <newparam sid="Clouds-in-Sky-clouds--sampler">
-          <sampler2D>
-            <source>Clouds-in-Sky-clouds--surface</source>
-          </sampler2D>
-        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -505,7 +451,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="Clouds-in-Sky-clouds--sampler" texcoord="UVTex"/>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
             </diffuse>
             <specular>
               <color sid="specular">0.5 0.5 0.5 1</color>
@@ -1280,9 +1226,7 @@
         <instance_geometry url="#Circle-mesh" name="_87-Main">
           <bind_material>
             <technique_common>
-              <instance_material symbol="Main_White_002-material" target="#Main_White_002-material">
-                <bind_vertex_input semantic="UVTex" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
+              <instance_material symbol="Main_White_002-material" target="#Main_White_002-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -1292,9 +1236,7 @@
         <instance_geometry url="#Cube-mesh" name="_87-Wings">
           <bind_material>
             <technique_common>
-              <instance_material symbol="Main_White_003-material" target="#Main_White_003-material">
-                <bind_vertex_input semantic="UVTex" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
+              <instance_material symbol="Main_White_003-material" target="#Main_White_003-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -1314,9 +1256,7 @@
         <instance_geometry url="#Cube_002-mesh" name="_87-Tail">
           <bind_material>
             <technique_common>
-              <instance_material symbol="Tail-material" target="#Tail-material">
-                <bind_vertex_input semantic="UVTex" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
+              <instance_material symbol="Tail-material" target="#Tail-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
@@ -1444,9 +1384,7 @@
         <instance_geometry url="#Plane_003-mesh" name="BackDrop">
           <bind_material>
             <technique_common>
-              <instance_material symbol="Backdrop-material" target="#Backdrop-material">
-                <bind_vertex_input semantic="UVTex" input_semantic="TEXCOORD" input_set="0"/>
-              </instance_material>
+              <instance_material symbol="Backdrop-material" target="#Backdrop-material"/>
             </technique_common>
           </bind_material>
         </instance_geometry>
