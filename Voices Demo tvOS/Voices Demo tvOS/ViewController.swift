@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
         let synth = AVSpeechSynthesizer()
         for voice in englishVoices {
-            let utterance = AVSpeechUtterance(string: "hello world")
+            let utterance = AVSpeechUtterance(string: voice.language.uppercaseString + "," + voice.name + ",hello world")
             utterance.voice = voice
             print (utterance.voice)
             synth.speakUtterance(utterance)
