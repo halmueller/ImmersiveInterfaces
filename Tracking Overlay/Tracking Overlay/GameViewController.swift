@@ -31,8 +31,8 @@ class GameViewController: UIViewController {
         
         // show statistics such as fps and timing information
 //        scnView.showsStatistics = true
-		scnView.debugOptions = [SCNDebugOptions.ShowWireframe]
-        
+//		scnView.debugOptions = [SCNDebugOptions.ShowWireframe]
+		
         // configure the view
         scnView.backgroundColor = UIColor.yellowColor()
         
