@@ -31,11 +31,11 @@ class GameViewController: UIViewController {
         
         // show statistics such as fps and timing information
 //        scnView.showsStatistics = true
-		scnView.debugOptions = [SCNDebugOptions.ShowWireframe]
+//		scnView.debugOptions = [SCNDebugOptions.ShowWireframe]
 		
         // configure the view
-        scnView.backgroundColor = UIColor.yellowColor()
-        
+//        scnView.backgroundColor = UIColor.yellowColor()
+		
     }
     
     override func shouldAutorotate() -> Bool {
@@ -44,14 +44,6 @@ class GameViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
     }
     
     override func didReceiveMemoryWarning() {
