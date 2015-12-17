@@ -16,6 +16,7 @@
 		206829B01C17F72F00902F99 /* Tracking_OverlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206829AF1C17F72F00902F99 /* Tracking_OverlayTests.swift */; };
 		206829BB1C17F72F00902F99 /* Tracking_OverlayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206829BA1C17F72F00902F99 /* Tracking_OverlayUITests.swift */; };
 		206829C91C17F7FB00902F99 /* OrbitalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206829C81C17F7FB00902F99 /* OrbitalScene.swift */; };
+		2B1632C91C22971C00781693 /* InformationOverlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1632C81C22971C00781693 /* InformationOverlayScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		206829BA1C17F72F00902F99 /* Tracking_OverlayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracking_OverlayUITests.swift; sourceTree = "<group>"; };
 		206829BC1C17F72F00902F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		206829C81C17F7FB00902F99 /* OrbitalScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitalScene.swift; sourceTree = "<group>"; };
+		2B1632C81C22971C00781693 /* InformationOverlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationOverlayScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				2068299A1C17F72F00902F99 /* art.scnassets */,
 				2068299C1C17F72F00902F99 /* GameViewController.swift */,
 				206829C81C17F7FB00902F99 /* OrbitalScene.swift */,
+				2B1632C81C22971C00781693 /* InformationOverlayScene.swift */,
 				2068299E1C17F72F00902F99 /* Main.storyboard */,
 				206829A11C17F72F00902F99 /* Assets.xcassets */,
 				206829A31C17F72F00902F99 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				2068299D1C17F72F00902F99 /* GameViewController.swift in Sources */,
 				206829991C17F72F00902F99 /* AppDelegate.swift in Sources */,
+				2B1632C91C22971C00781693 /* InformationOverlayScene.swift in Sources */,
 				206829C91C17F7FB00902F99 /* OrbitalScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +498,7 @@
 				206829C11C17F72F00902F99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		206829C21C17F72F00902F99 /* Build configuration list for PBXNativeTarget "Tracking OverlayTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				206829C41C17F72F00902F99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		206829C51C17F72F00902F99 /* Build configuration list for PBXNativeTarget "Tracking OverlayUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +516,7 @@
 				206829C71C17F72F00902F99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
