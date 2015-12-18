@@ -119,10 +119,6 @@ public class OrbitalScene: SCNScene {
 
         let rotate = SCNAction.repeatActionForever(SCNAction.rotateByX(0.0, y: CGFloat(M_PI), z: 0, duration: 20.0))
         carouselNode.runAction(rotate)
-        self.rootNode.addChildNode(carouselNode)
-
-        let boxNodeConstraint = SCNLookAtConstraint(target: boxNode)
-//        fixedCameraNode.constraints = [boxNodeConstraint]
     }
     
     required public init?(coder aDecoder: NSCoder) {
