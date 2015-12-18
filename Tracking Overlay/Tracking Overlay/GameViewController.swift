@@ -51,7 +51,9 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 			if let orbitalScene = sceneView.scene as? OrbitalScene {
 //				print ("box raw", orbitalScene.boxNode.position)
 //				print ("box presentation node", orbitalScene.boxNode.presentationNode.position)
-				let boxWorldCoordinates = orbitalScene.rootNode.convertPosition(orbitalScene.boxNode.position, fromNode: orbitalScene.carouselNode)
+//				let boxWorldCoordinates = orbitalScene.rootNode.convertPosition(orbitalScene.boxNode.position, fromNode: orbitalScene.carouselNode)
+				let boxWorldCoordinates = orbitalScene.rootNode.convertPosition(orbitalScene.boxNode.position, fromNode:orbitalScene.boxNode.parentNode)
+				
 //				print("box world", boxWorldCoordinates)
 				let screenCoordinates = self.sceneView.projectPoint(boxWorldCoordinates)
 				print ("screen", screenCoordinates)
