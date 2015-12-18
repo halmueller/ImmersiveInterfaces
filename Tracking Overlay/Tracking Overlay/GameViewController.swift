@@ -46,7 +46,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 	
 	// MARK: SCNSceneRendererDelegate -
 	
-	func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
+	func renderer(renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: NSTimeInterval)  {
 		if let overlay = sceneView.overlaySKScene as? InformationOverlayScene {
 			if let orbitalScene = sceneView.scene as? OrbitalScene {
 //				print ("box raw", orbitalScene.boxNode.position)
