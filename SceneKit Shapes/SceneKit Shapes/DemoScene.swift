@@ -155,10 +155,8 @@ class DemoScene: SCNScene {
 		
 		let floor = SCNFloor()
 		floor.firstMaterial?.diffuse.contents = NSImage(named: "WoodFine0001_1_S")
-		floor.firstMaterial?.diffuse.wrapS = .Repeat
-		floor.firstMaterial?.diffuse.wrapT = .Repeat
+        floor.firstMaterial?.diffuse.contentsTransform = SCNMatrix4MakeScale(10, 10, 10)
 		self.rootNode.addChildNode(SCNNode(geometry: floor))
-		
 	}
 
 	required init?(coder aDecoder: NSCoder) {
