@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
-        <plugIn identifier="com.apple.SceneKitIBPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.SceneKitIBPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -680,7 +680,6 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="270" id="NUL-Cz-g99"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="ula-HD-3ca"/>
                                 </constraints>
-                                <animations/>
                             </sceneView>
                             <sceneView jitteringEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O8S-wU-ahG">
                                 <rect key="frame" x="160" y="0.0" width="160" height="270"/>
@@ -688,7 +687,6 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="270" id="3Fq-LG-NNC"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="H4b-4Q-uqt"/>
                                 </constraints>
-                                <animations/>
                             </sceneView>
                             <sceneView jitteringEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-7P-jrq">
                                 <rect key="frame" x="320" y="0.0" width="160" height="270"/>
@@ -696,7 +694,6 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="270" id="k5P-2n-q8V"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="qee-Di-TTO"/>
                                 </constraints>
-                                <animations/>
                             </sceneView>
                         </subviews>
                         <constraints>
@@ -714,7 +711,6 @@
                             <constraint firstItem="O8S-wU-ahG" firstAttribute="trailing" secondItem="ngf-7P-jrq" secondAttribute="leading" id="p0U-Wr-LtM"/>
                             <constraint firstItem="O8S-wU-ahG" firstAttribute="width" secondItem="ngf-7P-jrq" secondAttribute="width" id="tgb-dZ-zKZ"/>
                         </constraints>
-                        <animations/>
                     </view>
                     <connections>
                         <outlet property="centerView" destination="O8S-wU-ahG" id="U76-xM-0bm"/>
