@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B280F9E1C30C12300EADDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B280F9D1C30C12300EADDAB /* AppDelegate.swift */; };
+		2B280FA01C30C12300EADDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B280F9F1C30C12300EADDAB /* ViewController.swift */; };
+		2B280FA21C30C12300EADDAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B280FA11C30C12300EADDAB /* Assets.xcassets */; };
+		2B280FA51C30C12300EADDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B280FA31C30C12300EADDAB /* Main.storyboard */; };
+		2B280FB01C30C12300EADDAB /* Flight_PathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B280FAF1C30C12300EADDAB /* Flight_PathTests.swift */; };
+		2B280FBB1C30C12300EADDAB /* Flight_PathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B280FBA1C30C12300EADDAB /* Flight_PathUITests.swift */; };
+		2B280FCB1C30C30100EADDAB /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B280FCA1C30C30100EADDAB /* CHCSVParser.m */; };
+		2B280FCE1C30C3F700EADDAB /* FlightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B280FCD1C30C3F700EADDAB /* FlightPath.swift */; };
+		2B280FD01C30C43A00EADDAB /* FlightPathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B280FCF1C30C43A00EADDAB /* FlightPathScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B280FAC1C30C12300EADDAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B280F921C30C12300EADDAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B280F991C30C12300EADDAB;
+			remoteInfo = "Flight Path";
+		};
+		2B280FB71C30C12300EADDAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B280F921C30C12300EADDAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B280F991C30C12300EADDAB;
+			remoteInfo = "Flight Path";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B280F9A1C30C12300EADDAB /* Flight Path.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flight Path.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B280F9D1C30C12300EADDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B280F9F1C30C12300EADDAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B280FA11C30C12300EADDAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B280FA41C30C12300EADDAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B280FA61C30C12300EADDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B280FAB1C30C12300EADDAB /* Flight PathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flight PathTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B280FAF1C30C12300EADDAB /* Flight_PathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight_PathTests.swift; sourceTree = "<group>"; };
+		2B280FB11C30C12300EADDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B280FB61C30C12300EADDAB /* Flight PathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flight PathUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B280FBA1C30C12300EADDAB /* Flight_PathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight_PathUITests.swift; sourceTree = "<group>"; };
+		2B280FBC1C30C12300EADDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B280FC81C30C30100EADDAB /* Flight Path-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flight Path-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B280FC91C30C30100EADDAB /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = "../../CHCSVParser-master/CHCSVParser/CHCSVParser/CHCSVParser.h"; sourceTree = "<group>"; };
+		2B280FCA1C30C30100EADDAB /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = "../../CHCSVParser-master/CHCSVParser/CHCSVParser/CHCSVParser.m"; sourceTree = "<group>"; };
+		2B280FCD1C30C3F700EADDAB /* FlightPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPath.swift; sourceTree = "<group>"; };
+		2B280FCF1C30C43A00EADDAB /* FlightPathScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPathScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B280F971C30C12300EADDAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B280FA81C30C12300EADDAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B280FB31C30C12300EADDAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B280F911C30C12200EADDAB = {
+			isa = PBXGroup;
+			children = (
+				2B280F9C1C30C12300EADDAB /* Flight Path */,
+				2B280FAE1C30C12300EADDAB /* Flight PathTests */,
+				2B280FB91C30C12300EADDAB /* Flight PathUITests */,
+				2B280F9B1C30C12300EADDAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B280F9B1C30C12300EADDAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B280F9A1C30C12300EADDAB /* Flight Path.app */,
+				2B280FAB1C30C12300EADDAB /* Flight PathTests.xctest */,
+				2B280FB61C30C12300EADDAB /* Flight PathUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B280F9C1C30C12300EADDAB /* Flight Path */ = {
+			isa = PBXGroup;
+			children = (
+				2B280F9D1C30C12300EADDAB /* AppDelegate.swift */,
+				2B280F9F1C30C12300EADDAB /* ViewController.swift */,
+				2B280FCD1C30C3F700EADDAB /* FlightPath.swift */,
+				2B280FCF1C30C43A00EADDAB /* FlightPathScene.swift */,
+				2B280FCC1C30C30B00EADDAB /* CHCSV Parser */,
+				2B280FA11C30C12300EADDAB /* Assets.xcassets */,
+				2B280FA31C30C12300EADDAB /* Main.storyboard */,
+				2B280FA61C30C12300EADDAB /* Info.plist */,
+				2B280FC81C30C30100EADDAB /* Flight Path-Bridging-Header.h */,
+			);
+			path = "Flight Path";
+			sourceTree = "<group>";
+		};
+		2B280FAE1C30C12300EADDAB /* Flight PathTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B280FAF1C30C12300EADDAB /* Flight_PathTests.swift */,
+				2B280FB11C30C12300EADDAB /* Info.plist */,
+			);
+			path = "Flight PathTests";
+			sourceTree = "<group>";
+		};
+		2B280FB91C30C12300EADDAB /* Flight PathUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B280FBA1C30C12300EADDAB /* Flight_PathUITests.swift */,
+				2B280FBC1C30C12300EADDAB /* Info.plist */,
+			);
+			path = "Flight PathUITests";
+			sourceTree = "<group>";
+		};
+		2B280FCC1C30C30B00EADDAB /* CHCSV Parser */ = {
+			isa = PBXGroup;
+			children = (
+				2B280FC91C30C30100EADDAB /* CHCSVParser.h */,
+				2B280FCA1C30C30100EADDAB /* CHCSVParser.m */,
+			);
+			name = "CHCSV Parser";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B280F991C30C12300EADDAB /* Flight Path */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B280FBF1C30C12300EADDAB /* Build configuration list for PBXNativeTarget "Flight Path" */;
+			buildPhases = (
+				2B280F961C30C12300EADDAB /* Sources */,
+				2B280F971C30C12300EADDAB /* Frameworks */,
+				2B280F981C30C12300EADDAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flight Path";
+			productName = "Flight Path";
+			productReference = 2B280F9A1C30C12300EADDAB /* Flight Path.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B280FAA1C30C12300EADDAB /* Flight PathTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B280FC21C30C12300EADDAB /* Build configuration list for PBXNativeTarget "Flight PathTests" */;
+			buildPhases = (
+				2B280FA71C30C12300EADDAB /* Sources */,
+				2B280FA81C30C12300EADDAB /* Frameworks */,
+				2B280FA91C30C12300EADDAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B280FAD1C30C12300EADDAB /* PBXTargetDependency */,
+			);
+			name = "Flight PathTests";
+			productName = "Flight PathTests";
+			productReference = 2B280FAB1C30C12300EADDAB /* Flight PathTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B280FB51C30C12300EADDAB /* Flight PathUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B280FC51C30C12300EADDAB /* Build configuration list for PBXNativeTarget "Flight PathUITests" */;
+			buildPhases = (
+				2B280FB21C30C12300EADDAB /* Sources */,
+				2B280FB31C30C12300EADDAB /* Frameworks */,
+				2B280FB41C30C12300EADDAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B280FB81C30C12300EADDAB /* PBXTargetDependency */,
+			);
+			name = "Flight PathUITests";
+			productName = "Flight PathUITests";
+			productReference = 2B280FB61C30C12300EADDAB /* Flight PathUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B280F921C30C12300EADDAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hal Mueller";
+				TargetAttributes = {
+					2B280F991C30C12300EADDAB = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2B280FAA1C30C12300EADDAB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2B280F991C30C12300EADDAB;
+					};
+					2B280FB51C30C12300EADDAB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2B280F991C30C12300EADDAB;
+					};
+				};
+			};
+			buildConfigurationList = 2B280F951C30C12300EADDAB /* Build configuration list for PBXProject "Flight Path" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B280F911C30C12200EADDAB;
+			productRefGroup = 2B280F9B1C30C12300EADDAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B280F991C30C12300EADDAB /* Flight Path */,
+				2B280FAA1C30C12300EADDAB /* Flight PathTests */,
+				2B280FB51C30C12300EADDAB /* Flight PathUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B280F981C30C12300EADDAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B280FA21C30C12300EADDAB /* Assets.xcassets in Resources */,
+				2B280FA51C30C12300EADDAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B280FA91C30C12300EADDAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B280FB41C30C12300EADDAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B280F961C30C12300EADDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B280FD01C30C43A00EADDAB /* FlightPathScene.swift in Sources */,
+				2B280FA01C30C12300EADDAB /* ViewController.swift in Sources */,
+				2B280F9E1C30C12300EADDAB /* AppDelegate.swift in Sources */,
+				2B280FCE1C30C3F700EADDAB /* FlightPath.swift in Sources */,
+				2B280FCB1C30C30100EADDAB /* CHCSVParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B280FA71C30C12300EADDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B280FB01C30C12300EADDAB /* Flight_PathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B280FB21C30C12300EADDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B280FBB1C30C12300EADDAB /* Flight_PathUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B280FAD1C30C12300EADDAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B280F991C30C12300EADDAB /* Flight Path */;
+			targetProxy = 2B280FAC1C30C12300EADDAB /* PBXContainerItemProxy */;
+		};
+		2B280FB81C30C12300EADDAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B280F991C30C12300EADDAB /* Flight Path */;
+			targetProxy = 2B280FB71C30C12300EADDAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B280FA31C30C12300EADDAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B280FA41C30C12300EADDAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B280FBD1C30C12300EADDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B280FBE1C30C12300EADDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2B280FC01C30C12300EADDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Flight Path/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Flight-Path";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Flight Path/Flight Path-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B280FC11C30C12300EADDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Flight Path/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Flight-Path";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Flight Path/Flight Path-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2B280FC31C30C12300EADDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Flight PathTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Flight-PathTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flight Path.app/Contents/MacOS/Flight Path";
+			};
+			name = Debug;
+		};
+		2B280FC41C30C12300EADDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Flight PathTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Flight-PathTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flight Path.app/Contents/MacOS/Flight Path";
+			};
+			name = Release;
+		};
+		2B280FC61C30C12300EADDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Flight PathUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Flight-PathUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Flight Path";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2B280FC71C30C12300EADDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Flight PathUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Flight-PathUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Flight Path";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B280F951C30C12300EADDAB /* Build configuration list for PBXProject "Flight Path" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B280FBD1C30C12300EADDAB /* Debug */,
+				2B280FBE1C30C12300EADDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B280FBF1C30C12300EADDAB /* Build configuration list for PBXNativeTarget "Flight Path" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B280FC01C30C12300EADDAB /* Debug */,
+				2B280FC11C30C12300EADDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B280FC21C30C12300EADDAB /* Build configuration list for PBXNativeTarget "Flight PathTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B280FC31C30C12300EADDAB /* Debug */,
+				2B280FC41C30C12300EADDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B280FC51C30C12300EADDAB /* Build configuration list for PBXNativeTarget "Flight PathUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B280FC61C30C12300EADDAB /* Debug */,
+				2B280FC71C30C12300EADDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B280F921C30C12300EADDAB /* Project object */;
+}
