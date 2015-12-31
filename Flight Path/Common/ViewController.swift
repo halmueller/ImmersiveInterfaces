@@ -6,23 +6,22 @@
 //  Copyright © 2015 Hal Mueller. All rights reserved.
 //
 
-import Cocoa
 import SceneKit
 
-class ViewController: NSViewController {
+#if os(iOS) || os(tvOS)
+	typealias FPViewController = UIViewController
+#elseif os(OSX)
+	typealias FPViewController = NSViewController
+#endif
+
+
+class ViewController: FPViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view.
 	}
-
-	override var representedObject: AnyObject? {
-		didSet {
-		// Update the view, if already loaded.
-		}
-	}
-
 
 }
 

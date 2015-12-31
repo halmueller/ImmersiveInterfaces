@@ -6,8 +6,11 @@
 //  Copyright © 2015 Hal Mueller. All rights reserved.
 //
 
-import Foundation
+import SceneKit
 
 struct FlightPath {
+	func SpheresRepresentationNode () -> SCNNode {
+		return SCNNode()
+	}
 	
 }
