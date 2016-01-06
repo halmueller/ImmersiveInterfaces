@@ -74,7 +74,14 @@ class GameViewController: NSViewController {
 		let block = SCNBox(width: 2, height: 2, length: 2, chamferRadius: 0)
 		let result = SCNNode(geometry: block)
 		
+		// Use array of colors for 6 different colors. Or just set firstMaterial for 6 animations.
 		block.materials = colorMaterials()
+		for i in [0, 1, 4] {
+			// instantiate the embedded scene multiple times, to test render sync
+			let sceneKitMaterial = SCNMaterial()
+			sceneKitMaterial.diffuse.contents = self.spinningShipSpriteKitScene()
+			block.materials[i] = sceneKitMaterial
+		}
 		return result
 	}
 	
@@ -94,6 +101,55 @@ class GameViewController: NSViewController {
 			result.append(material)
 		}
 		return result
+	}
+	
+	func spinningShipSpriteKitScene() -> SKScene {
+		let resultSize = CGSize(width: 200, height: 200)
+		let result = SKScene(size: resultSize)
+		result.scaleMode = .ResizeFill
+		let spinningShipNode = SK3DNode(viewportSize: result.size)
+		
+		let spinningShipScene = self.spinningShipScene()
+		spinningShipScene.rootNode.scale = SCNVector3Make(1, -10, 1)
+		spinningShipNode.scnScene = spinningShipScene
+		result.addChild(spinningShipNode)
+		spinningShipNode.position = CGPoint(x: resultSize.width/2.0, y: resultSize.height/2.0)
+		return result
+	}
+	
+	func spinningShipScene() -> SCNScene {
+		let scene = SCNScene(named: "art.scnassets/ship.scn")!
+		
+		// create and add a camera to the scene
+		let cameraNode = SCNNode()
+		cameraNode.camera = SCNCamera()
+		scene.rootNode.addChildNode(cameraNode)
+		
+		// place the camera
+		cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
+		// TODO: Figure out a better way to flip the camera
+		cameraNode.rotation = SCNVector4Make(0.0, 0.0, 1.0, CGFloat(M_PI));
+		
+		// create and add a light to the scene
+		let lightNode = SCNNode()
+		lightNode.light = SCNLight()
+		lightNode.light!.type = SCNLightTypeOmni
+		lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
+		scene.rootNode.addChildNode(lightNode)
+		
+		// create and add an ambient light to the scene
+		let ambientLightNode = SCNNode()
+		ambientLightNode.light = SCNLight()
+		ambientLightNode.light!.type = SCNLightTypeAmbient
+		ambientLightNode.light!.color = SKColor.darkGrayColor()
+		scene.rootNode.addChildNode(ambientLightNode)
+		
+		// retrieve the ship node
+		let ship = scene.rootNode.childNodeWithName("ship", recursively: true)!
+		
+		// animate the 3d object
+		ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
+		return scene
 	}
 	
 }
