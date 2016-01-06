@@ -69,6 +69,7 @@ class GameViewController: NSViewController {
 		self.gameView!.backgroundColor = NSColor.blackColor()
 	}
 	
+	// MARK: tinker with this function to show 0, 1, or many ship animations
 	func coloredBlockNode() -> SCNNode {
 		
 		let block = SCNBox(width: 2, height: 2, length: 2, chamferRadius: 0)
