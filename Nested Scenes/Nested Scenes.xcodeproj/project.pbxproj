@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B502F461C3CC52E0055E2F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B502F451C3CC52E0055E2F7 /* AppDelegate.swift */; };
+		2B502F481C3CC52E0055E2F7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B502F471C3CC52E0055E2F7 /* GameView.swift */; };
+		2B502F4A1C3CC52E0055E2F7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B502F491C3CC52E0055E2F7 /* GameViewController.swift */; };
+		2B502F4C1C3CC52E0055E2F7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B502F4B1C3CC52E0055E2F7 /* art.scnassets */; };
+		2B502F4E1C3CC52E0055E2F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B502F4D1C3CC52E0055E2F7 /* Assets.xcassets */; };
+		2B502F511C3CC52E0055E2F7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B502F4F1C3CC52E0055E2F7 /* MainMenu.xib */; };
+		2B502F5C1C3CC52E0055E2F7 /* Nested_ScenesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B502F5B1C3CC52E0055E2F7 /* Nested_ScenesTests.swift */; };
+		2B502F671C3CC52E0055E2F7 /* Nested_ScenesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B502F661C3CC52E0055E2F7 /* Nested_ScenesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B502F581C3CC52E0055E2F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B502F3A1C3CC52E0055E2F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B502F411C3CC52E0055E2F7;
+			remoteInfo = "Nested Scenes";
+		};
+		2B502F631C3CC52E0055E2F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B502F3A1C3CC52E0055E2F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B502F411C3CC52E0055E2F7;
+			remoteInfo = "Nested Scenes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B502F421C3CC52E0055E2F7 /* Nested Scenes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nested Scenes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B502F451C3CC52E0055E2F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B502F471C3CC52E0055E2F7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		2B502F491C3CC52E0055E2F7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2B502F4B1C3CC52E0055E2F7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		2B502F4D1C3CC52E0055E2F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B502F501C3CC52E0055E2F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2B502F521C3CC52E0055E2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B502F571C3CC52E0055E2F7 /* Nested ScenesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nested ScenesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B502F5B1C3CC52E0055E2F7 /* Nested_ScenesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nested_ScenesTests.swift; sourceTree = "<group>"; };
+		2B502F5D1C3CC52E0055E2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B502F621C3CC52E0055E2F7 /* Nested ScenesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nested ScenesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B502F661C3CC52E0055E2F7 /* Nested_ScenesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nested_ScenesUITests.swift; sourceTree = "<group>"; };
+		2B502F681C3CC52E0055E2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B502F3F1C3CC52E0055E2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B502F541C3CC52E0055E2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B502F5F1C3CC52E0055E2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B502F391C3CC52E0055E2F7 = {
+			isa = PBXGroup;
+			children = (
+				2B502F441C3CC52E0055E2F7 /* Nested Scenes */,
+				2B502F5A1C3CC52E0055E2F7 /* Nested ScenesTests */,
+				2B502F651C3CC52E0055E2F7 /* Nested ScenesUITests */,
+				2B502F431C3CC52E0055E2F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B502F431C3CC52E0055E2F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B502F421C3CC52E0055E2F7 /* Nested Scenes.app */,
+				2B502F571C3CC52E0055E2F7 /* Nested ScenesTests.xctest */,
+				2B502F621C3CC52E0055E2F7 /* Nested ScenesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B502F441C3CC52E0055E2F7 /* Nested Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2B502F451C3CC52E0055E2F7 /* AppDelegate.swift */,
+				2B502F471C3CC52E0055E2F7 /* GameView.swift */,
+				2B502F491C3CC52E0055E2F7 /* GameViewController.swift */,
+				2B502F4B1C3CC52E0055E2F7 /* art.scnassets */,
+				2B502F4D1C3CC52E0055E2F7 /* Assets.xcassets */,
+				2B502F4F1C3CC52E0055E2F7 /* MainMenu.xib */,
+				2B502F521C3CC52E0055E2F7 /* Info.plist */,
+			);
+			path = "Nested Scenes";
+			sourceTree = "<group>";
+		};
+		2B502F5A1C3CC52E0055E2F7 /* Nested ScenesTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B502F5B1C3CC52E0055E2F7 /* Nested_ScenesTests.swift */,
+				2B502F5D1C3CC52E0055E2F7 /* Info.plist */,
+			);
+			path = "Nested ScenesTests";
+			sourceTree = "<group>";
+		};
+		2B502F651C3CC52E0055E2F7 /* Nested ScenesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B502F661C3CC52E0055E2F7 /* Nested_ScenesUITests.swift */,
+				2B502F681C3CC52E0055E2F7 /* Info.plist */,
+			);
+			path = "Nested ScenesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B502F411C3CC52E0055E2F7 /* Nested Scenes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B502F6B1C3CC52E0055E2F7 /* Build configuration list for PBXNativeTarget "Nested Scenes" */;
+			buildPhases = (
+				2B502F3E1C3CC52E0055E2F7 /* Sources */,
+				2B502F3F1C3CC52E0055E2F7 /* Frameworks */,
+				2B502F401C3CC52E0055E2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nested Scenes";
+			productName = "Nested Scenes";
+			productReference = 2B502F421C3CC52E0055E2F7 /* Nested Scenes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B502F561C3CC52E0055E2F7 /* Nested ScenesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B502F6E1C3CC52E0055E2F7 /* Build configuration list for PBXNativeTarget "Nested ScenesTests" */;
+			buildPhases = (
+				2B502F531C3CC52E0055E2F7 /* Sources */,
+				2B502F541C3CC52E0055E2F7 /* Frameworks */,
+				2B502F551C3CC52E0055E2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B502F591C3CC52E0055E2F7 /* PBXTargetDependency */,
+			);
+			name = "Nested ScenesTests";
+			productName = "Nested ScenesTests";
+			productReference = 2B502F571C3CC52E0055E2F7 /* Nested ScenesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B502F611C3CC52E0055E2F7 /* Nested ScenesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B502F711C3CC52E0055E2F7 /* Build configuration list for PBXNativeTarget "Nested ScenesUITests" */;
+			buildPhases = (
+				2B502F5E1C3CC52E0055E2F7 /* Sources */,
+				2B502F5F1C3CC52E0055E2F7 /* Frameworks */,
+				2B502F601C3CC52E0055E2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B502F641C3CC52E0055E2F7 /* PBXTargetDependency */,
+			);
+			name = "Nested ScenesUITests";
+			productName = "Nested ScenesUITests";
+			productReference = 2B502F621C3CC52E0055E2F7 /* Nested ScenesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B502F3A1C3CC52E0055E2F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hal Mueller";
+				TargetAttributes = {
+					2B502F411C3CC52E0055E2F7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2B502F561C3CC52E0055E2F7 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2B502F411C3CC52E0055E2F7;
+					};
+					2B502F611C3CC52E0055E2F7 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2B502F411C3CC52E0055E2F7;
+					};
+				};
+			};
+			buildConfigurationList = 2B502F3D1C3CC52E0055E2F7 /* Build configuration list for PBXProject "Nested Scenes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B502F391C3CC52E0055E2F7;
+			productRefGroup = 2B502F431C3CC52E0055E2F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B502F411C3CC52E0055E2F7 /* Nested Scenes */,
+				2B502F561C3CC52E0055E2F7 /* Nested ScenesTests */,
+				2B502F611C3CC52E0055E2F7 /* Nested ScenesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B502F401C3CC52E0055E2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B502F4E1C3CC52E0055E2F7 /* Assets.xcassets in Resources */,
+				2B502F4C1C3CC52E0055E2F7 /* art.scnassets in Resources */,
+				2B502F511C3CC52E0055E2F7 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B502F551C3CC52E0055E2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B502F601C3CC52E0055E2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B502F3E1C3CC52E0055E2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B502F481C3CC52E0055E2F7 /* GameView.swift in Sources */,
+				2B502F4A1C3CC52E0055E2F7 /* GameViewController.swift in Sources */,
+				2B502F461C3CC52E0055E2F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B502F531C3CC52E0055E2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B502F5C1C3CC52E0055E2F7 /* Nested_ScenesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B502F5E1C3CC52E0055E2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B502F671C3CC52E0055E2F7 /* Nested_ScenesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B502F591C3CC52E0055E2F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B502F411C3CC52E0055E2F7 /* Nested Scenes */;
+			targetProxy = 2B502F581C3CC52E0055E2F7 /* PBXContainerItemProxy */;
+		};
+		2B502F641C3CC52E0055E2F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B502F411C3CC52E0055E2F7 /* Nested Scenes */;
+			targetProxy = 2B502F631C3CC52E0055E2F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B502F4F1C3CC52E0055E2F7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B502F501C3CC52E0055E2F7 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B502F691C3CC52E0055E2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B502F6A1C3CC52E0055E2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2B502F6C1C3CC52E0055E2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Nested Scenes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Nested-Scenes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B502F6D1C3CC52E0055E2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Nested Scenes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Nested-Scenes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2B502F6F1C3CC52E0055E2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Nested ScenesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Nested-ScenesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nested Scenes.app/Contents/MacOS/Nested Scenes";
+			};
+			name = Debug;
+		};
+		2B502F701C3CC52E0055E2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Nested ScenesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Nested-ScenesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nested Scenes.app/Contents/MacOS/Nested Scenes";
+			};
+			name = Release;
+		};
+		2B502F721C3CC52E0055E2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Nested ScenesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Nested-ScenesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Nested Scenes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2B502F731C3CC52E0055E2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Nested ScenesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.halmueller.Nested-ScenesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Nested Scenes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B502F3D1C3CC52E0055E2F7 /* Build configuration list for PBXProject "Nested Scenes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B502F691C3CC52E0055E2F7 /* Debug */,
+				2B502F6A1C3CC52E0055E2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B502F6B1C3CC52E0055E2F7 /* Build configuration list for PBXNativeTarget "Nested Scenes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B502F6C1C3CC52E0055E2F7 /* Debug */,
+				2B502F6D1C3CC52E0055E2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B502F6E1C3CC52E0055E2F7 /* Build configuration list for PBXNativeTarget "Nested ScenesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B502F6F1C3CC52E0055E2F7 /* Debug */,
+				2B502F701C3CC52E0055E2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B502F711C3CC52E0055E2F7 /* Build configuration list for PBXNativeTarget "Nested ScenesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B502F721C3CC52E0055E2F7 /* Debug */,
+				2B502F731C3CC52E0055E2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B502F3A1C3CC52E0055E2F7 /* Project object */;
+}
