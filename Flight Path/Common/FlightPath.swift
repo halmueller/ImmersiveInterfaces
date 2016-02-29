@@ -10,6 +10,7 @@ import SceneKit
 
 struct FlightPath {
 	func SpheresRepresentationNode () -> SCNNode {
+		let parser = NSArray.init
 		return SCNNode()
 	}
 	

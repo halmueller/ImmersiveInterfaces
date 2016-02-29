@@ -38,6 +38,8 @@ class DemoScene: SCNScene {
         // MARK: Camera near/far clipping. Uncomment both of these, then keep zNear but omit zFar:
 //		camera.zNear = 0.1
 //		camera.zFar = 2.00
+//		camera.usesOrthographicProjection = true
+		camera.automaticallyAdjustsZRange = true
 		result.camera = camera
 
 		return result
@@ -169,13 +171,17 @@ class DemoScene: SCNScene {
 				if hit.node.parentNode == self.carousel {
 					debugPrint (hit.node)
 					self.trackWithSpotlight(hit.node)
-					let animationAction = SCNAction.moveByX(0, y: 1, z: 0, duration: 5)
+					let animationAction = SCNAction.moveByX(0, y: 1, z: 0, duration: 0.5)
 					let fadeAction = SCNAction.fadeOpacityTo(0.0, duration: 5)
 					let unfadeAction = SCNAction.fadeOpacityTo(1.0, duration: 5)
 					let growAction = SCNAction.scaleBy(2.0, duration: 5)
-					let sequence = SCNAction.sequence([animationAction, animationAction.reversedAction(),
-						fadeAction, unfadeAction,
-						growAction, growAction.reversedAction()])
+					let sequence = SCNAction.sequence([
+						animationAction, animationAction.reversedAction(),
+						animationAction, animationAction.reversedAction(),
+						animationAction, animationAction.reversedAction()
+						//						fadeAction, unfadeAction,
+//						growAction, growAction.reversedAction()
+						])
 					hit.node.runAction(sequence)
 				}
 			}

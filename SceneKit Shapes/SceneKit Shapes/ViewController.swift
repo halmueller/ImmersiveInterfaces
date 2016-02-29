@@ -49,13 +49,14 @@ class ViewController: NSViewController {
 			hits = leftView.hitTest(leftPoint, options: nil)
 		}
 		else if NSPointInRect(centerPoint, centerView.bounds) {
-			hits = centerView.hitTest(leftPoint, options: nil)
+			hits = centerView.hitTest(centerPoint, options: nil)
 		}
 		else if NSPointInRect(rightPoint, rightView.bounds) {
-			hits = rightView.hitTest(leftPoint, options: nil)
+			hits = rightView.hitTest(rightPoint, options: nil)
 		}
 		else {
 			hits = nil
+			print("no joy")
 		}
 			demoScene.handleTouchHits(hits)
 	}
