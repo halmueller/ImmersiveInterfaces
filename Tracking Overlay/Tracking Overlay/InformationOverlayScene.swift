@@ -8,18 +8,18 @@
 
 import SpriteKit
 
-public class InformationOverlayScene: SKScene {
-	public var labelNode: SKLabelNode?
-	public var cursorNode: SKShapeNode?
+open class InformationOverlayScene: SKScene {
+	open var labelNode: SKLabelNode?
+	open var cursorNode: SKShapeNode?
 	
 	override init(size: CGSize) {
 		super.init(size: size)
-		scaleMode = .ResizeFill
+		scaleMode = .resizeFill
 		labelNode = SKLabelNode(text: "tracking")
 		labelNode?.position = CGPoint(x: 100, y: 400)
 		self.addChild(labelNode!)
 		cursorNode = SKShapeNode(circleOfRadius: 25.0)
-		cursorNode?.strokeColor = UIColor.greenColor()
+		cursorNode?.strokeColor = UIColor.green
 		self.addChild(cursorNode!)
 	}
 

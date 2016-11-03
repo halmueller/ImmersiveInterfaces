@@ -16,13 +16,13 @@
 
 import SceneKit
 
-public class OrbitalScene: SCNScene {
+open class OrbitalScene: SCNScene {
     
     let fixedCameraNode: SCNNode
     let carouselNode: SCNNode
-	public let boxNode: SCNNode
+	open let boxNode: SCNNode
     
-    class func visibleCamera (fovDegrees: Double) -> SCNNode {
+    class func visibleCamera (_ fovDegrees: Double) -> SCNNode {
         let result = SCNNode()
         
         let shapeForCamera = SCNCone(topRadius: 0, bottomRadius: 0.1, height: 0.3)
@@ -56,12 +56,12 @@ public class OrbitalScene: SCNScene {
 
 		carouselNode = SCNNode()
 
-		let boxColors = [MyColor.magentaColor(), MyColor.cyanColor(), MyColor.yellowColor()]
+		let boxColors = [MyColor.magenta, MyColor.cyan, MyColor.yellow]
 		var boxMaterials: [SCNMaterial] = []
 		for color in boxColors {
 			let thisMaterial = SCNMaterial()
 			thisMaterial.diffuse.contents = color
-			thisMaterial.specular.contents = MyColor.whiteColor()
+			thisMaterial.specular.contents = MyColor.white
 			boxMaterials.append(thisMaterial)
 		}
 		
@@ -73,13 +73,13 @@ public class OrbitalScene: SCNScene {
 		carouselNode.addChildNode(boxNode)
 		
 		let pyramidGeometry = SCNPyramid(width: centerSize, height: centerSize, length: centerSize)
-		pyramidGeometry.firstMaterial?.diffuse.contents = MyColor.magentaColor()
-		let pyramidColors = [MyColor.blueColor(), MyColor.redColor(), MyColor.greenColor()]
+		pyramidGeometry.firstMaterial?.diffuse.contents = MyColor.magenta
+		let pyramidColors = [MyColor.blue, MyColor.red, MyColor.green]
 		var pyramidMaterials: [SCNMaterial] = []
 		for color in pyramidColors {
 			let thisMaterial = SCNMaterial()
 			thisMaterial.diffuse.contents = color
-			thisMaterial.specular.contents = MyColor.whiteColor()
+			thisMaterial.specular.contents = MyColor.white
 			pyramidMaterials.append(thisMaterial)
 		}
 		pyramidGeometry.materials = pyramidMaterials
@@ -99,13 +99,13 @@ public class OrbitalScene: SCNScene {
 
         let centerMarkerGeometry = SCNSphere(radius: centerSize)
         let centerNode = SCNNode(geometry: centerMarkerGeometry)
-        centerMarkerGeometry.firstMaterial?.diffuse.contents = MyColor.redColor()
+        centerMarkerGeometry.firstMaterial?.diffuse.contents = MyColor.red
         
         self.rootNode.addChildNode(centerNode)
         self.rootNode.addChildNode(carouselNode)
         
         let ambientLight = SCNLight()
-        ambientLight.type = SCNLightTypeAmbient
+        ambientLight.type = SCNLight.LightType.ambient
         let ambientLightNode = SCNNode()
         ambientLightNode.light = ambientLight
         self.rootNode.addChildNode(ambientLightNode)
@@ -117,7 +117,7 @@ public class OrbitalScene: SCNScene {
         //carouselConstraint.gimbalLockEnabled = true
         fixedCameraNode.constraints = [carouselConstraint]
 
-        let rotate = SCNAction.repeatActionForever(SCNAction.rotateByX(0.0, y: CGFloat(M_PI), z: 0, duration: 20.0))
+        let rotate = SCNAction.repeatForever(SCNAction.rotateBy(x: 0.0, y: CGFloat(M_PI), z: 0, duration: 20.0))
         carouselNode.runAction(rotate)
     }
     
@@ -125,8 +125,8 @@ public class OrbitalScene: SCNScene {
         fatalError("init(coder:) has not been implemented")
     }
 	
-	public func boxCoordinates () -> SCNVector3 {
-		let worldCoordinates = self.rootNode.convertPosition(boxNode.position, fromNode: carouselNode)
+	open func boxCoordinates () -> SCNVector3 {
+		let worldCoordinates = self.rootNode.convertPosition(boxNode.position, from: carouselNode)
 //		print("box", worldCoordinates)
 		return worldCoordinates
 	}

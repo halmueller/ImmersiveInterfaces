@@ -23,19 +23,18 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 		sceneView.allowsCameraControl = true
 		sceneView.showsStatistics = true
 		//		sceneView.debugOptions = [SCNDebugOptions.ShowWireframe]
-		sceneView.backgroundColor = UIColor.grayColor()
+		sceneView.backgroundColor = UIColor.gray
 		
 		sceneView.delegate = self
 		
 		sceneView.overlaySKScene = InformationOverlayScene(size: sceneView.frame.size)
-		print(sceneView.overlaySKScene)
 	}
 	
-	override func shouldAutorotate() -> Bool {
+	override var shouldAutorotate : Bool {
 		return true
 	}
 	
-	override func prefersStatusBarHidden() -> Bool {
+	override var prefersStatusBarHidden : Bool {
 		return true
 	}
 	
@@ -46,13 +45,13 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 	
 	// MARK: SCNSceneRendererDelegate -
 	
-	func renderer(renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: NSTimeInterval)  {
+	func renderer(_ renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: TimeInterval)  {
 		if let overlay = sceneView.overlaySKScene as? InformationOverlayScene {
 			if let orbitalScene = sceneView.scene as? OrbitalScene {
 //				print ("box raw", orbitalScene.boxNode.position)
 //				print ("box presentation node", orbitalScene.boxNode.presentationNode.position)
 //				let boxWorldCoordinates = orbitalScene.rootNode.convertPosition(orbitalScene.boxNode.position, fromNode: orbitalScene.carouselNode)
-				let boxWorldCoordinates = orbitalScene.rootNode.convertPosition(orbitalScene.boxNode.position, fromNode:orbitalScene.boxNode.parentNode)
+				let boxWorldCoordinates = orbitalScene.rootNode.convertPosition(orbitalScene.boxNode.position, from:orbitalScene.boxNode.parent)
 				
 //				print("box world", boxWorldCoordinates)
 				let screenCoordinates = self.sceneView.projectPoint(boxWorldCoordinates)
