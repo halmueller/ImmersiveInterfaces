@@ -20,29 +20,23 @@ class ViewController: NSViewController {
 		super.viewDidLoad()
 		
 		for sceneView in [leftView, centerView, rightView] {
-			sceneView.scene = demoScene
-			sceneView.debugOptions = [.ShowWireframe, .ShowLightExtents, .ShowLightInfluences, .ShowBoundingBoxes]
-			sceneView.debugOptions = .ShowWireframe
-			sceneView.showsStatistics = true
+			sceneView?.scene = demoScene
+			sceneView?.debugOptions = [.showWireframe, .showLightExtents, .showLightInfluences, .showBoundingBoxes]
+			sceneView?.debugOptions = .showWireframe
+			sceneView?.showsStatistics = true
 		}
 		rightView.pointOfView = demoScene.followSpotNode
 		centerView.pointOfView = demoScene.overheadCameraNode
 		leftView.pointOfView = demoScene.fixedCameraNode
 	}
 
-	override var representedObject: AnyObject? {
-		didSet {
-		// Update the view, if already loaded.
-		}
-	}
-	
-	override func mouseUp(theEvent: NSEvent) {
-		super.mouseUp(theEvent)
+	override func mouseUp(with theEvent: NSEvent) {
+		super.mouseUp(with: theEvent)
 		let eventLocation = theEvent.locationInWindow
 		
-		let leftPoint = leftView.convertPoint(eventLocation, fromView: nil)
-		let centerPoint = centerView.convertPoint(eventLocation, fromView: nil)
-		let rightPoint = rightView.convertPoint(eventLocation, fromView: nil)
+		let leftPoint = leftView.convert(eventLocation, from: nil)
+		let centerPoint = centerView.convert(eventLocation, from: nil)
+		let rightPoint = rightView.convert(eventLocation, from: nil)
 		
 		let hits: [SCNHitTestResult]?
 		if NSPointInRect(leftPoint, leftView.bounds) {

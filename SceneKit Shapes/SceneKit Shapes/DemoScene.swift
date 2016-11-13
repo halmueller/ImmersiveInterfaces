@@ -23,7 +23,7 @@ class DemoScene: SCNScene {
 	let fixedCameraNode: SCNNode
 	let carousel: SCNNode
 	
-	class func visibleCamera (fovDegrees: Double) -> SCNNode {
+	class func visibleCamera (_ fovDegrees: Double) -> SCNNode {
 		let result = SCNNode()
 		
 		let shapeForCamera = SCNCone(topRadius: 0, bottomRadius: 0.1, height: 0.3)
@@ -50,14 +50,14 @@ class DemoScene: SCNScene {
 		let carouselRadius = 5 * objectSize
 		let cameraFOVDegrees = 60.0
 		
-		let colors = [MyColor.redColor(), MyColor.blueColor(), MyColor.greenColor(), MyColor.magentaColor(), MyColor.yellowColor(), MyColor.cyanColor()]
+		let colors = [MyColor.red, MyColor.blue, MyColor.green, MyColor.magenta, MyColor.yellow, MyColor.cyan]
 		var newMaterials: [SCNMaterial] = []
 		for color in colors {
 			let thisMaterial = SCNMaterial()
             // MARK: uncomment this to get back of SCNPlane visible:
 //            thisMaterial.doubleSided = true
 			thisMaterial.diffuse.contents = color
-			thisMaterial.specular.contents = MyColor.whiteColor()
+			thisMaterial.specular.contents = MyColor.white
 			newMaterials.append(thisMaterial)
 		}
 		materials = newMaterials
@@ -72,7 +72,7 @@ class DemoScene: SCNScene {
 		followSpotNode = DemoScene.visibleCamera(cameraFOVDegrees)
 		followSpotNode.position = SCNVector3Make(1.1*carouselRadius/sqrt(2.0), 3*objectSize, carouselRadius/sqrt(2.0))
 		 let followSpotLight = SCNLight()
-		followSpotLight.type = SCNLightTypeSpot
+		followSpotLight.type = SCNLight.LightType.spot
 		followSpotLight.castsShadow = true
 		followSpotNode.light = followSpotLight
 		
@@ -80,7 +80,7 @@ class DemoScene: SCNScene {
 		super.init()
 		
 		let ambientLight = SCNLight()
-		ambientLight.type = SCNLightTypeAmbient
+		ambientLight.type = SCNLight.LightType.ambient
 		let ambientLightNode = SCNNode()
 		ambientLightNode.light = ambientLight
 		self.rootNode.addChildNode(ambientLightNode)
@@ -90,7 +90,7 @@ class DemoScene: SCNScene {
 		self.rootNode.addChildNode(fixedCameraNode)
 		
 		carousel.position = SCNVector3Make(0, objectSize, 0)
-		let rotate = SCNAction.repeatActionForever(SCNAction.rotateByX(0.0, y: CGFloat(M_PI), z: 0, duration: 20.0))
+		let rotate = SCNAction.repeatForever(SCNAction.rotateBy(x: 0.0, y: CGFloat(M_PI), z: 0, duration: 20.0))
 		carousel.runAction(rotate)
 		self.rootNode.addChildNode(carousel)
 
@@ -108,12 +108,12 @@ class DemoScene: SCNScene {
 		let capsule = SCNCapsule(capRadius: objectSize/4, height: objectSize)
 	
 		let standardSphere = SCNSphere(radius: objectSize/2)
-		standardSphere.geodesic = false
+		standardSphere.isGeodesic = false
 		
 		let tube = SCNTube(innerRadius: 0.4 * objectSize, outerRadius: 0.5 * objectSize, height: objectSize)
 		
 		let geodesicSphere = SCNSphere(radius: objectSize/2)
-		geodesicSphere.geodesic = true
+		geodesicSphere.isGeodesic = true
 		
 		let pyramid = SCNPyramid(width: objectSize/3, height: objectSize, length: objectSize/5)
 		
@@ -125,7 +125,7 @@ class DemoScene: SCNScene {
 
 		let cone2 = SCNCone(topRadius: objectSize/6, bottomRadius: objectSize/3, height: objectSize)
 		
-		let sourceString = NSAttributedString(string: "hello", attributes: [NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
+		let sourceString = NSAttributedString(string: "hello", attributes: [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
 		 NSFontAttributeName: MyFont(name: "Chalkduster", size: 0.5)!])
 		let text = SCNText(string: sourceString, extrusionDepth: objectSize/10)
 		
@@ -144,7 +144,7 @@ class DemoScene: SCNScene {
 		for geometry in geometries {
 			geometry.materials = materials
 			let node = SCNNode(geometry: geometry)
-			let angle = CGFloat(angleIncrement * Double(index++))
+			let angle = CGFloat(angleIncrement * Double(index))
 			let x = carouselRadius * cos(angle)
 			let y = carouselRadius * sin(angle)
 			node.position = SCNVector3Make(x, 0, y)
@@ -152,6 +152,7 @@ class DemoScene: SCNScene {
 //			node.eulerAngles.y = -1.0 * angle
 			carousel.addChildNode(node)
 			lastNode = node
+			index += 1
 		}
 		self.trackWithSpotlight(lastNode)
 		
@@ -165,20 +166,20 @@ class DemoScene: SCNScene {
 	    fatalError("init(coder:) has not been implemented")
 	}
 	
-	func handleTouchHits(hits: [SCNHitTestResult]?) {
+	func handleTouchHits(_ hits: [SCNHitTestResult]?) {
 		if hits != nil {
 			for hit in hits! {
-				if hit.node.parentNode == self.carousel {
+				if hit.node.parent == self.carousel {
 					debugPrint (hit.node)
 					self.trackWithSpotlight(hit.node)
-					let animationAction = SCNAction.moveByX(0, y: 1, z: 0, duration: 0.5)
-					let fadeAction = SCNAction.fadeOpacityTo(0.0, duration: 5)
-					let unfadeAction = SCNAction.fadeOpacityTo(1.0, duration: 5)
-					let growAction = SCNAction.scaleBy(2.0, duration: 5)
+					let animationAction = SCNAction.moveBy(x: 0, y: 1, z: 0, duration: 0.5)
+					let fadeAction = SCNAction.fadeOpacity(to: 0.0, duration: 5)
+					let unfadeAction = SCNAction.fadeOpacity(to: 1.0, duration: 5)
+					let growAction = SCNAction.scale(by: 2.0, duration: 5)
 					let sequence = SCNAction.sequence([
-						animationAction, animationAction.reversedAction(),
-						animationAction, animationAction.reversedAction(),
-						animationAction, animationAction.reversedAction()
+						animationAction, animationAction.reversed(),
+						animationAction, animationAction.reversed(),
+						animationAction, animationAction.reversed()
 						//						fadeAction, unfadeAction,
 //						growAction, growAction.reversedAction()
 						])
@@ -188,7 +189,7 @@ class DemoScene: SCNScene {
 		}
 	}
 
-	func trackWithSpotlight (target: SCNNode) {
+	func trackWithSpotlight (_ target: SCNNode) {
 		let followSpotConstraint = SCNLookAtConstraint(target: target)
         // MARK: uncomment this to correct horizon:
 		//followSpotConstraint.gimbalLockEnabled = true
